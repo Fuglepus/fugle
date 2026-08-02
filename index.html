@@ -83,6 +83,12 @@
     font-family:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
     font-weight:800;font-size:1.8rem;letter-spacing:-0.02em;
     color:var(--blue);
+    display:flex;align-items:center;gap:14px;
+  }
+  .arrow-down{animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(7px)}
   }
   .project{
     padding:40px 0;
@@ -200,7 +206,7 @@
   }
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
-    *{transition:none !important}
+    *{transition:none !important;animation:none !important}
   }
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -228,7 +234,13 @@
   </section>
 
   <section class="projects" aria-label="Prosjekter">
-    <h2>Hva vi har bygget</h2>
+    <h2>
+      Hva vi har bygget
+      <svg class="arrow-down" width="20" height="26" viewBox="0 0 20 26" fill="none" aria-hidden="true">
+        <line x1="10" y1="3" x2="10" y2="19" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M4 14 L10 21 L16 14" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </h2>
 
     <article class="project">
       <div class="project-head">
