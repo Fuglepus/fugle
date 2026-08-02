@@ -46,6 +46,7 @@ header{padding:40px 0 0}
 .crumb a:hover{text-decoration:underline}
 
 article{padding:20px 0 40px}
+.article-logo{width:60px;height:60px;display:block;margin-top:12px}
 article h1{
   font-family:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
   font-weight:800;
