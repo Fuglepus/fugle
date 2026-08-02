@@ -101,6 +101,14 @@
     font-variant-numeric:tabular-nums;
   }
   .project p{margin-top:12px;max-width:58ch;color:var(--ink)}
+  .difficulty{margin-top:10px;display:flex;align-items:center;gap:8px}
+  .diff-label{
+    font-size:.72rem;font-weight:500;
+    text-transform:uppercase;letter-spacing:.06em;
+    color:var(--muted);
+  }
+  .stars{display:inline-flex;gap:3px}
+  .stars svg{display:block}
   .tags{
     margin-top:16px;display:flex;flex-wrap:wrap;gap:8px;
     list-style:none;
@@ -206,22 +214,16 @@
 
     <article class="project">
       <div class="project-head">
-        <h2><a href="https://betbott.com" target="_blank" rel="noopener">BetBott</a></h2>
-        <span class="domain">betbott.com</span>
-      </div>
-      <p>Automatisert fotballanalyse med over 66 000 medlemmer. Boten følger live-data fra over 100 ligaer hvert 15. sekund, døgnet rundt, og varsler i Discord når en spiller blir utvist eller et lag dominerer på skudd, cornere og ballbesittelse uten å lede. Hver morgen skanner den i tillegg alle ligaene etter lag i form og sender ut de lagene som er verdt å spille på.</p>
-      <ul class="tags">
-        <li>66 000+ medlemmer</li>
-        <li>100+ ligaer</li>
-        <li>Sanntidsdata 24/7</li>
-        <li>Discord-bot</li>
-      </ul>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
         <h2><a href="https://watchscanning.com" target="_blank" rel="noopener">WatchScanning</a></h2>
         <span class="domain">watchscanning.com</span>
+      </div>
+      <div class="difficulty">
+        <span class="diff-label">Vanskelighet</span>
+        <span class="stars" role="img" aria-label="Vanskelighetsgrad 3 av 3">
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+        </span>
       </div>
       <p>KI-drevet autentisering av klokker. Last opp inntil fire bilder og få svar på om klokken er ekte, hvilken modell det er og hva den er verdt, på rundt 30 sekunder. Kjenner igjen forfalskninger på tvers av 40+ merker, fra Rolex og Patek Philippe til Seiko og Casio.</p>
       <ul class="tags">
@@ -234,8 +236,59 @@
 
     <article class="project">
       <div class="project-head">
+        <h2><a href="https://betbott.com" target="_blank" rel="noopener">BetBott</a></h2>
+        <span class="domain">betbott.com</span>
+      </div>
+      <div class="difficulty">
+        <span class="diff-label">Vanskelighet</span>
+        <span class="stars" role="img" aria-label="Vanskelighetsgrad 3 av 3">
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+        </span>
+      </div>
+      <p>Automatisert fotballanalyse med over 66 000 medlemmer. Boten følger live-data fra over 100 ligaer hvert 15. sekund, døgnet rundt, og varsler i Discord når en spiller blir utvist eller et lag dominerer på skudd, cornere og ballbesittelse uten å lede. Hver morgen skanner den i tillegg alle ligaene etter lag i form og sender ut de lagene som er verdt å spille på.</p>
+      <ul class="tags">
+        <li>66 000+ medlemmer</li>
+        <li>100+ ligaer</li>
+        <li>Sanntidsdata 24/7</li>
+        <li>Discord-bot</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h2><a href="https://aistil.no" target="_blank" rel="noopener">AiStil</a></h2>
+        <span class="domain">aistil.no</span>
+      </div>
+      <div class="difficulty">
+        <span class="diff-label">Vanskelighet</span>
+        <span class="stars" role="img" aria-label="Vanskelighetsgrad 2,5 av 3">
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="halvstjerne"><stop offset="50%" stop-color="var(--yellow)"/><stop offset="50%" stop-color="var(--line)"/></linearGradient></defs><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="url(#halvstjerne)"/></svg>
+        </span>
+      </div>
+      <p>AI-styling av bolig med dine egne gjenstander. Ta bilde av rommet, så styler AI-en det med møblene og tingene du faktisk eier, i stedet for å vise en drøm du aldri kan gjenskape. Rom og gjenstander lagres i appen, så du kan generere nye stiler på sekunder, og alle resultater havner i ditt eget galleri.</p>
+      <ul class="tags">
+        <li>AI-bildegenerering</li>
+        <li>Interiør</li>
+        <li>Egne gjenstander</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
         <h2><a href="https://skriving.no" target="_blank" rel="noopener">Skriving.no</a></h2>
         <span class="domain">skriving.no</span>
+      </div>
+      <div class="difficulty">
+        <span class="diff-label">Vanskelighet</span>
+        <span class="stars" role="img" aria-label="Vanskelighetsgrad 1 av 3">
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--line)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--line)"/></svg>
+        </span>
       </div>
       <p>Norges skrivetest. Mål hvor raskt og nøyaktig du skriver, med egne moduser for ord, setninger og vanskelig tekst. Siden har i tillegg kalkulatorer, quizer og skriveguider, og fungerer i både lyst og mørkt tema.</p>
       <ul class="tags">
@@ -250,6 +303,14 @@
         <h2><a href="https://scrolling.no" target="_blank" rel="noopener">Scrolling.no</a></h2>
         <span class="domain">scrolling.no</span>
       </div>
+      <div class="difficulty">
+        <span class="diff-label">Vanskelighet</span>
+        <span class="stars" role="img" aria-label="Vanskelighetsgrad 1 av 3">
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--line)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--line)"/></svg>
+        </span>
+      </div>
       <p>Bli rik på kunnskap mens du scroller. Læring pakket inn i formatet folk faktisk bruker hver dag, som gjør skjermtiden litt smartere i stedet for litt dummere.</p>
       <ul class="tags">
         <li>Mikrolæring</li>
@@ -262,24 +323,19 @@
         <h2><a href="https://eliteparlay.com" target="_blank" rel="noopener">EliteParlay</a></h2>
         <span class="domain">eliteparlay.com</span>
       </div>
+      <div class="difficulty">
+        <span class="diff-label">Vanskelighet</span>
+        <span class="stars" role="img" aria-label="Vanskelighetsgrad 1 av 3">
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--line)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--line)"/></svg>
+        </span>
+      </div>
       <p>Premium Discord-community for sportsspill, der medlemmene får delte analyser, tips og et aktivt miljø rundt kampene.</p>
       <ul class="tags">
         <li>Community</li>
         <li>Discord</li>
         <li>Sport</li>
-      </ul>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
-        <h2><a href="https://aistil.no" target="_blank" rel="noopener">AiStil</a></h2>
-        <span class="domain">aistil.no</span>
-      </div>
-      <p>AI-styling av bolig med dine egne gjenstander. Ta bilde av rommet, så styler AI-en det med møblene og tingene du faktisk eier, i stedet for å vise en drøm du aldri kan gjenskape. Rom og gjenstander lagres i appen, så du kan generere nye stiler på sekunder, og alle resultater havner i ditt eget galleri.</p>
-      <ul class="tags">
-        <li>AI-bildegenerering</li>
-        <li>Interiør</li>
-        <li>Egne gjenstander</li>
       </ul>
     </article>
 
