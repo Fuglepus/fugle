@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slik lager du en nettside med Claude Code, steg for steg | Fugle.no</title>
+<meta name="description" content="Norsk guide: lag din egen nettside med Claude Code uten forkunnskaper. Fra installasjon til ferdig side på eget domene, med konkrete steg og tips.">
+<link rel="canonical" href="https://fugle.no/guider/lag-nettside-med-claude-code/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%A6%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.no</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Lag nettside med Claude Code</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <h1>Slik lager du en nettside med Claude Code</h1>
+    <p class="ingress">En steg for steg-guide på norsk, fra tom mappe til ferdig nettside på eget domene. Du trenger ingen forkunnskaper, bare en datamaskin og en kveld eller to.</p>
+
+    <h2>Det du trenger før du starter</h2>
+    <ul>
+      <li>En Mac- eller Windows-maskin</li>
+      <li>Et Claude-abonnement fra Anthropic (Pro holder lenge for en nettside)</li>
+      <li>En idé om hva siden skal inneholde</li>
+    </ul>
+    <p>Er du usikker på hva Claude Code egentlig er, les først <a href="/guider/hva-er-claude-code/">Hva er Claude Code?</a></p>
+
+    <h2>Steg 1: Installer Claude Code</h2>
+    <p>Den enkleste veien er å laste ned appen for Mac eller Windows fra Anthropic. Foretrekker du terminalen, installerer du med npm (som følger med <a href="https://nodejs.org" rel="noopener">Node.js</a>):</p>
+    <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+    <p>Deretter åpner du en tom mappe for prosjektet ditt og starter verktøyet med kommandoen <code>claude</code>. Første gang logger du inn med Claude-kontoen din.</p>
+
+    <h2>Steg 2: Beskriv siden du vil ha</h2>
+    <p>Nå kommer det viktigste steget: fortell hva du vil bygge, med vanlige ord. Skriv gjerne på norsk. Et eksempel:</p>
+    <pre><code>Lag en nettside for frisørsalongen min. Den skal ha
+en forside med åpningstider, en prisliste og et
+kontaktskjema. Bruk rolige farger og gjør den mobilvennlig.</code></pre>
+    <p>Claude Code lager filene, og du kan åpne resultatet i nettleseren med en gang.</p>
+    <div class="tips">
+      <strong>Tips: vær konkret</strong>
+      Jo mer spesifikk du er, jo bedre blir resultatet. "Prislisten skal ha tre kategorier: dame, herre og barn" gir et bedre svar enn "lag en prisliste". Du kan også lime inn lenker til sider du liker stilen på.
+    </div>
+
+    <h2>Steg 3: Juster til du er fornøyd</h2>
+    <p>Ingen side blir perfekt på første forsøk, og det er her arbeidsmåten skinner. Se på siden, og be om endringer i klartekst:</p>
+    <ul>
+      <li>"Gjør overskriften større og bytt bildet på forsiden"</li>
+      <li>"Legg til en seksjon med kundeomtaler"</li>
+      <li>"Siden ser rar ut på mobil, fiks det"</li>
+    </ul>
+    <p>Hver runde tar sekunder til minutter. De fleste bruker mest tid på å bestemme seg for hva de faktisk vil ha, ikke på å få det bygget.</p>
+
+    <h2>Steg 4: Legg siden ut på nett</h2>
+    <p>En nettside på din egen maskin er ikke mye verdt før andre kan se den. Den vanligste gratisruten:</p>
+    <ol>
+      <li>Opprett en konto på <a href="https://github.com" rel="noopener">GitHub</a> og be Claude Code pushe prosjektet dit. Verktøyet kan gjøre hele git-oppsettet for deg.</li>
+      <li>Opprett en konto på <a href="https://vercel.com" rel="noopener">Vercel</a>, velg "Add New Project" og importer GitHub-repoet. Siden er live på et par minutter.</li>
+      <li>Vil du ha eget domene, kjøper du et .no-domene hos for eksempel Domeneshop og kobler det til i Vercel under Domains.</li>
+    </ol>
+    <p>Fra da av holder det å be Claude Code pushe endringer, så oppdateres siden automatisk.</p>
+
+    <h2>Hvor lang tid tar det?</h2>
+    <p>En enkel side med noen seksjoner og et kontaktskjema er fullt mulig å få live på en kveld. Regn med litt ekstra tid første gang til kontoer og oppsett. Mer avanserte ting som booking, innlogging eller betaling går også, men da bør du lese <a href="/guider/bygge-med-ki-uten-a-kode/">Bygge med KI uten å kunne kode</a> først, så du vet hvor fellene ligger.</p>
+
+    <div class="cta-box">
+      <h2>Vil du heller slippe hele jobben?</h2>
+      <p>Fugle bygger nettsiden for deg, fra design til live på eget domene. Du forteller hva du trenger, og får en ferdig side uten å røre en terminal.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.no</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

@@ -53,7 +53,9 @@
   }
   .wrap{max-width:720px;margin:0 auto;padding:0 24px}
 
-  header{padding:40px 0 0}
+  header{padding:40px 0 0;display:flex;justify-content:space-between;align-items:center}
+  .topnav a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500}
+  .topnav a:hover{color:var(--blue)}
   .mark{
     display:flex;align-items:center;gap:10px;
     font-family:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
@@ -201,6 +203,7 @@
     </svg>
     fugle.no
   </div>
+  <nav class="topnav"><a href="/guider/">Guider</a></nav>
 </header>
 
 <main class="wrap">
@@ -407,6 +410,7 @@
 
 <footer class="wrap">
   <span>fugle.no</span>
+  <span><a href="/guider/" style="color:inherit">Guider</a></span>
   <span>Nettsider, automasjon og KI-løsninger</span>
 </footer>
 
