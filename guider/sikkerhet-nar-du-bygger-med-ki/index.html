@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sikkerhet når du bygger med KI: derfor trenger du kunnskap | Fugle.no</title>
+<meta name="description" content="KI kan skrive koden, men den tar ikke ansvaret. Her forklarer vi hvorfor sikkerhet er punktet der KI-bygde løsninger oftest feiler, og hvilken kunnskap du faktisk trenger.">
+<link rel="canonical" href="https://fugle.no/guider/sikkerhet-nar-du-bygger-med-ki/">
+<meta property="og:title" content="Sikkerhet når du bygger med KI: derfor trenger du kunnskap">
+<meta property="og:description" content="KI kan skrive koden, men den tar ikke ansvaret. Derfor er sikkerhet punktet der KI-bygde løsninger oftest feiler.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.no/guider/sikkerhet-nar-du-bygger-med-ki/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%A6%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Sikkerhet når du bygger med KI: derfor trenger du kunnskap",
+      "description": "Hvorfor sikkerhet er punktet der KI-bygde løsninger oftest feiler, og hvilken kunnskap du faktisk trenger for å bygge trygt.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "author": {"@type": "Organization", "name": "Fugle", "url": "https://fugle.no"},
+      "publisher": {"@type": "Organization", "name": "Fugle", "url": "https://fugle.no"},
+      "mainEntityOfPage": "https://fugle.no/guider/sikkerhet-nar-du-bygger-med-ki/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Forsiden", "item": "https://fugle.no/"},
+        {"@type": "ListItem", "position": 2, "name": "Guider", "item": "https://fugle.no/guider/"},
+        {"@type": "ListItem", "position": 3, "name": "Sikkerhet når du bygger med KI", "item": "https://fugle.no/guider/sikkerhet-nar-du-bygger-med-ki/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Skriver KI usikker kode?",
+          "acceptedAnswer": {"@type": "Answer", "text": "KI-verktøy skriver stort sett fornuftig kode og unngår mange klassiske feil. Problemet er at de bygger det du ber om, og hvis du ikke ber om sikkerhet, blir den lett et hull. Risikoen ligger i det du ikke vet at du skulle spurt om."}
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg lansere en KI-bygget app uten sikkerhetsgjennomgang?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Hvis appen bare viser informasjon, ja. Hvis den tar imot brukerdata, passord eller betaling, bør noen med sikkerhetskunnskap se over den først. Feil på disse områdene rammer ikke bare deg, men brukerne dine, og kan bli et juridisk ansvar."}
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er den vanligste sikkerhetsfeilen i KI-bygde prosjekter?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Hemmeligheter på feil sted, typisk API-nøkler i frontend-koden eller i et offentlig GitHub-repo. Deretter kommer manglende validering av det brukerne sender inn, og hjemmesnekret innlogging i stedet for velprøvde løsninger."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.no</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Sikkerhet når du bygger med KI</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <h1>Sikkerhet når du bygger med KI: derfor trenger du kunnskap</h1>
+    <p class="ingress">KI-verktøy har gjort det mulig for hvem som helst å bygge nettsider og apper. Men KI-en tar ikke ansvaret når noe går galt, det gjør du. Og sikkerhet er punktet der manglende kunnskap koster mest.</p>
+
+    <h2>KI-en bygger det du ber om, ikke det du burde bedt om</h2>
+    <p>Moderne KI-verktøy skriver stort sett fornuftig kode. Problemet er ikke at koden er dårlig, det er at du får det du spør om. Ber du om "et innloggingsskjema", får du et innloggingsskjema. Om det tåler tusen innloggingsforsøk i sekundet fra en bot, om passordene lagres riktig, om økten utløper, det er detaljer du må vite at du skal spørre om.</p>
+    <p>Erfarne utviklere bærer på en lang liste med "ting som kan gå galt" og sjekker koden mot den automatisk. Uten den listen ser du ikke hullene, for på overflaten fungerer jo alt.</p>
+
+    <h2>Der det faktisk går galt</h2>
+    <ul>
+      <li><strong>Hemmeligheter på avveie:</strong> API-nøkler og passord i koden eller i et offentlig repo. Les <a href="/guider/lekket-api-nokkel/">hva som skjer når en API-nøkkel lekker</a>, det er styggere enn folk tror.</li>
+      <li><strong>Brukerdata uten beskyttelse:</strong> skjemaer som ikke validerer det som sendes inn, databaser som står åpne, personopplysninger som lagres uten grunn. I Norge er dette fort et GDPR-ansvar.</li>
+      <li><strong>Hjemmelaget innlogging:</strong> autentisering er notorisk vanskelig å få riktig. Velprøvde løsninger finnes, men da må du vite at du skal be om dem.</li>
+      <li><strong>Ingen grenser:</strong> uten forbrukstak og trafikkbegrensning kan en enkelt person med dårlige hensikter gi deg en formidabel regning eller ta ned tjenesten din.</li>
+    </ul>
+    <div class="tips">
+      <strong>Tommelfingerregel</strong>
+      Skal siden bare vise informasjon, kan du trygt bygge selv. Skal den ta imot penger, passord eller personopplysninger, må noen med sikkerhetskunnskap enten bygge den eller se over den før lansering.
+    </div>
+
+    <h2>Kunnskapen du bør skaffe deg</h2>
+    <p>Du trenger ikke bli sikkerhetsekspert for å bygge trygt i det små. Men fire ting bør du forstå før du slipper ekte brukere inn:</p>
+    <ol>
+      <li><strong>Hemmeligheter:</strong> hva en API-nøkkel er, hvor den skal ligge, og hvorfor frontend-kode alltid er offentlig.</li>
+      <li><strong>Inndata:</strong> alt brukere sender inn kan være fiendtlig, og må valideres på serveren.</li>
+      <li><strong>Tilgang:</strong> hvem kan se og endre hva, og hva skjer hvis noen prøver seg på andres data.</li>
+      <li><strong>Grenser:</strong> forbrukstak, trafikkbegrensning og varsler, så en feil har en makspris.</li>
+    </ol>
+    <p>Et godt triks er å bruke KI-en selv: be den "gå gjennom prosjektet som en sikkerhetsekspert og list opp svakheter". Det fanger mye, men erstatter ikke et menneske med erfaring når innsatsen er høy.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Skriver KI usikker kode?</summary>
+        <p>KI-verktøy skriver stort sett fornuftig kode og unngår mange klassiske feil. Problemet er at de bygger det du ber om, og hvis du ikke ber om sikkerhet, blir den lett et hull. Risikoen ligger i det du ikke vet at du skulle spurt om.</p>
+      </details>
+      <details>
+        <summary>Kan jeg lansere en KI-bygget app uten sikkerhetsgjennomgang?</summary>
+        <p>Hvis appen bare viser informasjon, ja. Hvis den tar imot brukerdata, passord eller betaling, bør noen med sikkerhetskunnskap se over den først. Feil på disse områdene rammer ikke bare deg, men brukerne dine, og kan bli et juridisk ansvar.</p>
+      </details>
+      <details>
+        <summary>Hva er den vanligste sikkerhetsfeilen i KI-bygde prosjekter?</summary>
+        <p>Hemmeligheter på feil sted, typisk API-nøkler i frontend-koden eller i et offentlig GitHub-repo. Deretter kommer manglende validering av det brukerne sender inn, og hjemmesnekret innlogging i stedet for velprøvde løsninger.</p>
+      </details>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du bygge trygt fra start?</h2>
+      <p>Vi har lansert KI-tjenester og botter med titusenvis av brukere, og vet hvor fellene ligger. Vi bygger løsningen din med sikkerheten på plass, eller går gjennom det du allerede har laget.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.no</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

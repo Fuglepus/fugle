@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 vanlige sikkerhetsfeil på nettsider, og hvordan du unngår dem | Fugle.no</title>
+<meta name="description" content="De fleste nettsider som blir hacket, rammes av de samme kjente feilene. Her er de 7 vanligste sikkerhetsfeilene, hva de kan koste deg, og hvordan du unngår hver av dem.">
+<link rel="canonical" href="https://fugle.no/guider/vanlige-sikkerhetsfeil/">
+<meta property="og:title" content="7 vanlige sikkerhetsfeil på nettsider, og hvordan du unngår dem">
+<meta property="og:description" content="De fleste nettsider som blir hacket, rammes av de samme kjente feilene. Her er de 7 vanligste, og hvordan du unngår dem.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.no/guider/vanlige-sikkerhetsfeil/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%A6%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "7 vanlige sikkerhetsfeil på nettsider, og hvordan du unngår dem",
+      "description": "De vanligste sikkerhetsfeilene på nettsider og i apper, hva de kan koste, og hvordan du unngår hver av dem.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "author": {"@type": "Organization", "name": "Fugle", "url": "https://fugle.no"},
+      "publisher": {"@type": "Organization", "name": "Fugle", "url": "https://fugle.no"},
+      "mainEntityOfPage": "https://fugle.no/guider/vanlige-sikkerhetsfeil/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Forsiden", "item": "https://fugle.no/"},
+        {"@type": "ListItem", "position": 2, "name": "Guider", "item": "https://fugle.no/guider/"},
+        {"@type": "ListItem", "position": 3, "name": "Vanlige sikkerhetsfeil", "item": "https://fugle.no/guider/vanlige-sikkerhetsfeil/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hvorfor skulle noen angripe min lille nettside?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Angrepene er automatiserte og bryr seg ikke om størrelse. Botter skanner hele internett etter kjente svakheter og angriper alt de finner. En liten norsk nettside blir truffet av de samme skannerne som de store, ofte samme dag som den lanseres."}
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er den viktigste enkelttingen jeg kan gjøre for sikkerheten?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Hold hemmeligheter ute av koden og frontend. API-nøkler og passord skal ligge i miljøvariabler på serveren, aldri i kode som publiseres eller sendes til nettleseren. Det stopper den vanligste og dyreste feilen."}
+        },
+        {
+          "@type": "Question",
+          "name": "Hvor ofte bør jeg oppdatere avhengighetene til nettsiden?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Sjekk for sikkerhetsoppdateringer minst månedlig, og umiddelbart når en alvorlig sårbarhet blir kjent i noe du bruker. Verktøy som GitHub sin Dependabot kan varsle deg automatisk, så du slipper å følge med manuelt."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.no</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Vanlige sikkerhetsfeil</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <h1>7 vanlige sikkerhetsfeil på nettsider, og hvordan du unngår dem</h1>
+    <p class="ingress">De fleste nettsider som blir hacket, rammes ikke av genial hacking, men av de samme kjente feilene om og om igjen. Her er de syv vanligste, hva de kan koste deg, og hva du gjør i stedet.</p>
+
+    <h2>1. Hemmeligheter i koden</h2>
+    <p>API-nøkler, passord og tilgangskoder som ligger rett i kildekoden, havner før eller siden på avveie, gjerne via GitHub. Konsekvensen kan være en regning på titusener, se <a href="/guider/lekket-api-nokkel/">hva som skjer når en API-nøkkel lekker</a>.</p>
+    <p><strong>Gjør i stedet:</strong> legg hemmeligheter i miljøvariabler, og la <code>.env</code>-filen stå i <code>.gitignore</code>.</p>
+
+    <h2>2. Stole på det brukerne sender inn</h2>
+    <p>Alt som kommer fra et skjema eller en URL kan være fiendtlig. Uten validering på serveren kan innsendte data manipulere databasen din (SQL-injeksjon) eller plante skript hos andre besøkende (XSS).</p>
+    <p><strong>Gjør i stedet:</strong> valider og rens all inndata på serveren, ikke bare i nettleseren, og bruk databaseverktøy som skiller data fra kommandoer.</p>
+
+    <h2>3. Hjemmelaget innlogging</h2>
+    <p>Egen passordhåndtering ender lett med passord lagret i klartekst eller økter som aldri utløper. Innlogging er blant det vanskeligste å få riktig.</p>
+    <p><strong>Gjør i stedet:</strong> bruk en etablert innloggingstjeneste eller et velprøvd bibliotek, og la brukerne logge inn med Google, Vipps eller BankID der det passer.</p>
+
+    <h2>4. Ingen grenser på noe</h2>
+    <p>Uten trafikkbegrensning kan en bot prøve tusenvis av passord i minuttet eller kalle det dyre KI-endepunktet ditt til kontoen er tom.</p>
+    <p><strong>Gjør i stedet:</strong> sett opp begrensning på innloggingsforsøk og API-kall, og sett forbrukstak med varsler hos alle betalte tjenester.</p>
+
+    <h2>5. Utdaterte avhengigheter</h2>
+    <p>Nettsider bygges på biblioteker som jevnlig får kjente sårbarheter. Botter skanner nettet etter sider som kjører gamle versjoner, og angriper automatisk.</p>
+    <p><strong>Gjør i stedet:</strong> skru på automatiske sårbarhetsvarsler, for eksempel Dependabot på GitHub, og oppdater jevnlig.</p>
+
+    <h2>6. Åpne databaser og lagringsbøtter</h2>
+    <p>En database eller skylagring som står åpen mot internett, blir funnet. Det finnes søkemotorer laget kun for å finne dem, og norske virksomheter har fått GDPR-saker på akkurat dette.</p>
+    <p><strong>Gjør i stedet:</strong> steng alt som ikke må være åpent, krev autentisering på databasen, og sjekk delingsinnstillingene på lagringen din.</p>
+
+    <h2>7. Ingen plan for når det smeller</h2>
+    <p>Uten sikkerhetskopier og logger er et innbrudd eller en feil katastrofal i stedet for irriterende. Mange oppdager først etter uhellet at backupen aldri fungerte.</p>
+    <p><strong>Gjør i stedet:</strong> automatiske sikkerhetskopier du faktisk har testet å gjenopprette, og logger som viser hva som skjedde.</p>
+
+    <div class="tips">
+      <strong>Bygger du med KI?</strong>
+      KI-verktøy gjør mye av dette riktig av seg selv, men bare hvis du vet nok til å be om det og kontrollere det. Les <a href="/guider/sikkerhet-nar-du-bygger-med-ki/">Sikkerhet når du bygger med KI</a> for hva du selv må kunne.
+    </div>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hvorfor skulle noen angripe min lille nettside?</summary>
+        <p>Angrepene er automatiserte og bryr seg ikke om størrelse. Botter skanner hele internett etter kjente svakheter og angriper alt de finner. En liten norsk nettside blir truffet av de samme skannerne som de store, ofte samme dag som den lanseres.</p>
+      </details>
+      <details>
+        <summary>Hva er den viktigste enkelttingen jeg kan gjøre for sikkerheten?</summary>
+        <p>Hold hemmeligheter ute av koden og frontend. API-nøkler og passord skal ligge i miljøvariabler på serveren, aldri i kode som publiseres eller sendes til nettleseren. Det stopper den vanligste og dyreste feilen.</p>
+      </details>
+      <details>
+        <summary>Hvor ofte bør jeg oppdatere avhengighetene til nettsiden?</summary>
+        <p>Sjekk for sikkerhetsoppdateringer minst månedlig, og umiddelbart når en alvorlig sårbarhet blir kjent i noe du bruker. Verktøy som GitHub sin Dependabot kan varsle deg automatisk, så du slipper å følge med manuelt.</p>
+      </details>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du ha noen til å sjekke siden din?</h2>
+      <p>Vi går gjennom nettsiden eller appen din mot nettopp denne listen, og bygger nye løsninger med sikkerheten på plass fra start. Send oss en melding, så tar vi det derfra.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.no</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

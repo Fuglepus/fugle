@@ -100,6 +100,17 @@ article pre code{background:none;border:none;padding:0}
 }
 .tips strong{display:block;margin-bottom:6px}
 
+.faq{margin-top:44px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0 14px}
+.faq summary{
+  font-family:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  font-weight:600;font-size:1.02rem;
+  cursor:pointer;padding:12px 0 0;
+  list-style-position:outside;
+}
+.faq summary:hover{color:var(--blue)}
+.faq details p{margin-top:10px;color:var(--muted);max-width:60ch}
+
 .cta-box{
   margin-top:48px;
   background:var(--card);
