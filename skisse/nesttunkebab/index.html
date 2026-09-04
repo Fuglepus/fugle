@@ -10,221 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --cream:#FAF6EF;
-    --ink:#1B1712;
-    --muted:#6E6659;
-    --line:#E9E1D2;
-    --card:#FFFFFF;
-    --red:#C6362B;
-    --red-dark:#A32A21;
-    --green:#1F7A3E;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--cream);
-    color:var(--ink);
-    font-family:"Inter", "Segoe UI", system-ui, sans-serif;
-    font-size:16.5px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  img{max-width:100%;display:block}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  h1,h2,.display{
-    font-family:"Anton", "Arial Narrow", sans-serif;
-    font-weight:400;
-    text-transform:uppercase;
-    letter-spacing:.01em;
-    line-height:1.05;
-  }
-
-  /* skisse-varsel */
-  .notice{
-    background:var(--ink);color:#EFE9DE;
-    font-size:.8rem;text-align:center;
-    padding:7px 16px;
-  }
-  .notice a{color:#fff}
-
-  /* topp */
-  header{
-    background:var(--cream);
-    border-bottom:1px solid var(--line);
-  }
-  .bar{
-    display:flex;align-items:center;justify-content:space-between;
-    gap:20px;padding:14px 0;
-  }
-  .logo img{height:58px;width:auto}
-  nav{display:flex;align-items:center;gap:26px}
-  nav a{
-    color:var(--ink);text-decoration:none;
-    font-size:.95rem;font-weight:600;
-  }
-  nav a:hover{color:var(--red)}
-  .tel{
-    background:var(--red);color:#fff !important;
-    padding:10px 18px;border-radius:8px;
-    white-space:nowrap;
-  }
-  .tel:hover{background:var(--red-dark);color:#fff !important}
-
-  /* hero */
-  .hero{
-    position:relative;
-    background:#171310 url("/skisse/nesttunkebab/bilder/om-oss-background.jpg") center/cover no-repeat;
-    color:#fff;
-  }
-  .hero::before{
-    content:"";position:absolute;inset:0;
-    background:rgba(18,14,10,.52);
-  }
-  .hero-inner{
-    position:relative;
-    padding:96px 0 190px;
-    max-width:640px;
-  }
-  .eyebrow{
-    display:inline-block;
-    font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-    color:#F5D9A8;
-    margin-bottom:14px;
-  }
-  .hero h1{
-    font-size:clamp(2.6rem, 7vw, 4.4rem);
-    text-wrap:balance;
-  }
-  .hero p{
-    margin-top:18px;font-size:1.1rem;max-width:44ch;
-    color:rgba(255,255,255,.88);
-  }
-  .hero-knapper{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-  .knapp{
-    display:inline-block;text-decoration:none;
-    font-weight:700;font-size:1rem;
-    padding:14px 26px;border-radius:8px;
-  }
-  .knapp.rod{background:var(--red);color:#fff}
-  .knapp.rod:hover{background:var(--red-dark)}
-  .knapp.hvit{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
-  .knapp.hvit:hover{background:#fff;color:var(--ink)}
-
-  /* infostripe */
-  .info{
-    position:relative;
-    margin-top:-92px;
-    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
-    padding-bottom:0;
-  }
-  .info > div{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:22px 24px;
-    box-shadow:0 10px 30px rgba(27,23,18,.08);
-  }
-  .info b{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
-  .info span{font-weight:600}
-  .info small{display:block;color:var(--muted);font-weight:400;font-size:.88rem}
-
-  /* meny */
-  .meny{padding:80px 0 30px}
-  .sek-head{max-width:60ch;margin-bottom:36px}
-  .sek-head h2{font-size:clamp(1.9rem,4vw,2.6rem)}
-  .sek-head h2 em{font-style:normal;color:var(--red)}
-  .sek-head p{margin-top:10px;color:var(--muted)}
-  .meny-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
-    align-items:start;
-  }
-  .kategori{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:26px 26px 18px;
-  }
-  .kategori h3{
-    font-family:"Anton", sans-serif;font-weight:400;
-    text-transform:uppercase;font-size:1.25rem;letter-spacing:.02em;
-    padding-bottom:12px;border-bottom:2px solid var(--red);
-  }
-  .kategori h3 small{
-    display:block;font-family:"Inter",sans-serif;text-transform:none;
-    font-size:.8rem;color:var(--muted);letter-spacing:0;font-weight:500;
-    margin-top:2px;
-  }
-  .rett{padding:14px 0;border-bottom:1px dashed var(--line)}
-  .rett:last-child{border-bottom:0}
-  .rett-topp{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-  .rett-topp b{font-size:.98rem}
-  .pris{white-space:nowrap;font-weight:700;color:var(--red);font-variant-numeric:tabular-nums}
-  .rett p{font-size:.86rem;color:var(--muted);margin-top:2px}
-  .meny-mer{
-    margin-top:22px;text-align:center;color:var(--muted);font-size:.95rem;
-  }
-
-  /* om oss */
-  .om{padding:70px 0}
-  .om-grid{
-    display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;
-  }
-  .om img{border-radius:12px;box-shadow:0 14px 34px rgba(27,23,18,.14)}
-  .om h2{font-size:clamp(1.9rem,4vw,2.6rem)}
-  .om h2 em{font-style:normal;color:var(--red)}
-  .om p{margin-top:14px;color:#3D362C}
-  .sjekk{list-style:none;margin-top:18px}
-  .sjekk li{
-    padding-left:28px;position:relative;margin-top:8px;font-weight:600;
-  }
-  .sjekk li::before{
-    content:"✓";position:absolute;left:0;top:0;
-    color:var(--green);font-weight:800;
-  }
-
-  /* bestill-cta */
-  .bestill{background:var(--red);color:#fff}
-  .bestill-grid{
-    display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center;
-  }
-  .bestill-tekst{padding:64px 0}
-  .bestill h2{font-size:clamp(2rem,4.5vw,3rem)}
-  .bestill p{margin-top:14px;font-size:1.08rem;color:rgba(255,255,255,.92);max-width:46ch}
-  .bestill .knapp{background:#fff;color:var(--red);margin-top:26px}
-  .bestill .knapp:hover{background:var(--ink);color:#fff}
-  .bestill-bilde{align-self:stretch}
-  .bestill-bilde img{height:100%;width:100%;object-fit:cover}
-
-  /* bunn */
-  footer{background:var(--ink);color:#CFC7B8;padding:56px 0 30px}
-  .foot-grid{
-    display:grid;grid-template-columns:auto 1fr 1fr;gap:48px;align-items:start;
-  }
-  .foot-grid img{height:110px;width:auto}
-  footer b{color:#fff;display:block;margin-bottom:8px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
-  footer a{color:#fff}
-  .foot-bunn{
-    margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);
-    font-size:.82rem;color:#96907F;
-    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  }
-  .foot-bunn a{color:#CFC7B8}
-
-  @media (max-width:860px){
-    .bar{flex-wrap:wrap}
-    nav{gap:18px;flex-wrap:wrap}
-    .hero-inner{padding:64px 0 150px}
-    .info{grid-template-columns:1fr;margin-top:-70px}
-    .meny-grid{grid-template-columns:1fr}
-    .om-grid{grid-template-columns:1fr;gap:28px}
-    .bestill-grid{grid-template-columns:1fr}
-    .bestill-tekst{padding:48px 0 0}
-    .bestill-bilde{max-height:420px;overflow:hidden;margin-top:36px}
-    .foot-grid{grid-template-columns:1fr;gap:28px}
-  }
-</style>
+<link rel="stylesheet" href="/skisse/nesttunkebab/stil.css">
 </head>
 <body>
 
@@ -232,12 +18,13 @@
 
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#" aria-label="Nesttun Kebab og Pizza">
+    <a class="logo" href="/skisse/nesttunkebab/" aria-label="Nesttun Kebab og Pizza">
       <img src="/skisse/nesttunkebab/bilder/logo-banner.png" alt="Nesttun Kebab & Pizza">
     </a>
     <nav>
-      <a href="#meny">Meny</a>
+      <a href="/skisse/nesttunkebab/meny/">Meny</a>
       <a href="#om-oss">Om oss</a>
+      <a href="#vurderinger">Vurderinger</a>
       <a href="#kontakt">Kontakt</a>
       <a class="tel" href="tel:+4755981200">Ring 55 98 12 00</a>
     </nav>
@@ -250,7 +37,7 @@
     <h1>Byens beste kebab. Ferskt, hver dag.</h1>
     <p>Kebab, pizza og burger laget på ferske råvarer, klart på minutter. Bestill på telefon og hent maten varm hos oss på Nesttun.</p>
     <div class="hero-knapper">
-      <a class="knapp rod" href="#meny">Se menyen</a>
+      <a class="knapp rod" href="/skisse/nesttunkebab/meny/">Se menyen</a>
       <a class="knapp hvit" href="tel:+4755981200">Ring og bestill</a>
     </div>
   </div>
@@ -354,7 +141,10 @@
     </div>
   </div>
 
-  <p class="meny-mer">…og mye mer: calzone, pasta, salater, barnemeny, drikke og tilbehør. Full meny får egen side.</p>
+  <div class="meny-mer">
+    <p>…og mye mer: calzone, pasta, salater, barnemeny, drikke og tilbehør.</p>
+    <a class="knapp rod" href="/skisse/nesttunkebab/meny/">Se hele menyen</a>
+  </div>
 </section>
 
 <section class="om wrap" id="om-oss">
@@ -370,6 +160,56 @@
       </ul>
     </div>
   </div>
+</section>
+
+<section class="vurdering wrap" id="vurderinger">
+  <div class="sek-head">
+    <h2>Hva kundene <em>sier</em></h2>
+  </div>
+
+  <div class="anmeldelse-grid">
+    <figure class="anmeldelse">
+      <span class="stjerner" aria-label="5 av 5 stjerner">★★★★★</span>
+      <h3>Great food!</h3>
+      <blockquote>«Awesome food! Awesome service! Going back soon!»</blockquote>
+      <figcaption>Mark, april 2021</figcaption>
+    </figure>
+    <figure class="anmeldelse">
+      <span class="stjerner" aria-label="5 av 5 stjerner">★★★★★</span>
+      <h3>Stedet for god kebab</h3>
+      <blockquote>«For alle som elsker kebab, prøv disse her. Perfekt smak og perfekt service 😀»</blockquote>
+      <figcaption>John, april 2021</figcaption>
+    </figure>
+  </div>
+
+  <form class="vurder-form">
+    <h3>Gi oss din vurdering</h3>
+    <div class="felt-rad">
+      <label class="felt">
+        <span>Ditt navn</span>
+        <input type="text" name="navn" autocomplete="name">
+      </label>
+      <label class="felt">
+        <span>Tittel på vurderingen</span>
+        <input type="text" name="tittel">
+      </label>
+    </div>
+    <div class="felt felt-full">
+      <span id="vurder-label">Din vurdering</span>
+      <div class="stjernevalg" role="radiogroup" aria-labelledby="vurder-label">
+        <input type="radio" id="s5" name="stjerner" value="5"><label for="s5" aria-label="5 stjerner">★</label>
+        <input type="radio" id="s4" name="stjerner" value="4"><label for="s4" aria-label="4 stjerner">★</label>
+        <input type="radio" id="s3" name="stjerner" value="3"><label for="s3" aria-label="3 stjerner">★</label>
+        <input type="radio" id="s2" name="stjerner" value="2"><label for="s2" aria-label="2 stjerner">★</label>
+        <input type="radio" id="s1" name="stjerner" value="1"><label for="s1" aria-label="1 stjerne">★</label>
+      </div>
+    </div>
+    <label class="felt felt-full">
+      <span>Melding</span>
+      <textarea name="melding"></textarea>
+    </label>
+    <button class="knapp rod" type="submit">Send vurdering</button>
+  </form>
 </section>
 
 <section class="bestill" id="kontakt">
