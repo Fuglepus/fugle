@@ -124,6 +124,26 @@
   .hero p{
     margin-top:22px;max-width:52ch;color:var(--muted);font-size:1.05rem;
   }
+  .hero-tags{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:8px;
+    list-style:none;
+  }
+  .hero-tags a{
+    display:inline-block;
+    font-size:.78rem;font-weight:500;
+    letter-spacing:.04em;text-transform:uppercase;
+    color:var(--blue-ink);
+    background:color-mix(in srgb, var(--blue) 10%, var(--card));
+    border:1px solid color-mix(in srgb, var(--blue) 25%, transparent);
+    border-radius:999px;
+    padding:5px 14px;
+    text-decoration:none;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .hero-tags a:hover{
+    background:color-mix(in srgb, var(--blue) 18%, var(--card));
+    border-color:color-mix(in srgb, var(--blue) 45%, transparent);
+  }
 
   .projects{padding:56px 0 8px}
   .projects > h2{
@@ -297,6 +317,13 @@
   <section class="hero">
     <h1>Vi bygger nettsider. Og <em>ferdige produkter</em>.</h1>
     <p>Vi lager nettsider, automasjon og KI-løsninger. Her er sju prosjekter vi har tatt fra idé til lansering, alt fra sanntidsanalyse av fotballkamper til AI som styler boligen din med tingene du allerede eier.</p>
+    <ul class="hero-tags" aria-label="Hva vi tilbyr">
+      <li><a href="/tjenester/">Nettsider</a></li>
+      <li><a href="/tjenester/">Bestillingssystemer</a></li>
+      <li><a href="/tjenester/">Booking</a></li>
+      <li><a href="/tjenester/">Automatisering</a></li>
+      <li><a href="/tjenester/">KI-løsninger</a></li>
+    </ul>
   </section>
 
   <section class="projects" aria-label="Prosjekter">
