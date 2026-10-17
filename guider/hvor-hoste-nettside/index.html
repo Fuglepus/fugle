@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hvor bør du hoste nettsiden? Webhotell, Vercel og Netlify | Fugle.dev</title>
+<meta name="description" content="Hvor bør du hoste nettsiden? Vi sammenligner webhotell, Vercel, Netlify, Cloudflare Pages og VPS på pris, fart og vedlikehold, og sier hva vi ville valgt.">
+<link rel="canonical" href="https://fugle.dev/guider/hvor-hoste-nettside/">
+<meta property="og:title" content="Hvor bør du hoste nettsiden? Webhotell, Vercel og Netlify">
+<meta property="og:description" content="Hvor bør du hoste nettsiden? Vi sammenligner webhotell, Vercel, Netlify, Cloudflare Pages og VPS på pris, fart og vedlikehold, og sier hva vi ville valgt.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/hvor-hoste-nettside/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Hvor bør du hoste nettsiden? Webhotell, Vercel og Netlify",
+      "description": "Hvor bør du hoste nettsiden? Vi sammenligner webhotell, Vercel, Netlify, Cloudflare Pages og VPS på pris, fart og vedlikehold, og sier hva vi ville valgt.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/hvor-hoste-nettside/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hvor hoste nettside",
+          "item": "https://fugle.dev/guider/hvor-hoste-nettside/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva koster det å hoste en nettside?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Et norsk webhotell for WordPress koster typisk 40 til 150 kr i måneden. En statisk bedriftsside kan hostes gratis på Cloudflare Pages eller Netlify, eller på Vercel Pro for rundt 20 dollar per bruker i måneden. Nettsidebyggere har hosting inkludert i planen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg bruke Vercel gratis til bedriftsnettsiden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. Vercels gratisplan Hobby er kun for personlige, ikke-kommersielle prosjekter. En bedriftsside skal ligge på Pro-planen. Cloudflare Pages tillater kommersiell bruk på gratisplanen og er et godt alternativ for statiske sider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er forskjellen på webhotell og Vercel eller Netlify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Et webhotell er en delt server som kjører PHP og databaser, og passer for WordPress. Vercel, Netlify og Cloudflare Pages publiserer siden på et globalt nettverk og passer for statiske og moderne sider. De er raskere og krever nesten ikke vedlikehold."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Må nettsiden hostes i Norge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. For en vanlig nettside betyr serverens plassering lite. Behandler siden personopplysninger, trenger du databehandleravtale med leverandøren og et lovlig grunnlag for overføring ut av EØS hvis data havner der."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er den raskeste hostingen for en liten bedrift?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En statisk side på et globalt nettverk som Cloudflare Pages, Netlify eller Vercel er nesten alltid raskest. Farten avhenger likevel mest av hvordan siden er bygget. En tung side blir ikke rask av å flytte den."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Hvor hoste nettside</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Hvor bør du hoste nettsiden?</h1>
+    <p class="ingress">Kort svar: det avhenger av hvordan siden er bygget. En WordPress-side trenger et webhotell, typisk 40 til 150 kr i måneden. En statisk eller moderne side bør ligge på en plattform som Cloudflare Pages, Netlify eller Vercel, der en liten bedriftsside ofte koster 0 til rundt 200 kr i måneden. Har du Wix eller Squarespace, er hostingen allerede inkludert, og du trenger ikke tenke på det.</p>
+    <h2>Hva betyr det å hoste en nettside?</h2>
+    <p>Å hoste en nettside betyr å leie plass på en server som er koblet til internett døgnet rundt, slik at siden er tilgjengelig når noen skriver inn adressen din. Domenet er adressen, hostingen er huset. De kjøpes ofte hver for seg, og det er en fordel. Har du ikke domenet ennå, start med <a href="/guider/kjope-domene/">Slik kjøper du et .no-domene</a>.</p>
+
+    <h2>Hvilken hosting passer til hvilken nettside?</h2>
+    <p>Hostingvalget følger av hvilken teknologi siden er laget med, ikke omvendt. Spør den som bygger siden hva den trenger, og velg ut fra tabellen:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Type</th><th>Eksempler</th><th>Typisk pris</th><th>Passer for</th><th>Vedlikehold</th></tr></thead>
+      <tbody>
+        <tr><td>Webhotell</td><td>Domeneshop, One.com, Webhuset</td><td>ca. 40 til 150 kr/mnd</td><td>WordPress og PHP-sider</td><td>Du må oppdatere WordPress og plugins</td></tr>
+        <tr><td>Administrert WordPress</td><td>Ulike norske og internasjonale leverandører</td><td>ofte 150 til 500 kr/mnd</td><td>Viktige WordPress-sider og nettbutikker</td><td>Leverandøren tar mye av oppdateringene</td></tr>
+        <tr><td>Statisk og moderne hosting</td><td>Cloudflare Pages, Netlify, Vercel</td><td>0 kr til ca. 20 USD/mnd for småbedrifter</td><td>Statiske sider, React, Next.js, Astro</td><td>Nesten ingenting</td></tr>
+        <tr><td>Egen virtuell server (VPS)</td><td>Hetzner, DigitalOcean, norske skyleverandører</td><td>ca. 50 til 300 kr/mnd</td><td>Utviklere med spesielle behov</td><td>Alt er ditt ansvar</td></tr>
+        <tr><td>Nettsidebygger</td><td>Wix, Squarespace</td><td>Inkludert i planen</td><td>Sider bygget i verktøyet</td><td>Ingen, men full innlåsing</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Er et vanlig webhotell fortsatt et godt valg?</h2>
+    <p>Et webhotell er fortsatt riktig valg hvis siden din kjører WordPress eller et annet PHP-system. Norske webhotell er rimelige og har support på norsk: hos Domeneshop koster for eksempel de tre webhotellnivåene 39, 69 og 99 kr i måneden. Ulempen er at du deler server med mange andre, og at farten avhenger mye av hvor godt siden er optimalisert. Billig webhotell pluss tung WordPress-side er den vanligste årsaken til trege bedriftssider vi ser. Mer om det i <a href="/guider/treg-nettside/">Hvorfor er nettsiden treg?</a>.</p>
+
+    <h2>Hva er Vercel, Netlify og Cloudflare Pages?</h2>
+    <p>Vercel, Netlify og Cloudflare Pages er plattformer som legger nettsiden ut på et globalt nettverk av servere, slik at den lastes raskt fra hvor som helst, uten at du drifter noen server selv. Du kobler dem til koden din, for eksempel på GitHub, og hver gang koden endres, publiseres siden på nytt automatisk. HTTPS er inkludert og fornyes av seg selv.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Plattform</th><th>Gratisplan</th><th>Kommersiell bruk på gratisplan</th><th>Betalt nivå</th></tr></thead>
+      <tbody>
+        <tr><td>Cloudflare Pages</td><td>Ja, raus for statiske sider</td><td>Ja</td><td>Rimelige tillegg ved behov for mer funksjonalitet</td></tr>
+        <tr><td>Netlify</td><td>Ja, med et månedlig kvotesystem (kreditter)</td><td>Sjekk gjeldende vilkår</td><td>Betalte planer med større kvote</td></tr>
+        <tr><td>Vercel</td><td>Ja (Hobby)</td><td>Nei, Hobby er kun for ikke-kommersielt bruk</td><td>Pro, ca. 20 USD per bruker i måneden</td></tr>
+        <tr><td>GitHub Pages</td><td>Ja</td><td>Ikke ment for å drive en nettbutikk eller kommersiell tjeneste</td><td>Ingen egen hostingplan</td></tr>
+      </tbody>
+    </table></div>
+    <p>Det viktige punktet mange overser: Vercels gratisplan er ikke til bedriftsbruk. Skal en bedriftsside ligge på Vercel, er det Pro som gjelder. For en enkel statisk bedriftsside er Cloudflare Pages ofte det mest kostnadseffektive valget. Vil du prøve selv, har vi en guide til å <a href="/guider/publisere-nettside-gratis/">publisere nettsiden gratis med GitHub og Vercel</a>.</p>
+    <div class="tips">
+      <strong>Vår egen erfaring</strong>
+      Siden du leser nå, ligger på Vercel, og de fleste prosjektene vi har lansert, kjører på denne typen plattformer. Det er ikke fordi de er trendy, men fordi en statisk side der nesten ikke trenger vedlikehold og nesten ikke kan hackes.
+    </div>
+
+    <h2>Når trenger du en egen server?</h2>
+    <p>En egen virtuell server (VPS) trenger du bare hvis du kjører programvare som ikke passer på de andre plattformene, for eksempel en bot, en tung bakgrunnsjobb eller en database du vil styre selv. For en vanlig bedriftsside er det feil verktøy. Du får billig og kraftig maskinvare, men også ansvar for oppdateringer, brannmur, sikkerhetskopi og overvåking. Vi bruker servere til slike oppgaver i egne prosjekter, aldri til en ren presentasjonsside.</p>
+
+    <h2>Spiller det noen rolle hvor serveren står?</h2>
+    <p>For selve nettsiden spiller plasseringen liten rolle så lenge leverandøren bruker et globalt nettverk; for persondata spiller den en rolle. Lagrer siden personopplysninger, for eksempel innsendte skjema, bookinger eller kundekontoer, skal du ha databehandleravtale med leverandøren og et lovlig grunnlag for eventuell overføring ut av EØS, som EU-US Data Privacy Framework for amerikanske selskaper som er sertifisert. Mer om dette i <a href="/guider/ki-og-personvern/">KI og personvern</a>, som også dekker de generelle GDPR-reglene.</p>
+
+    <h2>Hva med nettbutikk, booking og innlogging?</h2>
+    <p>Har siden innlogging, betaling eller booking, trenger den mer enn ren statisk hosting, men sjelden en egen server. Det vanlige i dag er en statisk eller moderne frontend på Vercel, Netlify eller Cloudflare, koblet til ferdige tjenester: Stripe eller Vipps for betaling, en database som Supabase, og et bookingsystem via API. Da betaler du for hver tjeneste etter bruk, og ofte er alt gratis eller nesten gratis til trafikken tar seg opp. En nettbutikkplattform som Shopify har hostingen inkludert, akkurat som Wix.</p>
+
+    <h2>Fem spørsmål du bør stille før du velger</h2>
+    <ol>
+      <li><strong>Hva er siden bygget med?</strong> WordPress trenger PHP og database. En statisk side gjør ikke det.</li>
+      <li><strong>Hva skjer ved mye trafikk?</strong> Får du en regning, blir siden stengt, eller bare tregere?</li>
+      <li><strong>Hvem tar sikkerhetskopi, og hvor ofte?</strong> Ha minst én kopi utenfor vertskapet.</li>
+      <li><strong>Hvor lett er det å flytte?</strong> Kan du laste ned alt, eller er siden låst til plattformen?</li>
+      <li><strong>Hva koster det om tre år?</strong> Mange webhotell har lav introduksjonspris og høyere pris ved fornyelse.</li>
+    </ol>
+
+    <h2>Fallgruver vi ser ofte</h2>
+    <ul>
+      <li><strong>"Drift" som egentlig bare er hosting</strong> til ti ganger markedspris. Spør hva som faktisk gjøres hver måned.</li>
+      <li><strong>Gratisplan i strid med vilkårene,</strong> for eksempel en bedriftsside på Vercel Hobby. Det fungerer til det plutselig ikke gjør det.</li>
+      <li><strong>Ingen kontroll over DNS.</strong> Ligger DNS hos en leverandør du ikke har innlogging til, er du låst.</li>
+      <li><strong>Gammel PHP-versjon</strong> på webhotellet. Det er en sikkerhetsrisiko og gjør siden tregere.</li>
+      <li><strong>E-post og nettside på samme lille webhotell.</strong> Går det ene ned, går ofte det andre også. Se <a href="/guider/epost-pa-eget-domene/">e-post på eget domene</a>.</li>
+    </ul>
+
+    <h2>Hva vi ville valgt</h2>
+    <p>For en ny bedriftsside ville vi bygget den statisk og lagt den på Cloudflare Pages eller Netlify gratis, eller Vercel Pro hvis siden har funksjoner som drar nytte av det. Har du en WordPress-side du er fornøyd med, ville vi latt den ligge på et seriøst norsk webhotell med automatiske oppdateringer og daglig backup. Det vi aldri ville gjort, er å betale flere hundre kroner i måneden for "drift" av en side som ikke trenger det.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva koster det å hoste en nettside?</summary>
+        <p>Et norsk webhotell for WordPress koster typisk 40 til 150 kr i måneden. En statisk bedriftsside kan hostes gratis på Cloudflare Pages eller Netlify, eller på Vercel Pro for rundt 20 dollar per bruker i måneden. Nettsidebyggere har hosting inkludert i planen.</p>
+      </details>
+      <details>
+        <summary>Kan jeg bruke Vercel gratis til bedriftsnettsiden?</summary>
+        <p>Nei. Vercels gratisplan Hobby er kun for personlige, ikke-kommersielle prosjekter. En bedriftsside skal ligge på Pro-planen. Cloudflare Pages tillater kommersiell bruk på gratisplanen og er et godt alternativ for statiske sider.</p>
+      </details>
+      <details>
+        <summary>Hva er forskjellen på webhotell og Vercel eller Netlify?</summary>
+        <p>Et webhotell er en delt server som kjører PHP og databaser, og passer for WordPress. Vercel, Netlify og Cloudflare Pages publiserer siden på et globalt nettverk og passer for statiske og moderne sider. De er raskere og krever nesten ikke vedlikehold.</p>
+      </details>
+      <details>
+        <summary>Må nettsiden hostes i Norge?</summary>
+        <p>Nei. For en vanlig nettside betyr serverens plassering lite. Behandler siden personopplysninger, trenger du databehandleravtale med leverandøren og et lovlig grunnlag for overføring ut av EØS hvis data havner der.</p>
+      </details>
+      <details>
+        <summary>Hva er den raskeste hostingen for en liten bedrift?</summary>
+        <p>En statisk side på et globalt nettverk som Cloudflare Pages, Netlify eller Vercel er nesten alltid raskest. Farten avhenger likevel mest av hvordan siden er bygget. En tung side blir ikke rask av å flytte den.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/kjope-domene/">Slik kjøper du et .no-domene</a></li>
+        <li><a href="/guider/publisere-nettside-gratis/">Slik publiserer du nettsiden gratis</a></li>
+        <li><a href="/guider/wordpress-eller-egen-nettside/">WordPress eller skreddersydd nettside?</a></li>
+        <li><a href="/guider/https-og-ssl/">Hva er HTTPS og SSL-sertifikat?</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du ha en side som nesten ikke koster noe å drifte?</h2>
+      <p>Vi bygger raske, statiske nettsider med moderne KI-verktøy og setter dem opp på riktig hosting fra start, med ditt eget domene og HTTPS. Send oss en e-post om hva du har i dag, så foreslår vi en løsning og en pris.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

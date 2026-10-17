@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supabase eller Firebase? Pris, fordeler og valg 2026 | Fugle.dev</title>
+<meta name="description" content="Supabase gir deg en ekte Postgres-database og forutsigbar pris, Firebase er sterkest på mobil og sanntid. Sammenligning av pris, grenser og fallgruver.">
+<link rel="canonical" href="https://fugle.dev/guider/supabase-eller-firebase/">
+<meta property="og:title" content="Supabase eller Firebase? Pris, fordeler og hva du bør velge">
+<meta property="og:description" content="Supabase gir deg en ekte Postgres-database og forutsigbar pris, Firebase er sterkest på mobil og sanntid. Sammenligning av pris, grenser og fallgruver.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/supabase-eller-firebase/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Supabase eller Firebase? Pris, fordeler og hva du bør velge",
+      "description": "Supabase gir deg en ekte Postgres-database og forutsigbar pris, Firebase er sterkest på mobil og sanntid. Sammenligning av pris, grenser og fallgruver.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/supabase-eller-firebase/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Supabase eller Firebase?",
+          "item": "https://fugle.dev/guider/supabase-eller-firebase/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Er Supabase bedre enn Firebase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For nettapper med strukturerte data som kunder, bestillinger og bookinger er Supabase ofte bedre, fordi det bygger på PostgreSQL, har fast månedspris og lav innlåsing. Firebase er bedre for mobilapper som trenger sanntid og offline-støtte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva koster Supabase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Supabase har en gratisplan med 500 MB database og 50 000 aktive brukere i måneden, men prosjektet settes på pause etter en uke uten aktivitet. Pro koster fra 25 dollar i måneden og gir 8 GB database, 100 000 aktive brukere og daglige sikkerhetskopier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva koster Firebase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Firebase er gratis på Spark-planen med blant annet 50 000 lesinger og 20 000 skrivinger per dag i Firestore. Cloud Functions og Cloud Storage krever Blaze-planen, der du betaler for faktisk bruk utover gratiskvotene."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg bytte fra Firebase til Supabase senere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, men det krever arbeid, fordi Firestore lagrer data som dokumenter og Supabase bruker tabeller. Dataene må struktureres om, og innlogging og sikkerhetsregler må settes opp på nytt. Det er enklere å velge riktig fra starten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Er Supabase og Firebase lovlig å bruke i Norge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, begge kan brukes i tråd med GDPR. Velg en region i EU når du oppretter prosjektet, inngå databehandleravtale med leverandøren, og sørg for at tilgangsreglene i databasen er satt opp riktig."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Supabase eller Firebase?</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Supabase eller Firebase?</h1>
+    <p class="ingress">Kort svar: velg Supabase hvis du bygger en nettapp med brukere, bestillinger eller noe som ligner en vanlig database, og vil ha forutsigbar pris. Velg Firebase hvis du bygger en mobilapp, trenger sanntid og offline-støtte, eller allerede er i Google-økosystemet. For de fleste norske småbedriftsprosjekter vi ser, er Supabase det beste valget i 2026.</p>
+
+    <h2>Hva er Supabase og Firebase?</h2>
+    <p>Supabase og Firebase er ferdige backend-tjenester som gir deg database, innlogging, fillagring og serverfunksjoner uten at du må drifte egne servere. De løser det samme problemet, men på to helt ulike måter.</p>
+    <p><strong>Firebase</strong> er Googles plattform. Kjernen er Firestore, en dokumentdatabase der data lagres som samlinger av dokumenter, omtrent som mapper med JSON-filer. Den er bygget for mobilapper og er svært god på sanntidsoppdateringer og offline-bruk.</p>
+    <p><strong>Supabase</strong> er åpen kildekode og bygger på PostgreSQL, en av verdens mest brukte relasjonsdatabaser. Data ligger i tabeller med rader og kolonner, og du kan bruke vanlig SQL. Supabase har blitt standardvalget for mange KI-verktøy, blant annet Lovable og Bolt, nettopp fordi Postgres er så godt kjent.</p>
+
+    <h2>Sammenligning side om side</h2>
+    <p>Tabellen viser de viktigste forskjellene per oktober 2026, basert på leverandørenes egne prissider. Prisene er i dollar uten mva.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Supabase</th><th>Firebase</th></tr></thead>
+      <tbody>
+        <tr><td>Database</td><td>PostgreSQL (relasjonsdatabase, SQL)</td><td>Firestore (dokumentdatabase, NoSQL)</td></tr>
+        <tr><td>Gratisplan</td><td>Free: 500 MB database, 1 GB filer, 50 000 aktive brukere i måneden</td><td>Spark: 1 GiB Firestore, 50 000 lesinger og 20 000 skrivinger per dag, 50 000 aktive brukere i måneden</td></tr>
+        <tr><td>Første betalte nivå</td><td>Pro fra 25 dollar i måneden</td><td>Blaze, betal for faktisk bruk utover gratiskvoten</td></tr>
+        <tr><td>Prismodell</td><td>Fast månedspris pluss eventuell overforbruk</td><td>Per lesing, skriving, lagring og trafikk</td></tr>
+        <tr><td>Serverfunksjoner</td><td>Edge Functions, også på gratisplanen</td><td>Cloud Functions, krever Blaze</td></tr>
+        <tr><td>Fillagring</td><td>Inkludert, også gratis</td><td>Cloud Storage, krever Blaze</td></tr>
+        <tr><td>Sanntid og offline</td><td>Sanntid finnes, offline krever ekstra arbeid</td><td>Svært godt, innebygd i SDK-ene</td></tr>
+        <tr><td>Åpen kildekode</td><td>Ja, kan driftes selv</td><td>Nei</td></tr>
+        <tr><td>Innlåsing</td><td>Lav, det er vanlig Postgres</td><td>Høy, Firestore finnes bare hos Google</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Hva koster Supabase?</h2>
+    <p>Supabase er gratis for små prosjekter og koster fra 25 dollar i måneden på Pro, som er planen alle prosjekter i produksjon bør ligge på.</p>
+    <ul>
+      <li><strong>Free:</strong> 500 MB database, 1 GB fillagring, 5 GB trafikk og 50 000 aktive brukere i måneden. Maks to aktive prosjekter, og prosjektet settes på pause etter en uke uten aktivitet.</li>
+      <li><strong>Pro, fra 25 dollar:</strong> 8 GB database, 100 GB fillagring, 250 GB trafikk og 100 000 aktive brukere. Daglige sikkerhetskopier i 7 dager, og ingen pausing. Du får 10 dollar i datakraftkreditt, som dekker én liten instans.</li>
+      <li><strong>Team, fra 599 dollar:</strong> for selskaper med krav til tilgangsstyring, revisjon og support.</li>
+    </ul>
+    <p>Pausingen på gratisplanen er det som overrasker flest. En kundeportal som ingen bruker i en uke, slutter å svare til du vekker den manuelt. Til testing er det greit, til en ekte bedrift er det ikke.</p>
+
+    <h2>Hva koster Firebase?</h2>
+    <p>Firebase er gratis på Spark-planen, men alt som er litt mer avansert krever Blaze, der du betaler for nøyaktig det du bruker.</p>
+    <p>Spark gir deg 1 GiB lagring i Firestore, 50 000 lesinger, 20 000 skrivinger og 20 000 slettinger per dag, i tillegg til innlogging for 50 000 aktive brukere i måneden og gratis hosting med 10 GB lagring. Cloud Functions og Cloud Storage krever Blaze.</p>
+    <p>Blaze har de samme gratiskvotene, og du betaler først når du går over. For en liten app kan regningen bli null kroner. Problemet er at du betaler per lesing, og en dårlig skrevet spørring eller en løkke i koden kan lese hele databasen tusenvis av ganger. Det finnes mange historier om uventede regninger etter en helg. Sett alltid budsjettvarsler i Google Cloud hvis du går over på Blaze, og husk at varsler ikke stopper forbruket av seg selv.</p>
+    <div class="tips">
+      <strong>Tommelfingerregel for pris</strong>
+      Supabase er lettere å budsjettere fordi du betaler en fast månedspris. Firebase kan være billigere for små apper og dyrere for apper med mye lesing, så regn på det før du velger.
+    </div>
+
+    <h2>Når er Supabase det beste valget?</h2>
+    <p>Supabase er best når dataene dine har relasjoner, for eksempel kunder som har bestillinger som har varelinjer, og når du vil kunne flytte deg senere.</p>
+    <ul>
+      <li><strong>Bookingsystemer, nettbutikker og kundeportaler.</strong> Slike data passer naturlig i tabeller, og SQL gjør det enkelt å lage rapporter og oversikter.</li>
+      <li><strong>Du bygger med KI-verktøy.</strong> KI-modeller skriver svært god SQL, og verktøy som <a href="/guider/lovable-bolt-v0/">Lovable og Bolt</a> har Supabase innebygd.</li>
+      <li><strong>Du vil unngå innlåsing.</strong> Supabase er vanlig Postgres, så du kan eksportere databasen og flytte den til en annen leverandør eller egen server.</li>
+      <li><strong>Du trenger vektorsøk for KI.</strong> Med utvidelsen pgvector kan du lagre og søke i embeddings i samme database som resten av dataene.</li>
+    </ul>
+
+    <h2>Når er Firebase det beste valget?</h2>
+    <p>Firebase er best for mobilapper som skal fungere uten nett, synkronisere i sanntid mellom mange enheter, og bruke andre Google-tjenester.</p>
+    <ul>
+      <li><strong>Chat, spill og samarbeidsapper.</strong> Firestore sender endringer til alle tilkoblede klienter umiddelbart, og håndterer offline-modus automatisk.</li>
+      <li><strong>Mobil først.</strong> SDK-ene for iOS, Android og Flutter er modne, og du får push-varsler, krasjrapporter og analyse i samme pakke.</li>
+      <li><strong>Du er allerede i Google Cloud.</strong> Da passer Firebase rett inn med samme fakturering og tilgangsstyring.</li>
+    </ul>
+
+    <h2>Hva med sikkerhet og personvern?</h2>
+    <p>Begge plattformene er trygge, men bare hvis du setter opp tilgangsreglene riktig. Det er her de fleste feilene skjer.</p>
+    <p>I Supabase må du slå på radnivåsikkerhet (Row Level Security) på hver tabell og skrive regler for hvem som kan lese og endre hva. I Firebase gjøres det samme med Security Rules. Glemmer du dette, kan hvem som helst med nøkkelen fra nettleserkoden lese hele databasen. Det er en av de vanligste feilene vi ser i apper laget med KI, og vi har skrevet mer om det i guiden om <a href="/guider/vanlige-sikkerhetsfeil/">vanlige sikkerhetsfeil</a>.</p>
+    <p>For personvern bør du velge en region i EU når du oppretter prosjektet, og inngå databehandleravtale. Begge leverandørene tilbyr dette. Les mer om GDPR-kravene i guiden om <a href="/guider/ki-og-personvern/">KI og personvern</a>.</p>
+
+    <h2>Hva ville vi valgt?</h2>
+    <p>For de fleste prosjekter vi bygger, velger vi Supabase. Bookingløsninger, bestillingssystemer, medlemsportaler og KI-tjenester med brukere passer naturlig i en relasjonsdatabase, og den faste prisen gjør det enkelt å gi kunden et ærlig anslag på driftskostnadene.</p>
+    <p>Vi ville valgt Firebase til en mobilapp der sanntid og offline-støtte er selve kjernen. Og vi ville aldri valgt basert på hva som er raskest den første dagen. Det er dag 300 som teller, når appen har tusen brukere og du trenger en rapport over alle bestillinger fra i fjor. Trenger du hjelp til å bygge noe slikt, se <a href="/tjenester/">tjenestene våre</a>.</p>
+    <h2>Finnes det andre alternativer?</h2>
+    <p>Ja, men for de fleste små prosjekter er Supabase og Firebase de to beste valgene i 2026.</p>
+    <p>Google har selv lansert Firebase Data Connect, som lar deg bruke PostgreSQL via Cloud SQL inne i Firebase. Det kan være interessant hvis du vil ha relasjonsdatabase, men ellers foretrekker Googles verktøy. Det er likevel nyere og mindre utbredt enn Supabase, og prismodellen følger Google Cloud.</p>
+    <p>Andre alternativer er Neon og andre rene Postgres-tjenester, der du kun får databasen og må løse innlogging og fillagring selv, og PocketBase eller Appwrite, som du kan drifte selv på en egen server. De gir mer kontroll, men også mer ansvar. Trenger du bare et kontaktskjema eller en enkel liste, er det ofte nok med en skjematjeneste og ingen database i det hele tatt. Ikke bygg mer enn du trenger.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Er Supabase bedre enn Firebase?</summary>
+        <p>For nettapper med strukturerte data som kunder, bestillinger og bookinger er Supabase ofte bedre, fordi det bygger på PostgreSQL, har fast månedspris og lav innlåsing. Firebase er bedre for mobilapper som trenger sanntid og offline-støtte.</p>
+      </details>
+      <details>
+        <summary>Hva koster Supabase?</summary>
+        <p>Supabase har en gratisplan med 500 MB database og 50 000 aktive brukere i måneden, men prosjektet settes på pause etter en uke uten aktivitet. Pro koster fra 25 dollar i måneden og gir 8 GB database, 100 000 aktive brukere og daglige sikkerhetskopier.</p>
+      </details>
+      <details>
+        <summary>Hva koster Firebase?</summary>
+        <p>Firebase er gratis på Spark-planen med blant annet 50 000 lesinger og 20 000 skrivinger per dag i Firestore. Cloud Functions og Cloud Storage krever Blaze-planen, der du betaler for faktisk bruk utover gratiskvotene.</p>
+      </details>
+      <details>
+        <summary>Kan jeg bytte fra Firebase til Supabase senere?</summary>
+        <p>Ja, men det krever arbeid, fordi Firestore lagrer data som dokumenter og Supabase bruker tabeller. Dataene må struktureres om, og innlogging og sikkerhetsregler må settes opp på nytt. Det er enklere å velge riktig fra starten.</p>
+      </details>
+      <details>
+        <summary>Er Supabase og Firebase lovlig å bruke i Norge?</summary>
+        <p>Ja, begge kan brukes i tråd med GDPR. Velg en region i EU når du oppretter prosjektet, inngå databehandleravtale med leverandøren, og sørg for at tilgangsreglene i databasen er satt opp riktig.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/lovable-bolt-v0/">Lovable, Bolt eller v0?</a></li>
+        <li><a href="/guider/hva-er-et-api/">Hva er et API?</a></li>
+        <li><a href="/guider/sikkerhet-nar-du-bygger-med-ki/">Sikkerhet når du bygger med KI</a></li>
+        <li><a href="/guider/lage-app-uten-a-kode/">Lage app uten å kode</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Trenger du en app med database og innlogging?</h2>
+      <p>Vi bygger bookingløsninger, kundeportaler og KI-tjenester med Supabase, med sikkerhetsreglene på plass fra dag én. Fortell oss hva du vil lage, så får du et forslag til løsning og et konkret prisanslag.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

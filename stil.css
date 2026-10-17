@@ -100,6 +100,15 @@ article pre code{background:none;border:none;padding:0}
 }
 .tips strong{display:block;margin-bottom:6px}
 
+.table-wrap{margin-top:18px;overflow-x:auto;max-width:100%}
+article table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--card);border:1px solid var(--line)}
+article th, article td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font-family:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;font-weight:600}
+article tr:last-child td{border-bottom:none}
+.related{margin-top:44px}
+.related ul{list-style:none;padding:0}
+.related li{margin-top:10px}
+
 .faq{margin-top:44px}
 .faq details{border-bottom:1px solid var(--line);padding:4px 0 14px}
 .faq summary{
@@ -144,3 +153,5 @@ footer{
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 }
 footer a{color:var(--muted)}
+.guide-group{margin-top:52px;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.guide-group + .guide-list{margin-top:8px}

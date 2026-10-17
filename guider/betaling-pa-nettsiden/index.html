@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betaling på nettsiden: Vipps, Stripe, Klarna og Nets | Fugle.dev</title>
+<meta name="description" content="Slik tar du betalt på nettsiden: vi sammenligner gebyrene til Vipps, Stripe, Klarna og Nexi (Nets) i 2026, med regneeksempel og hva du bør velge.">
+<link rel="canonical" href="https://fugle.dev/guider/betaling-pa-nettsiden/">
+<meta property="og:title" content="Betaling på nettsiden: Vipps, Stripe, Klarna og Nets sammenlignet">
+<meta property="og:description" content="Slik tar du betalt på nettsiden: vi sammenligner gebyrene til Vipps, Stripe, Klarna og Nexi (Nets) i 2026, med regneeksempel og hva du bør velge.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/betaling-pa-nettsiden/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Betaling på nettsiden: Vipps, Stripe, Klarna og Nets sammenlignet",
+      "description": "Slik tar du betalt på nettsiden: vi sammenligner gebyrene til Vipps, Stripe, Klarna og Nexi (Nets) i 2026, med regneeksempel og hva du bør velge.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/betaling-pa-nettsiden/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Betaling på nettsiden",
+          "item": "https://fugle.dev/guider/betaling-pa-nettsiden/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva koster Vipps for bedrifter på nett?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vipps MobilePay oppgir standardpriser på 2,99 prosent pluss 1 kr per betaling for integrert betaling og faste betalinger, og 2,49 prosent pluss 1 kr for betalingslenker. Bedrifter med høyt volum kan forhandle andre satser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva koster Stripe i Norge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stripe tar 2,4 prosent pluss 2 kr per vellykket betaling med norske og europeiske kort, og 3,25 prosent pluss 2 kr for kort utenfor EØS. Valutaveksling koster 2 prosent ekstra. Det er ingen månedspris eller oppstartsgebyr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er billigst av Vipps, Stripe og Klarna?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "På en ordre på 600 kr koster Vipps betalingslenke rundt 16 kr, Stripe med norsk kort rundt 16 kr, integrert Vipps rundt 19 kr og Klarna via Stripe rundt 22 kr. Forskjellene er små, så tilby betalingsmåtene kundene dine forventer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg ta betalt med Vipps uten nettbutikk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Med Vipps betalingslenker sender du en lenke på SMS eller e-post, og kunden betaler i appen. Det passer for tjenestebedrifter, forskudd og enkeltsalg."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Støtter Stripe BankAxept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. Stripe støtter ikke BankAxept-nettverket. Betaler kunden med et BankAxept-kort, behandles betalingen som Visa eller Mastercard i stedet."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Betaling på nettsiden</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Betaling på nettsiden: Vipps, Stripe, Klarna og Nets</h1>
+    <p class="ingress">Kort svar: de fleste norske bedrifter bør tilby Vipps og kort, og Klarna i tillegg hvis de selger dyrere varer. Regn med 2 til 3 prosent av beløpet pluss 1 til 4 kr per betaling i gebyr. Stripe er raskest å komme i gang med, Vipps er det kundene forventer, og Nexi (tidligere Nets) passer ofte når du allerede har kortavtale gjennom banken.</p>
+
+    <h2>Hva koster det å ta betalt på nettsiden?</h2>
+    <p>Det koster typisk mellom 2 og 3 prosent av beløpet pluss en fast krone eller to per betaling å ta imot betaling på nett i Norge. Tabellen viser standardprisene slik leverandørene selv oppgir dem i oktober 2026.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Løsning</th><th>Standardpris per betaling</th><th>Kommentar</th></tr></thead>
+      <tbody>
+        <tr><td>Vipps MobilePay, integrert betaling</td><td>2,99 % + 1 kr</td><td>Samme sats for faste betalinger (abonnement).</td></tr>
+        <tr><td>Vipps MobilePay, betalingslenker</td><td>2,49 % + 1 kr</td><td>Send en lenke på SMS eller e-post, ingen nettbutikk nødvendig.</td></tr>
+        <tr><td>Stripe, norske og europeiske kort</td><td>2,4 % + 2 kr</td><td>Ingen månedspris eller oppstartsgebyr.</td></tr>
+        <tr><td>Stripe, kort utenfor EØS</td><td>3,25 % + 2 kr</td><td>Pluss 2 % ved valutaveksling.</td></tr>
+        <tr><td>Klarna via Stripe</td><td>Fra 2,99 % + 4 kr</td><td>Direkte Klarna-avtale prises individuelt.</td></tr>
+        <tr><td>Nexi Checkout (tidligere Nets Easy)</td><td>Avtalebasert</td><td>Be om tilbud, gjerne sammen med kortavtalen i butikk.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Prisene er listepriser. Har du høy omsetning, kan du forhandle, og det lønner seg å spørre allerede ved noen hundre tusen kroner i året.</p>
+
+    <h2>Regneeksempel: hva koster en ordre på 600 kr?</h2>
+    <p>På en ordre på 600 kr betaler du mellom 16 og 22 kr i gebyr, avhengig av betalingsmåte.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Betalingsmåte</th><th>Gebyr på 600 kr</th><th>På 100 ordre</th></tr></thead>
+      <tbody>
+        <tr><td>Vipps, betalingslenke</td><td>15,94 kr</td><td>1 594 kr</td></tr>
+        <tr><td>Stripe, norsk kort</td><td>16,40 kr</td><td>1 640 kr</td></tr>
+        <tr><td>Vipps, integrert</td><td>18,94 kr</td><td>1 894 kr</td></tr>
+        <tr><td>Stripe, kort utenfor EØS</td><td>21,50 kr</td><td>2 150 kr</td></tr>
+        <tr><td>Klarna via Stripe</td><td>21,94 kr</td><td>2 194 kr</td></tr>
+      </tbody>
+    </table></div>
+    <p>Forskjellene er små per ordre. Det som faktisk koster, er å miste salg fordi kunden ikke fant betalingsmåten sin. Spar derfor ikke inn på betalingsmåter kundene forventer.</p>
+
+    <h2>Vipps: det norske kunder forventer</h2>
+    <p>Vipps er den betalingsmåten flest norske kunder kjenner og stoler på, og den bør være med i nesten alle norske nettbutikker.</p>
+    <p>Fordelen er at kunden slipper å taste kortnummer, og at betalingen godkjennes i appen de allerede har. Vipps MobilePay har egne utvidelser for blant annet WooCommerce, og kan kobles til Shopify og andre plattformer via betalingspartnere. For tjenestebedrifter uten nettbutikk er betalingslenker et godt alternativ: du sender en lenke, kunden betaler, ferdig. Selger du abonnement eller medlemskap, finnes faste betalinger.</p>
+    <p>Ulempen er at Vipps i praksis bare brukes av norske kunder. Selger du til utlandet, trenger du kort i tillegg.</p>
+
+    <h2>Stripe: raskest å komme i gang med</h2>
+    <p>Stripe er den enkleste måten å ta imot kortbetaling på nett, med åpne priser, ingen binding og gode verktøy for utviklere.</p>
+    <p>Du kan være i gang samme dag. Stripe har ferdige betalingssider, betalingslenker, abonnement og faktura, og støtter Apple Pay, Google Pay og Klarna. Vipps er tilgjengelig i Stripe som en lukket forhåndsversjon, så sjekk status i ditt eget dashbord før du regner med det. Noen ting er verdt å vite:</p>
+    <ul>
+      <li><strong>BankAxept støttes ikke.</strong> Betaler kunden med et BankAxept-kort, behandles det som Visa eller Mastercard. Det fungerer for kunden, men du får ikke BankAxept-prisene.</li>
+      <li><strong>Tvister koster.</strong> Stripe tar 200 kr per tvist, uansett utfall, pluss 200 kr om du svarer manuelt, som du får tilbake om du vinner.</li>
+      <li><strong>Gebyret refunderes ikke</strong> når du refunderer en kunde.</li>
+    </ul>
+
+    <h2>Klarna: når lønner det seg?</h2>
+    <p>Klarna lønner seg når du selger varer der kunden gjerne vil betale senere eller dele opp, typisk klær, møbler, elektronikk og andre kjøp over noen tusenlapper.</p>
+    <p>Klarna er dyrere per transaksjon enn kort og Vipps, men du får pengene med en gang, og Klarna tar risikoen for at kunden ikke betaler. For en kafé som selger gavekort til 300 kr, er Klarna sjelden verdt det. For en møbelbutikk kan det være forskjellen på salg og ikke salg. Husk at du som selger har ansvar for at kunden får tydelig informasjon om betingelsene.</p>
+
+    <h2>Nexi (Nets): for deg med bankavtale</h2>
+    <p>Nexi Checkout, tidligere Nets Easy, passer for bedrifter som vil ha nettbetaling og kortterminal hos samme leverandør, ofte gjennom banken.</p>
+    <p>Nexi samler kort, Vipps og flere andre betalingsmåter i én kasse, og har ferdige utvidelser til de fleste plattformer. Prisene er avtalebaserte, så du må be om tilbud. Har du allerede kortterminal fra Nexi i butikken, er det verdt å spørre hva nettbetaling koster som tillegg. Har kundene dine mange BankAxept-kort, spør konkret hvordan de håndteres på nett.</p>
+
+    <h2>Kostnadene som ikke står øverst i prislisten</h2>
+    <p>Transaksjonsgebyret er bare en del av regningen, og det er de andre postene som overrasker flest.</p>
+    <ul>
+      <li><strong>Oppstartsgebyr og månedspris.</strong> Noen avtaler har engangsgebyr ved oppstart eller fast månedsavgift. Stripe har ingen av delene, mens andre leverandører kan ha det. Spør direkte.</li>
+      <li><strong>Plattformens eget gebyr.</strong> Shopify legger på opptil 2 prosent hvis du ikke bruker Shopify Payments. Det kommer i tillegg til betalingsleverandørens gebyr.</li>
+      <li><strong>Refusjoner.</strong> Hos mange leverandører får du ikke tilbake gebyret når du refunderer. Har du mange returer, merkes det.</li>
+      <li><strong>Tvister og svindel.</strong> En kunde som bestrider en betaling, koster både varen og et tvistegebyr. Gode produktbeskrivelser, tydelig kontaktinfo og rask kundeservice gir færre tvister.</li>
+      <li><strong>Valuta.</strong> Tar du betalt i euro eller dollar og får utbetalt i kroner, kommer vekslingskostnaden på toppen.</li>
+      <li><strong>Utbetalingstid.</strong> Sjekk hvor mange dager det går fra kunden betaler til pengene er på konto. For en liten bedrift med stram likviditet kan det bety mer enn en halv prosent i gebyr.</li>
+    </ul>
+    <p>Be alltid om en skriftlig oversikt over alle gebyrer før du signerer, og regn på et helt år med ditt faktiske volum og din faktiske returandel.</p>
+
+    <h2>Hvilken betalingsløsning bør du velge?</h2>
+    <p>Valget avhenger mest av hva du selger og hvor kundene dine er.</p>
+    <ul>
+      <li><strong>Tjenestebedrift som sender faktura eller tar forskudd:</strong> Vipps betalingslenker eller Stripe Payment Links. Ingen nettbutikk nødvendig.</li>
+      <li><strong>Norsk nettbutikk:</strong> Vipps og kort, enten direkte eller via én samlet leverandør. Se <a href="/guider/lage-nettbutikk/">slik lager du nettbutikk</a>.</li>
+      <li><strong>Dyrere varer:</strong> legg til Klarna.</li>
+      <li><strong>Abonnement og medlemskap:</strong> Stripe Billing eller Vipps faste betalinger.</li>
+      <li><strong>Salg til utlandet:</strong> Stripe, med kort og lokale betalingsmåter.</li>
+      <li><strong>Restaurant og takeaway:</strong> Vipps og kort i egen bestillingsløsning. Se <a href="/guider/egen-bestillingslosning-restaurant/">egen nettbestilling for restaurant</a>.</li>
+    </ul>
+    <p>Bruker du Shopify, påvirker valget også plattformgebyret. Det har vi forklart i <a href="/guider/shopify-eller-woocommerce/">Shopify eller WooCommerce</a>.</p>
+
+    <h2>Sikkerhet: dette må være på plass</h2>
+    <p>Den viktigste sikkerhetsregelen er at kortdata aldri skal innom din egen server.</p>
+    <ol>
+      <li><strong>Bruk leverandørens betalingsside eller betalingsfelt.</strong> Da er det Stripe, Vipps eller Nexi som håndterer kortnummeret, og kravene i kortbransjens sikkerhetsstandard PCI DSS blir langt enklere for deg.</li>
+      <li><strong>Hold hemmelige nøkler hemmelige.</strong> API-nøkler skal ligge på serveren, aldri i koden som sendes til nettleseren. Se <a href="/guider/lekket-api-nokkel/">lekket API-nøkkel</a> for hva som skjer når det går galt.</li>
+      <li><strong>Bekreft betalingen på serveren.</strong> Marker aldri en ordre som betalt bare fordi nettleseren sier det. Vent på bekreftelsen fra betalingsleverandøren via webhook.</li>
+      <li><strong>Sterk kundeautentisering.</strong> I EØS skal de fleste kortbetalinger bekreftes med BankID, kode eller biometri i bankappen. Leverandørene håndterer dette, men test at det fungerer.</li>
+    </ol>
+    <p>Bygger du betaling selv med KI-verktøy, er dette punktene som oftest blir feil. Les <a href="/guider/sikkerhet-nar-du-bygger-med-ki/">sikkerhet når du bygger med KI</a> før du lanserer.</p>
+
+    <h2>Hva vi ville gjort</h2>
+    <p>Vi ville startet med Vipps og kort, sjekket gebyrene etter tre måneder, og lagt til Klarna bare hvis snittordren er høy.</p>
+    <p>For de fleste små bedrifter er den beste løsningen den kundene kjenner og som du kan sette opp på en ettermiddag. Når volumet vokser, ta en runde med leverandørene og forhandle. Vi kobler betaling til nettsider, nettbutikker og bookingsystemer hver uke, og setter gjerne opp riktig løsning for deg. Se <a href="/tjenester/">tjenestene våre</a>.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva koster Vipps for bedrifter på nett?</summary>
+        <p>Vipps MobilePay oppgir standardpriser på 2,99 prosent pluss 1 kr per betaling for integrert betaling og faste betalinger, og 2,49 prosent pluss 1 kr for betalingslenker. Bedrifter med høyt volum kan forhandle andre satser.</p>
+      </details>
+      <details>
+        <summary>Hva koster Stripe i Norge?</summary>
+        <p>Stripe tar 2,4 prosent pluss 2 kr per vellykket betaling med norske og europeiske kort, og 3,25 prosent pluss 2 kr for kort utenfor EØS. Valutaveksling koster 2 prosent ekstra. Det er ingen månedspris eller oppstartsgebyr.</p>
+      </details>
+      <details>
+        <summary>Hva er billigst av Vipps, Stripe og Klarna?</summary>
+        <p>På en ordre på 600 kr koster Vipps betalingslenke rundt 16 kr, Stripe med norsk kort rundt 16 kr, integrert Vipps rundt 19 kr og Klarna via Stripe rundt 22 kr. Forskjellene er små, så tilby betalingsmåtene kundene dine forventer.</p>
+      </details>
+      <details>
+        <summary>Kan jeg ta betalt med Vipps uten nettbutikk?</summary>
+        <p>Ja. Med Vipps betalingslenker sender du en lenke på SMS eller e-post, og kunden betaler i appen. Det passer for tjenestebedrifter, forskudd og enkeltsalg.</p>
+      </details>
+      <details>
+        <summary>Støtter Stripe BankAxept?</summary>
+        <p>Nei. Stripe støtter ikke BankAxept-nettverket. Betaler kunden med et BankAxept-kort, behandles betalingen som Visa eller Mastercard i stedet.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/lage-nettbutikk/">Slik lager du nettbutikk i 2026</a></li>
+        <li><a href="/guider/shopify-eller-woocommerce/">Shopify eller WooCommerce?</a></li>
+        <li><a href="/guider/egen-bestillingslosning-restaurant/">Egen nettbestilling for restaurant vs Wolt og Foodora</a></li>
+        <li><a href="/guider/sikkerhet-nar-du-bygger-med-ki/">Sikkerhet når du bygger med KI</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du ta betalt på nettsiden din?</h2>
+      <p>Vi setter opp Vipps, kort og Klarna på nettsiden, i nettbutikken eller i bookingsystemet ditt, trygt og riktig fra start. Fortell oss hva du selger, så foreslår vi løsningen med lavest totalkostnad.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

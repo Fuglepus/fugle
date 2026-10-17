@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hva er MCP (Model Context Protocol)? Enkelt forklart | Fugle.dev</title>
+<meta name="description" content="MCP er en åpen standard som lar KI-assistenter koble seg til verktøy og data. Vi forklarer hvordan Model Context Protocol virker, eksempler, sikkerhet og nytte.">
+<link rel="canonical" href="https://fugle.dev/guider/hva-er-mcp/">
+<meta property="og:title" content="Hva er MCP (Model Context Protocol)? Enkelt forklart">
+<meta property="og:description" content="Model Context Protocol forklart på norsk: hva det er, hvordan det fungerer, hva bedrifter kan bruke det til, og hvilke sikkerhetsfeller du bør kjenne.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/hva-er-mcp/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Hva er MCP (Model Context Protocol)? Enkelt forklart",
+      "description": "MCP er en åpen standard som lar KI-assistenter koble seg til verktøy og data. Vi forklarer hvordan Model Context Protocol virker, eksempler, sikkerhet og nytte.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/hva-er-mcp/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hva er MCP?",
+          "item": "https://fugle.dev/guider/hva-er-mcp/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva står MCP for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MCP står for Model Context Protocol. Det er en åpen standard som lar KI-assistenter koble seg til verktøy, datakilder og systemer på en felles måte, slik at én tilkobling kan brukes av mange ulike KI-programmer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvem har laget MCP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MCP ble lansert av Anthropic i november 2024. I desember 2025 ble protokollen overført til Agentic AI Foundation under Linux Foundation, og den styres nå som en åpen bransjestandard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvilke KI-er støtter MCP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Blant annet Claude, ChatGPT, Gemini, Microsoft Copilot, Cursor og VS Code støtter MCP. Mange tjenester som GitHub, Slack, Notion og Google Drive har egne MCP-servere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er forskjellen på MCP og et API?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Et API er grensesnittet et system tilbyr andre programmer. MCP er en standard som pakker inn verktøy, ofte API-er, slik at KI-modeller forstår hva de kan gjøre og kan bruke dem på samme måte uansett hvilken KI du bruker."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Er MCP trygt å bruke?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det er trygt når du bruker offisielle servere fra kjente leverandører, gir minst mulig tilgang og krever godkjenning før handlinger som sender, sletter eller betaler. Den største risikoen er prompt-injeksjon via innhold KI-en leser."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Hva er MCP?</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Hva er MCP (Model Context Protocol)?</h1>
+    <p class="ingress">Kort svar: MCP, Model Context Protocol, er en åpen standard for å koble KI-assistenter til verktøy og data, som regnskapssystemer, databaser, kalendere og filer. Tenk på det som en USB-C-port for KI: lag en MCP-tilkobling én gang, så kan Claude, ChatGPT, Gemini, Copilot, Cursor og andre bruke den.</p>
+    <h2>Hvorfor trengs MCP?</h2>
+    <p>MCP trengs fordi KI-modeller er nyttige først når de kan nå dataene og verktøyene dine, og før MCP måtte hver kobling bygges på nytt for hver KI. Ville du at ChatGPT skulle lese fra CRM-et ditt, måtte noen lage en egen integrasjon for det. Skulle Claude gjøre det samme, en til. Med ti verktøy og fem KI-er fikk du femti integrasjoner å vedlikeholde.</p>
+    <p>MCP snur regnestykket. Verktøyet får én MCP-server, og alle KI-programmer som støtter MCP kan bruke den. Det er det samme prinsippet som gjorde at én lader passer i både telefon, nettbrett og PC.</p>
+
+    <h2>Hvor kommer MCP fra, og hvem bruker det?</h2>
+    <p>MCP ble lansert av Anthropic, selskapet bak Claude, i november 2024 som en åpen spesifikasjon. Det tok av raskt. I løpet av 2025 tok OpenAI, Google, Microsoft og de store utviklerverktøyene det i bruk, og i desember 2025 ga Anthropic protokollen bort til Agentic AI Foundation, en stiftelse under Linux Foundation som også OpenAI og Block er med på å grunnlegge. Det betyr at MCP i dag ikke eies av ett selskap, men styres som en åpen bransjestandard.</p>
+    <p>Ved overføringen oppga Anthropic at det fantes over 10 000 aktive offentlige MCP-servere, og at ChatGPT, Gemini, Microsoft Copilot, Cursor og VS Code støttet protokollen. Mange kjente tjenester tilbyr i dag egne MCP-servere, blant annet for GitHub, Slack, Notion, Google Drive, Stripe og en rekke databaser.</p>
+
+    <h2>Hvordan fungerer MCP?</h2>
+    <p>MCP fungerer med tre roller: en vert, en klient og en server. Det høres teknisk ut, men er enkelt i praksis:</p>
+    <ul>
+      <li><strong>Verten</strong> er KI-programmet du bruker, for eksempel Claude Desktop, ChatGPT, Cursor eller Claude Code.</li>
+      <li><strong>Serveren</strong> er en liten tjeneste som står foran et verktøy eller en datakilde, og forteller KI-en hva den kan gjøre der.</li>
+      <li><strong>Klienten</strong> er biten inne i verten som snakker med serveren. Den ser du sjelden.</li>
+    </ul>
+    <p>En MCP-server kan tilby tre typer ting:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Type</th><th>Hva det er</th><th>Eksempel</th></tr></thead>
+      <tbody>
+        <tr><td>Verktøy (tools)</td><td>Handlinger KI-en kan utføre</td><td>"Opprett faktura", "søk etter kunde", "send melding i Slack"</td></tr>
+        <tr><td>Ressurser (resources)</td><td>Data KI-en kan lese</td><td>Et dokument, en tabell, en logg</td></tr>
+        <tr><td>Maler (prompts)</td><td>Ferdige instruksjoner brukeren kan velge</td><td>"Lag månedsrapport fra salgsdata"</td></tr>
+      </tbody>
+    </table></div>
+    <p>Når du spør KI-en om noe, ser den listen over tilgjengelige verktøy med beskrivelser, velger hvilke den trenger, og ber om å kjøre dem. Svaret fra verktøyet sendes tilbake til modellen, som bruker det videre. Det er nettopp dette som gjør vanlige chatboter om til <a href="/guider/hva-er-en-ki-agent/">KI-agenter</a>.</p>
+    <p>Teknisk kan en MCP-server kjøre lokalt på maskinen din, eller som en ekstern tjeneste over internett med innlogging via OAuth. Lokale servere er vanlige for utviklere. Eksterne servere er det vanlige for bedriftsverktøy, fordi brukerne bare logger inn og klikker godta.</p>
+
+    <h2>Hva er forskjellen på MCP og et API?</h2>
+    <p>Et API er måten et program snakker med et annet på, mens MCP er en standard innpakning som gjør API-er forståelige og brukbare for KI-modeller. De fleste MCP-servere kaller et vanlig API i bakkant. Forskjellen er at MCP-serveren beskriver hvert verktøy i et format modellen forstår, og at alle KI-programmer snakker samme språk med den. Er du usikker på hva et API er, har vi en <a href="/guider/hva-er-et-api/">enkel forklaring av API</a>.</p>
+
+    <h2>Hva kan en bedrift bruke MCP til?</h2>
+    <p>En bedrift kan bruke MCP til å la KI-assistenten jobbe direkte i systemene dere allerede har, i stedet for at noen kopierer data inn og ut av en chat. Eksempler:</p>
+    <ul>
+      <li><strong>Salg:</strong> "Hvilke kunder har ikke bestilt på 90 dager?" besvart direkte fra CRM-et, med utkast til oppfølgings-e-post.</li>
+      <li><strong>Økonomi:</strong> hent ubetalte fakturaer og lag en oversikt per kunde.</li>
+      <li><strong>Internt oppslag:</strong> la ansatte spørre i dokumenter, rutiner og håndbøker i Google Drive eller SharePoint.</li>
+      <li><strong>Drift:</strong> lese bestillinger, oppdatere lagerstatus, varsle i Slack.</li>
+      <li><strong>Utvikling:</strong> kodeagenter som <a href="/guider/hva-er-claude-code/">Claude Code</a> bruker MCP til å lese feilmeldinger, databaser og dokumentasjon. Vi bruker det daglig når vi bygger.</li>
+    </ul>
+    <p>Har du et eget system, et bookingsystem, et ordresystem eller en database, kan det lages en egen MCP-server for det. Da kan alle ansatte bruke KI-assistenten de foretrekker mot de samme dataene.</p>
+
+    <h2>Er MCP trygt?</h2>
+    <p>MCP er like trygt som serverne du kobler til og tilgangene du gir dem. Protokollen i seg selv er bare et format. Risikoen ligger i hva KI-en får lov til å gjøre, og i hvem som har laget serveren.</p>
+    <ul>
+      <li><strong>Bruk kjente servere.</strong> Installer helst offisielle MCP-servere fra leverandøren selv, ikke tilfeldige pakker fra internett. En ondsinnet server kan lese alt den får tilgang til.</li>
+      <li><strong>Minst mulig tilgang.</strong> Gi lesetilgang der det holder. Hvis serveren kan slette, sende eller betale, krev godkjenning i KI-programmet før hver handling.</li>
+      <li><strong>Prompt-injeksjon.</strong> Hvis KI-en leser innhold fra utsiden, som e-post eller nettsider, kan det inneholde skjulte instruksjoner. Kombinasjonen av tilgang til private data, eksponering for fremmed innhold og mulighet til å sende data ut er den farligste.</li>
+      <li><strong>Hemmeligheter.</strong> API-nøkler til MCP-servere skal ikke ligge i delte filer eller i kode. Se <a href="/guider/lekket-api-nokkel/">Lekket API-nøkkel: dette gjør du</a>.</li>
+      <li><strong>Personvern.</strong> Henter KI-en kundedata via MCP, sendes de til KI-leverandøren. Da gjelder de vanlige GDPR-reglene, se <a href="/guider/ki-og-personvern/">KI og personvern</a>.</li>
+    </ul>
+    <div class="tips">
+      <strong>Tommelfingerregel</strong>
+      Behandle en MCP-server som en ny ansatt med nøkkelkort. Hvilke dører trenger den egentlig å åpne? Gi den de, og ikke flere.
+    </div>
+
+    <h2>Hva koster det å ta i bruk MCP?</h2>
+    <p>Selve MCP er gratis, fordi det er en åpen standard uten lisens. Kostnadene ligger i KI-abonnementet og eventuelt i å bygge en server for egne systemer.</p>
+    <ul>
+      <li><strong>Ferdige tilkoblinger:</strong> inkludert i KI-assistenter som Claude, ChatGPT og Copilot. Noen tilkoblinger krever betalt abonnement, typisk 200 til 400 kr per bruker i måneden.</li>
+      <li><strong>Egen MCP-server for et internt system:</strong> et avgrenset utviklingsprosjekt. For et system med et ryddig API er det ofte gjort på kort tid, og prisen avhenger mest av hvor mange verktøy serveren skal ha og hvor strenge tilgangskravene er.</li>
+      <li><strong>Drift:</strong> en ekstern MCP-server må kjøre et sted, men for små bedrifter er hostingkostnaden som regel lav.</li>
+    </ul>
+
+    <h2>MCP eller Zapier og Make?</h2>
+    <p>MCP og automatiseringsverktøy løser ulike ting. Zapier, Make og n8n kjører faste arbeidsflyter som går likt hver gang: når det kommer en bestilling, gjør dette. MCP gir en KI tilgang til verktøy den bruker etter behov, når du spør. Mange bedrifter trenger begge, og flere av automatiseringsverktøyene tilbyr nå selv MCP-tilkobling. Se sammenligningen <a href="/guider/zapier-make-n8n/">Zapier, Make eller n8n?</a></p>
+
+    <h2>Slik prøver du MCP selv</h2>
+    <p>Den enkleste måten å prøve MCP på er å bruke tilkoblingene som allerede er bygget inn i KI-assistenten din. Steg for steg:</p>
+    <ol>
+      <li>Åpne innstillingene i KI-programmet du bruker. Se etter "Connectors", "Koblinger", "Apps" eller "MCP".</li>
+      <li>Velg en tjeneste du allerede bruker, for eksempel Google Drive, Notion eller GitHub, og logg inn.</li>
+      <li>Gi bare de tilgangene du trenger. Mange tilkoblinger lar deg velge lesetilgang.</li>
+      <li>Still et spørsmål som krever data derfra: "Oppsummer de siste tre referatene fra styremøtene."</li>
+      <li>Se hvilke verktøykall KI-en gjør. Gode programmer viser det tydelig og spør før handlinger.</li>
+    </ol>
+    <p>For egne systemer må det bygges en MCP-server. For et enkelt system med noen få verktøy er det typisk et lite prosjekt, ofte gjort på dager, ikke måneder, fordi det finnes offisielle utviklingsverktøy for de vanligste programmeringsspråkene.</p>
+
+    <h2>Hva vi mener om MCP</h2>
+    <p>MCP er den viktigste byggesteinen for praktisk KI i bedrifter akkurat nå, fordi den flytter KI fra chatvinduet og inn i arbeidet. Men vi ville ikke koblet alt på med en gang. Start med én datakilde med lesetilgang, se hvor mye tid det sparer, og utvid derfra. De fleste bedrifter får mest ut av en tilkobling til dokumentene og en til systemet der kundene ligger.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva står MCP for?</summary>
+        <p>MCP står for Model Context Protocol. Det er en åpen standard som lar KI-assistenter koble seg til verktøy, datakilder og systemer på en felles måte, slik at én tilkobling kan brukes av mange ulike KI-programmer.</p>
+      </details>
+      <details>
+        <summary>Hvem har laget MCP?</summary>
+        <p>MCP ble lansert av Anthropic i november 2024. I desember 2025 ble protokollen overført til Agentic AI Foundation under Linux Foundation, og den styres nå som en åpen bransjestandard.</p>
+      </details>
+      <details>
+        <summary>Hvilke KI-er støtter MCP?</summary>
+        <p>Blant annet Claude, ChatGPT, Gemini, Microsoft Copilot, Cursor og VS Code støtter MCP. Mange tjenester som GitHub, Slack, Notion og Google Drive har egne MCP-servere.</p>
+      </details>
+      <details>
+        <summary>Hva er forskjellen på MCP og et API?</summary>
+        <p>Et API er grensesnittet et system tilbyr andre programmer. MCP er en standard som pakker inn verktøy, ofte API-er, slik at KI-modeller forstår hva de kan gjøre og kan bruke dem på samme måte uansett hvilken KI du bruker.</p>
+      </details>
+      <details>
+        <summary>Er MCP trygt å bruke?</summary>
+        <p>Det er trygt når du bruker offisielle servere fra kjente leverandører, gir minst mulig tilgang og krever godkjenning før handlinger som sender, sletter eller betaler. Den største risikoen er prompt-injeksjon via innhold KI-en leser.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/hva-er-en-ki-agent/">Hva er en KI-agent?</a></li>
+        <li><a href="/guider/hva-er-et-api/">Hva er et API?</a></li>
+        <li><a href="/guider/hva-er-claude-code/">Hva er Claude Code?</a></li>
+        <li><a href="/guider/sikkerhet-nar-du-bygger-med-ki/">Sikkerhet når du bygger med KI</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du koble KI til dine egne systemer?</h2>
+      <p>Vi bygger MCP-servere og integrasjoner som lar KI-assistenten jobbe direkte i bookingsystemet, ordresystemet eller databasen din, med tilganger som er tilpasset jobben. Fortell oss hvilke systemer du bruker, så foreslår vi et konkret og trygt oppsett.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

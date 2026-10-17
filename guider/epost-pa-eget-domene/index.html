@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slik får du e-post på eget domene, steg for steg | Fugle.dev</title>
+<meta name="description" content="Slik får du e-post på eget domene: Google Workspace, Microsoft 365 eller billig e-post fra domeneleverandøren. Priser i 2026, DNS-oppsett og vanlige feil.">
+<link rel="canonical" href="https://fugle.dev/guider/epost-pa-eget-domene/">
+<meta property="og:title" content="Slik får du e-post på eget domene: priser, oppsett og DNS steg for steg">
+<meta property="og:description" content="Slik får du e-post på eget domene: Google Workspace, Microsoft 365 eller billig e-post fra domeneleverandøren. Priser i 2026, DNS-oppsett og vanlige feil.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/epost-pa-eget-domene/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Slik får du e-post på eget domene: priser, oppsett og DNS steg for steg",
+      "description": "Slik får du e-post på eget domene: Google Workspace, Microsoft 365 eller billig e-post fra domeneleverandøren. Priser i 2026, DNS-oppsett og vanlige feil.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/epost-pa-eget-domene/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "E-post på eget domene",
+          "item": "https://fugle.dev/guider/epost-pa-eget-domene/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva koster e-post på eget domene?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enkel e-post fra en domeneleverandør koster fra rundt 29 kr i måneden. Google Workspace Business Starter koster 6,80 euro per bruker i måneden med årsavtale, rundt 80 kr, og Microsoft 365 Business Basic koster rundt 60 til 75 kr per bruker i måneden med årsavtale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg få e-post på eget domene gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Noen webhotell og domeneleverandører inkluderer enkel e-post, men en egen e-posttjeneste for bedrifter koster nesten alltid noe. For en bedrift er det vanligvis verdt de få kronene i måneden for bedre spamfilter, oppetid og sikkerhet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er MX-oppføring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En MX-oppføring er en DNS-innstilling som forteller resten av internett hvilken server som skal ta imot e-post for domenet ditt. Den settes hos den som administrerer domenet, og peker for eksempel til Google eller Microsoft."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvorfor havner e-posten min i søppelpost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Den vanligste grunnen er at SPF, DKIM eller DMARC mangler eller er satt opp feil. Disse DNS-oppføringene beviser at e-posten virkelig kommer fra deg. Gmail og Yahoo krever SPF eller DKIM av alle avsendere, og alle tre av store avsendere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Må jeg betale for hver e-postadresse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. Hos Google Workspace og Microsoft 365 betaler du per bruker. Adresser som post@, faktura@ og booking@ kan settes opp som aliaser eller grupper som havner i en eksisterende innboks."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / E-post på eget domene</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Slik får du e-post på eget domene</h1>
+    <p class="ingress">Kort svar: du trenger et domene og en e-posttjeneste, og så kobler du dem sammen med noen DNS-oppføringer. Google Workspace og Microsoft 365 koster rundt 70 til 80 kr per bruker i måneden for de rimeligste planene. Trenger du bare e-post, finnes det løsninger fra domeneleverandører til rundt 30 kr i måneden. Selve oppsettet tar en time hvis du følger stegene under.</p>
+
+    <h2>Hvorfor e-post på eget domene?</h2>
+    <p>E-post på eget domene, som post@dinbedrift.no, gjør at kundene stoler mer på deg, og at adressen er din selv om du bytter leverandør.</p>
+    <p>En adresse som dinbedrift@gmail.com fungerer, men den ser mindre profesjonell ut, og den er knyttet til en privat konto. Slutter en ansatt eller mister du tilgangen, kan e-posthistorikken forsvinne. Med eget domene eier bedriften adressene, og du kan flytte dem til en annen tjeneste uten at kundene merker noe. Har du ikke domene ennå, se guiden om å <a href="/guider/kjope-domene/">kjøpe domene</a>.</p>
+
+    <h2>Hva koster e-post på eget domene?</h2>
+    <p>E-post på eget domene koster fra rundt 30 kr i måneden for enkel e-post til rundt 80 kr per bruker i måneden for Google Workspace eller Microsoft 365 med kontorprogrammer og lagring.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tjeneste</th><th>Pris</th><th>Hva du får</th></tr></thead>
+      <tbody>
+        <tr><td>Google Workspace Business Starter</td><td>6,80 euro per bruker/mnd med årsavtale, rundt 80 kr</td><td>Gmail på eget domene, 30 GB, Meet, Dokumenter</td></tr>
+        <tr><td>Google Workspace Business Standard</td><td>13,60 euro per bruker/mnd med årsavtale</td><td>2 TB lagring, opptak av møter, bookingsider</td></tr>
+        <tr><td>Microsoft 365 Business Basic</td><td>Rundt 60 til 75 kr per bruker/mnd med årsavtale</td><td>Outlook på eget domene, Teams, nettversjon av Office</td></tr>
+        <tr><td>Microsoft 365 Business Standard</td><td>Rundt 130 til 150 kr per bruker/mnd med årsavtale</td><td>Som Basic, pluss Office-programmene på PC og Mac</td></tr>
+        <tr><td>E-post fra domeneleverandør</td><td>Fra rundt 29 kr/mnd</td><td>Domeneshop gir for eksempel 20 kontoer med 15 GB hver for 29 kr/mnd inkl. mva</td></tr>
+        <tr><td>E-post i webhotellet</td><td>Ofte inkludert</td><td>Varierer mye i kvalitet og spamfilter</td></tr>
+      </tbody>
+    </table></div>
+    <p>Prisene er uten mva der ikke annet står. Google oppgir prisene i euro også på sin norske prisside. Microsoft økte prisene på Business Basic og Business Standard fra 1. juli 2026, så sjekk dagens pris i norske kroner før du bestemmer deg. Begge har jevnlig introduksjonstilbud for nye kunder.</p>
+
+    <h2>Google Workspace eller Microsoft 365?</h2>
+    <p>Velg Google Workspace hvis dere jobber mest i nettleseren og på mobil, og Microsoft 365 hvis dere bruker Word, Excel og Outlook på PC hver dag.</p>
+    <p>Begge er gode og trygge. Gmail har etter vår erfaring det beste spamfilteret og det enkleste grensesnittet. Microsoft 365 er det mange regnskapsførere, kunder og offentlige etater bruker, og Teams er standarden i mange bransjer. Det viktigste er å velge én ting og bruke den, ikke å blande e-post fra ett sted og dokumenter fra et annet.</p>
+    <p>Er personvern viktigere for deg enn kontorprogrammer, finnes det også europeiske alternativer som Proton Mail, med kryptering og servere i Sveits. De passer godt for advokater, terapeuter og andre som håndterer sensitive opplysninger, men har færre samarbeidsverktøy enn de to store. Uansett leverandør skal du ha en databehandleravtale, siden e-posten inneholder personopplysninger om kundene dine.</p>
+    <div class="tips">
+      <strong>Spar penger med aliaser</strong>
+      Du betaler per bruker, ikke per adresse. post@, faktura@ og booking@ kan være aliaser eller grupper som havner i innboksen til en ansatt. Ikke kjøp en egen lisens for hver adresse.
+    </div>
+
+    <h2>Slik setter du opp e-post på eget domene, steg for steg</h2>
+    <p>Oppsettet består av seks steg, og det eneste tekniske er å legge inn DNS-oppføringer hos den som har domenet ditt.</p>
+    <ol>
+      <li><strong>Velg tjeneste og opprett kontoen.</strong> Registrer deg hos Google Workspace, Microsoft 365 eller domeneleverandøren, og oppgi domenet du skal bruke.</li>
+      <li><strong>Bekreft at du eier domenet.</strong> Tjenesten gir deg en TXT-oppføring som du legger inn i DNS hos domeneleverandøren. Det tar ofte bare noen minutter før den blir godkjent.</li>
+      <li><strong>Opprett brukere og aliaser.</strong> Lag kontoer for de som trenger egen innboks, og aliaser for resten.</li>
+      <li><strong>Sett MX-oppføringene.</strong> Disse styrer hvor e-posten havner. For Google Workspace er det i dag én oppføring som peker til smtp.google.com. For Microsoft 365 får du en adresse som slutter på mail.protection.outlook.com. Slett gamle MX-oppføringer.</li>
+      <li><strong>Sett opp SPF, DKIM og DMARC.</strong> Dette sørger for at e-posten din ikke havner i søppelpost. Mer om det under.</li>
+      <li><strong>Flytt gammel e-post og koble til telefonen.</strong> Både Google og Microsoft har verktøy for å importere e-post fra en gammel konto. Legg kontoen inn i mobilen og test at du kan sende og motta.</li>
+    </ol>
+
+    <h2>SPF, DKIM og DMARC: hvorfor e-posten havner i søppelpost</h2>
+    <p>SPF, DKIM og DMARC er tre DNS-oppføringer som beviser at e-posten virkelig kommer fra deg, og uten dem havner den lett i søppelposten hos mottakeren.</p>
+    <ul>
+      <li><strong>SPF</strong> sier hvilke servere som får sende e-post fra domenet ditt. For Google ser den slik ut: <code>v=spf1 include:_spf.google.com ~all</code>. For Microsoft: <code>v=spf1 include:spf.protection.outlook.com ~all</code>.</li>
+      <li><strong>DKIM</strong> er en digital signatur på hver e-post. Du slår den på i administrasjonspanelet og legger inn en nøkkel i DNS.</li>
+      <li><strong>DMARC</strong> forteller mottakeren hva som skal skje med e-post som ikke består sjekkene. Start med <code>v=DMARC1; p=none; rua=mailto:post@dinbedrift.no</code>, og stram inn til quarantine når alt fungerer.</li>
+    </ul>
+    <p>Gmail og Yahoo har siden 2024 krevd SPF eller DKIM av alle avsendere, og alle tre av dem som sender mer enn 5 000 e-poster om dagen. Microsoft innførte lignende krav for store avsendere til Outlook.com i 2025. Selv om du sender lite, er det dette som avgjør om tilbudet ditt havner i innboksen.</p>
+    <div class="tips">
+      <strong>Bare én SPF-oppføring</strong>
+      Domenet kan bare ha én SPF-oppføring. Bruker du både Google og et nyhetsbrevverktøy, skal de stå i samme oppføring, for eksempel <code>v=spf1 include:_spf.google.com include:annentjeneste.no ~all</code>. To SPF-oppføringer er en av de vanligste feilene vi ser.
+    </div>
+
+    <h2>Vanlige feil når du flytter e-post</h2>
+    <p>Den vanligste feilen er å glemme at nettsiden, bookingsystemet eller nettbutikken også sender e-post fra domenet ditt.</p>
+    <ul>
+      <li><strong>Kontaktskjemaet slutter å virke.</strong> Når du endrer SPF, må alle tjenester som sender på vegne av domenet være med, ellers havner bekreftelsene i spam.</li>
+      <li><strong>E-post forsvinner i overgangen.</strong> Senk TTL på MX-oppføringene dagen før, og bytt utenom arbeidstid.</li>
+      <li><strong>Domenet står i leverandørens navn.</strong> Sjekk at domenet er registrert på bedriften din. Står det på et byrå eller en tidligere ansatt, er det et problem du bør løse nå. Se <a href="/guider/bytte-nettsideleverandor/">slik bytter du nettsideleverandør</a>.</li>
+      <li><strong>Ingen tofaktorautentisering.</strong> E-postkontoen er nøkkelen til alt annet. Slå på tofaktor for alle brukere fra første dag. Les mer i <a href="/guider/sikkerhet-nar-du-bygger-med-ki/">sikkerhet når du bygger med KI</a>.</li>
+      <li><strong>Webhotellets e-post som eneste løsning.</strong> Den er billig, men ofte med svakere spamfilter og dårligere oppetid. For en bedrift som lever av henvendelser, er det sjelden verdt besparelsen.</li>
+    </ul>
+
+    <h2>Hva vi anbefaler</h2>
+    <p>For de fleste små bedrifter anbefaler vi Google Workspace Business Starter eller Microsoft 365 Business Basic, med aliaser i stedet for ekstra brukere.</p>
+    <p>Er du alene og bare trenger en adresse som ser ordentlig ut, holder e-post fra domeneleverandøren lenge. Uansett hva du velger: sett opp SPF, DKIM og DMARC samme dag, slå på tofaktor, og sørg for at domenet står i bedriftens navn. Vi hjelper gjerne med oppsettet når vi lager eller flytter nettsiden din, og vi kan koble e-posten til skjemaer, booking og automatiseringer. Se <a href="/tjenester/">tjenestene våre</a> eller les om <a href="/guider/ki-for-sma-bedrifter/">KI for små bedrifter</a>.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva koster e-post på eget domene?</summary>
+        <p>Enkel e-post fra en domeneleverandør koster fra rundt 29 kr i måneden. Google Workspace Business Starter koster 6,80 euro per bruker i måneden med årsavtale, rundt 80 kr, og Microsoft 365 Business Basic koster rundt 60 til 75 kr per bruker i måneden med årsavtale.</p>
+      </details>
+      <details>
+        <summary>Kan jeg få e-post på eget domene gratis?</summary>
+        <p>Noen webhotell og domeneleverandører inkluderer enkel e-post, men en egen e-posttjeneste for bedrifter koster nesten alltid noe. For en bedrift er det vanligvis verdt de få kronene i måneden for bedre spamfilter, oppetid og sikkerhet.</p>
+      </details>
+      <details>
+        <summary>Hva er MX-oppføring?</summary>
+        <p>En MX-oppføring er en DNS-innstilling som forteller resten av internett hvilken server som skal ta imot e-post for domenet ditt. Den settes hos den som administrerer domenet, og peker for eksempel til Google eller Microsoft.</p>
+      </details>
+      <details>
+        <summary>Hvorfor havner e-posten min i søppelpost?</summary>
+        <p>Den vanligste grunnen er at SPF, DKIM eller DMARC mangler eller er satt opp feil. Disse DNS-oppføringene beviser at e-posten virkelig kommer fra deg. Gmail og Yahoo krever SPF eller DKIM av alle avsendere, og alle tre av store avsendere.</p>
+      </details>
+      <details>
+        <summary>Må jeg betale for hver e-postadresse?</summary>
+        <p>Nei. Hos Google Workspace og Microsoft 365 betaler du per bruker. Adresser som post@, faktura@ og booking@ kan settes opp som aliaser eller grupper som havner i en eksisterende innboks.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/kjope-domene/">Slik kjøper du et .no-domene</a></li>
+        <li><a href="/guider/hvor-hoste-nettside/">Hvor bør du hoste nettsiden?</a></li>
+        <li><a href="/guider/bytte-nettsideleverandor/">Slik bytter du nettsideleverandør uten å miste noe</a></li>
+        <li><a href="/guider/sikkerhet-nar-du-bygger-med-ki/">Sikkerhet når du bygger med KI</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du ha e-post og nettside som bare fungerer?</h2>
+      <p>Vi setter opp domene, e-post og DNS riktig fra start, med SPF, DKIM og DMARC på plass, og bygger nettsiden rundt det. Send oss domenet ditt, så ser vi på hva som må til.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

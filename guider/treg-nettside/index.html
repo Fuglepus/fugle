@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hvorfor er nettsiden treg? Core Web Vitals forklart | Fugle.dev</title>
+<meta name="description" content="Hvorfor er nettsiden treg? Core Web Vitals forklart med grensene for LCP, INP og CLS i 2026, de vanligste årsakene og hva du bør fikse først.">
+<link rel="canonical" href="https://fugle.dev/guider/treg-nettside/">
+<meta property="og:title" content="Hvorfor er nettsiden treg? Core Web Vitals forklart">
+<meta property="og:description" content="Grensene for LCP, INP og CLS, hva som gjør nettsider trege og hvilken rekkefølge du bør fikse ting i.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/treg-nettside/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Hvorfor er nettsiden treg? Core Web Vitals forklart",
+      "description": "Hvorfor er nettsiden treg? Core Web Vitals forklart med grensene for LCP, INP og CLS i 2026, de vanligste årsakene og hva du bør fikse først.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/treg-nettside/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Treg nettside",
+          "item": "https://fugle.dev/guider/treg-nettside/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva er gode verdier for Core Web Vitals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "God LCP er 2,5 sekunder eller mindre, god INP er 200 millisekunder eller mindre, og god CLS er 0,1 eller lavere. For å bestå må minst 75 prosent av besøkene ligge innenfor disse grensene, målt separat for mobil og PC."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvorfor er nettsiden min treg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De vanligste årsakene er for store bilder, en treg server eller et billig webhotell uten mellomlagring, for mange tredjepartsskript som chat og sporing, og tunge temaer eller mange utvidelser i WordPress. Mål siden i PageSpeed Insights for å se hvilken måling som feiler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Påvirker hastighet plasseringen på Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, Core Web Vitals brukes i Googles rangeringssystemer, men relevans veier tyngre. En rask side med svakt innhold slår ikke en litt tregere side med det beste svaret. Fart kan likevel avgjøre når flere sider er omtrent like gode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er forskjellen på PageSpeed-poengsum og Core Web Vitals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Poengsummen fra 0 til 100 kommer fra en simulert laboratorietest. Core Web Vitals i feltdata er målinger fra ekte brukere de siste 28 dagene, og det er disse Google bruker. Målet er grønne feltdata, ikke 100 poeng."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva erstattet FID i Core Web Vitals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "INP, Interaction to Next Paint, erstattet FID som Core Web Vital i mars 2024. INP måler hvor raskt siden reagerer på alle trykk og klikk gjennom hele besøket, ikke bare det første."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Treg nettside</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Hvorfor er nettsiden treg?</h1>
+    <p class="ingress">Kort svar: de fleste nettsider er trege på grunn av for store bilder, treg hosting eller for mye JavaScript fra temaer, utvidelser og tredjepartsskript. Google måler dette med Core Web Vitals, der grensene for god opplevelse er LCP på høyst 2,5 sekunder, INP på høyst 200 millisekunder og CLS på høyst 0,1.</p>
+    <h2>Hva er Core Web Vitals?</h2>
+    <p>Core Web Vitals er tre målinger Google bruker for å vurdere om en nettside oppleves rask og stabil for ekte brukere: hvor fort hovedinnholdet vises, hvor raskt siden reagerer når du trykker, og om innholdet hopper rundt mens det laster. Google bruker dem i rangeringen, og de er et godt mål på om besøkende blir frustrerte.</p>
+    <p>Grensene har ligget fast siden INP erstattet den gamle målingen FID i mars 2024, og de gjelder fortsatt per oktober 2026:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Måling</th><th>Hva den måler</th><th>God</th><th>Bør forbedres</th><th>Dårlig</th></tr></thead>
+      <tbody>
+        <tr><td>LCP (Largest Contentful Paint)</td><td>Tid til det største elementet, ofte toppbildet eller overskriften, er synlig</td><td>2,5 s eller mindre</td><td>2,5 til 4 s</td><td>Over 4 s</td></tr>
+        <tr><td>INP (Interaction to Next Paint)</td><td>Hvor raskt siden reagerer på trykk, klikk og tastetrykk</td><td>200 ms eller mindre</td><td>200 til 500 ms</td><td>Over 500 ms</td></tr>
+        <tr><td>CLS (Cumulative Layout Shift)</td><td>Hvor mye innholdet flytter seg uventet</td><td>0,1 eller mindre</td><td>0,1 til 0,25</td><td>Over 0,25</td></tr>
+      </tbody>
+    </table></div>
+    <p>For å bestå må 75 prosent av besøkene ligge innenfor "god" på alle tre, målt separat for mobil og PC. Det er altså ikke nok at siden er rask på din egen PC med fiber. Den må være rask på en gjennomsnittlig mobil på 4G i Tromsø også.</p>
+
+    <h2>Hvordan sjekker du om nettsiden er treg?</h2>
+    <p>Det raskeste er å lime inn adressen i PageSpeed Insights (pagespeed.web.dev), som viser både ekte brukerdata og en laboratorietest. Forskjellen mellom de to er det mange misforstår:</p>
+    <ul>
+      <li><strong>Feltdata</strong> øverst er målinger fra ekte Chrome-brukere de siste 28 dagene. Det er disse Google bruker. Små nettsteder har ofte for lite trafikk til at det finnes feltdata.</li>
+      <li><strong>Laboratoriedata</strong> og poengsummen fra 0 til 100 kommer fra en simulert test på én tenkt mobil. Den er nyttig for å finne feil, men poengsummen i seg selv er ikke det Google rangerer på.</li>
+    </ul>
+    <p>I tillegg har <a href="/guider/google-search-console/">Google Search Console</a> en egen Core Web Vitals-rapport som grupperer like sider og viser hvilke som feiler. Vil du se det live, viser ytelsespanelet i Chrome DevTools LCP, INP og CLS mens du klikker deg rundt på siden.</p>
+    <div class="tips">
+      <strong>Ikke jakt på 100 poeng</strong>
+      Vi ser bedrifter bruke tusenvis av kroner på å gå fra 85 til 98 i Lighthouse. Det gir nesten aldri målbar effekt. Målet er grønt på alle tre Core Web Vitals i feltdata. Er du der, er fart ikke lenger det som holder deg tilbake.
+    </div>
+
+    <h2>Hvorfor laster nettsiden sakte? (LCP)</h2>
+    <p>Dårlig LCP skyldes nesten alltid ett av fire problemer: for store bilder, treg server, filer som blokkerer visningen, eller at det viktigste elementet lastes for sent. Slik ser det ut i praksis:</p>
+    <ul>
+      <li><strong>Toppbildet er 3 til 5 MB rett fra kameraet.</strong> Det skal være 100 til 300 KB i WebP eller AVIF, i riktig størrelse for skjermen. Dette alene fikser LCP på et flertall av småbedriftssidene vi ser på.</li>
+      <li><strong>Toppbildet er satt til å lastes lat.</strong> Lazy loading er bra for bilder lenger ned, men gjør det viktigste bildet tregere. Gi heller toppbildet <code>fetchpriority="high"</code>.</li>
+      <li><strong>Serveren bruker lang tid på å svare.</strong> Tiden til første byte bør være under 0,8 sekunder. Billig delt webhotell uten mellomlagring, eller en WordPress-side som bygger hver side på nytt for hver besøkende, ligger ofte langt over.</li>
+      <li><strong>Glidere og videoer øverst.</strong> En bildekarusell laster gjerne fem store bilder og en haug JavaScript før noe vises. Ett godt bilde slår fem middels.</li>
+    </ul>
+
+    <h2>Hvorfor reagerer siden tregt når du trykker? (INP)</h2>
+    <p>Dårlig INP skyldes for mye JavaScript som kjører samtidig, slik at nettleseren ikke rekker å svare på trykket ditt. På vanlige bedriftssider er det sjelden egen kode som er synderen, men alt som er lagt til over tid:</p>
+    <ul>
+      <li>Chat-widgets, sporingsskript og markedsføringspiksler fra flere leverandører.</li>
+      <li>Tunge sidebyggere og temaer med animasjoner på alt.</li>
+      <li>WordPress-installasjoner med 30 eller 40 utvidelser, der hver av dem laster sine egne filer på hver side.</li>
+      <li>Cookie-bannere som laster et stort skript før noe annet fungerer.</li>
+    </ul>
+    <p>Løsningen er å telle og kutte. Åpne nettverksfanen i nettleseren, se hvor mange eksterne skript som lastes, og spør for hvert av dem: bruker vi faktisk dette? Det er ikke uvanlig å kunne fjerne halvparten.</p>
+
+    <h2>Hvorfor hopper innholdet rundt? (CLS)</h2>
+    <p>Innhold hopper når noe dukker opp eller endrer størrelse etter at resten av siden er vist. Klassikeren er at du skal trykke på en knapp, og så presses den ned av et banner som lastet et halvt sekund for sent. De vanligste årsakene:</p>
+    <ul>
+      <li>Bilder uten oppgitt bredde og høyde, så nettleseren ikke vet hvor mye plass de skal ha.</li>
+      <li>Bannere, varsler eller cookie-løsninger som skyver innholdet ned i stedet for å legge seg over.</li>
+      <li>Innbygde kart, videoer og sosiale medier uten fast plass.</li>
+      <li>Nettfonter som bytter ut reservefonten og endrer linjelengdene.</li>
+    </ul>
+    <p>CLS er ofte det enkleste å fikse: gi alle bilder og innbygginger faste mål, og la bannere ligge over innholdet.</p>
+
+    <h2>Hvor mye betyr fart for Google-plasseringen?</h2>
+    <p>Fart teller, men relevans teller mer. Google skriver selv at søket alltid prøver å vise det mest relevante innholdet, også når sideopplevelsen er dårlig, men at god sideopplevelse kan gjøre forskjellen når mange sider er omtrent like gode. Core Web Vitals er altså sjelden grunnen til at du ligger på side tre, men de kan være grunnen til at du ligger på plass fem i stedet for to.</p>
+    <p>Den største effekten av en rask side ser du ofte ikke i Google, men i hvor mange som faktisk tar kontakt. Folk som venter på en treg side på mobilen, trykker tilbake og velger neste treff. Det er en kunde du betalte for å få, enten med annonser eller med SEO-arbeid, og så mistet i døra.</p>
+
+    <h2>Hva med WordPress, Wix og Squarespace?</h2>
+    <p>Alle tre kan gi grønne Core Web Vitals, men de feiler på ulike måter. På WordPress har du full kontroll, og det er både styrken og problemet: tunge temaer, sidebyggere og mange utvidelser er den vanligste grunnen til trege bedriftssider vi ser. Et lett tema, en mellomlagringsutvidelse, automatisk bildekomprimering og en streng holdning til nye utvidelser løser mye.</p>
+    <p>På Wix og Squarespace har du mindre å skru på. Hostingen og koden er leverandørens, så det du kan påvirke er stort sett bildestørrelser, antall seksjoner og hvor mange apper og innbygginger du legger til. Er siden fortsatt treg etter det, er det lite mer å hente uten å bytte plattform.</p>
+    <p>Egenbygde sider kan være de raskeste av alle, eller de tregeste, avhengig av hvem som har bygget dem. Et tungt JavaScript-rammeverk for en side med fem undersider er like ille som et tungt WordPress-tema.</p>
+
+    <h2>Hva bør du gjøre hvis siden er treg?</h2>
+    <p>Gå frem i denne rekkefølgen. Det gir mest per time, og de første stegene kan du ofte gjøre selv:</p>
+    <ol>
+      <li><strong>Mål</strong> forsiden og de to viktigste undersidene i PageSpeed Insights, på mobil.</li>
+      <li><strong>Komprimer og skaler bilder.</strong> Størst effekt, minst risiko.</li>
+      <li><strong>Fjern skript og utvidelser</strong> du ikke bruker.</li>
+      <li><strong>Gi bilder og innbygginger faste mål</strong> for å fjerne hopping.</li>
+      <li><strong>Vurder hostingen.</strong> Er tiden til første byte over ett sekund, hjelper ikke resten nok. Se guiden om <a href="/guider/hvor-hoste-nettside/">hvor du bør hoste nettsiden</a>.</li>
+      <li><strong>Vurder plattformen.</strong> Er siden bygget på et tungt tema med sidebygger, kan det være billigere å bygge om enn å lappe. Vi sammenligner alternativene i <a href="/guider/wordpress-eller-egen-nettside/">WordPress eller skreddersydd nettside</a>.</li>
+    </ol>
+    <p>Hvordan bygger vi selv? Sidene våre, også denne du leser nå, er ren HTML med ett felles stilark, levert fra et CDN uten database. Det er ingen magi, bare færre ting som kan gå tregt. For en vanlig bedriftsside med noen få undersider er det den enkleste veien til grønne tall, og med moderne KI-verktøy koster det ikke lenger mer å bygge slik enn å sette opp et tema. Prisbildet finner du i guiden om <a href="/guider/hva-koster-en-nettside/">hva en nettside koster</a>.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva er gode verdier for Core Web Vitals?</summary>
+        <p>God LCP er 2,5 sekunder eller mindre, god INP er 200 millisekunder eller mindre, og god CLS er 0,1 eller lavere. For å bestå må minst 75 prosent av besøkene ligge innenfor disse grensene, målt separat for mobil og PC.</p>
+      </details>
+      <details>
+        <summary>Hvorfor er nettsiden min treg?</summary>
+        <p>De vanligste årsakene er for store bilder, en treg server eller et billig webhotell uten mellomlagring, for mange tredjepartsskript som chat og sporing, og tunge temaer eller mange utvidelser i WordPress. Mål siden i PageSpeed Insights for å se hvilken måling som feiler.</p>
+      </details>
+      <details>
+        <summary>Påvirker hastighet plasseringen på Google?</summary>
+        <p>Ja, Core Web Vitals brukes i Googles rangeringssystemer, men relevans veier tyngre. En rask side med svakt innhold slår ikke en litt tregere side med det beste svaret. Fart kan likevel avgjøre når flere sider er omtrent like gode.</p>
+      </details>
+      <details>
+        <summary>Hva er forskjellen på PageSpeed-poengsum og Core Web Vitals?</summary>
+        <p>Poengsummen fra 0 til 100 kommer fra en simulert laboratorietest. Core Web Vitals i feltdata er målinger fra ekte brukere de siste 28 dagene, og det er disse Google bruker. Målet er grønne feltdata, ikke 100 poeng.</p>
+      </details>
+      <details>
+        <summary>Hva erstattet FID i Core Web Vitals?</summary>
+        <p>INP, Interaction to Next Paint, erstattet FID som Core Web Vital i mars 2024. INP måler hvor raskt siden reagerer på alle trykk og klikk gjennom hele besøket, ikke bare det første.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/hvor-hoste-nettside/">Hvor bør du hoste nettsiden?</a></li>
+        <li><a href="/guider/vedlikehold-av-nettside/">Vedlikehold av nettside: hva må gjøres og hva koster det</a></li>
+        <li><a href="/guider/seo-for-sma-bedrifter/">SEO for små bedrifter: komplett nybegynnerguide</a></li>
+        <li><a href="/guider/google-search-console/">Google Search Console for nybegynnere</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du ha en nettside som er rask fra start?</h2>
+      <p>Vi bygger lette nettsider med moderne KI-verktøy, uten tunge temaer og unødvendige utvidelser, så Core Web Vitals er grønne fra dag én. Har du en treg side i dag, kan vi også se på hva som er billigst: å fikse den eller å bygge ny. Send oss adressen, så får du en ærlig vurdering.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

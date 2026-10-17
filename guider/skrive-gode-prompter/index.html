@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slik skriver du gode prompter: guide med eksempler | Fugle.dev</title>
+<meta name="description" content="Slik skriver du gode prompter til ChatGPT, Claude og Gemini: en enkel mal, norske før og etter-eksempler, vanlige feil og teknikkene som faktisk gir bedre svar.">
+<link rel="canonical" href="https://fugle.dev/guider/skrive-gode-prompter/">
+<meta property="og:title" content="Slik skriver du gode prompter: guide med eksempler">
+<meta property="og:description" content="En praktisk promptguide på norsk: malen vi bruker, eksempler før og etter, teknikker som virker i 2026 og feilene som gir dårlige KI-svar.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/skrive-gode-prompter/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Slik skriver du gode prompter: guide med eksempler",
+      "description": "Slik skriver du gode prompter til ChatGPT, Claude og Gemini: en enkel mal, norske før og etter-eksempler, vanlige feil og teknikkene som faktisk gir bedre svar.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/skrive-gode-prompter/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Slik skriver du gode prompter",
+          "item": "https://fugle.dev/guider/skrive-gode-prompter/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva er en god prompt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En god prompt forteller KI-modellen hva oppgaven er, hvorfor den skal gjøres, hvem resultatet er for, hvilket materiale den skal bygge på og hvordan svaret skal se ut. Jo mer relevant kontekst, jo mindre må modellen gjette."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvor lang bør en prompt være?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Så lang som den må være for at en ny kollega uten bakgrunn skulle forstått oppgaven. Et enkelt spørsmål kan være én setning, mens en viktig tekst eller analyse gjerne trenger et halvt til et helt skjermbilde med kontekst og eksempler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fungerer de samme promptene i ChatGPT, Claude og Gemini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, grunnprinsippene er de samme for alle de store modellene. Forskjellene handler mest om hvor ordrike modellene er og hvor bokstavelig de følger instruksjoner, så du kan måtte justere lengde og detaljnivå litt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Må jeg skrive prompter på engelsk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. De store modellene forstår og skriver godt norsk. Skriv prompten på det språket du vil ha svaret på, og si gjerne at du vil ha bokmål eller nynorsk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvordan unngår jeg at KI finner på fakta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gi modellen kildematerialet selv, be den bare svare ut fra det, og be den si fra når den er usikker. Sjekk alltid tall, kilder og juridiske påstander før du bruker dem."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Slik skriver du gode prompter</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Slik skriver du gode prompter</h1>
+    <p class="ingress">Kort svar: en god prompt forteller KI-en det samme som du ville fortalt en flink ny kollega: hva oppgaven er, hvorfor den skal gjøres, hvem resultatet er for, hvilken informasjon den skal bygge på, og hvordan svaret skal se ut. Jo mer relevant kontekst du gir, jo mindre må modellen gjette, og det er gjettingen som gir de generiske svarene.</p>
+    <h2>Hva er en prompt?</h2>
+    <p>En prompt er instruksjonen du gir en KI-modell, alt fra et kort spørsmål til en side med bakgrunn, eksempler og krav. Modeller som ChatGPT, Claude og Gemini har ikke tilgang til tankene dine. De vet ikke hvem kundene dine er, hvilken tone bedriften har, eller hva du prøvde i går. Alt de ikke får vite, fyller de inn med det mest gjennomsnittlige svaret. Det er derfor KI-tekst så ofte føles generisk.</p>
+    <p>Den gode nyheten er at moderne modeller er svært flinke til å følge instruksjoner. Du trenger ingen magiske formuleringer eller triks. Du trenger å være tydelig.</p>
+
+    <h2>Malen vi bruker for gode prompter</h2>
+    <p>En god prompt har fem deler: oppgave, kontekst, materiale, format og grenser. Ikke alle trengs hver gang, men tenk gjennom dem før du skriver noe viktig.</p>
+    <ol>
+      <li><strong>Oppgaven:</strong> hva skal gjøres, med et tydelig verb. Skriv, oppsummer, sammenlign, finn feil i, foreslå.</li>
+      <li><strong>Konteksten:</strong> hvem du er, hvem resultatet er for, og hvorfor. "Til en kunde som har ventet to uker på en reklamasjon" endrer svaret mye.</li>
+      <li><strong>Materialet:</strong> teksten, dataene eller dokumentet modellen skal jobbe med. Lim det inn i stedet for å beskrive det.</li>
+      <li><strong>Formatet:</strong> lengde, struktur og tone. Tre punkter, maks 120 ord, uformelt men høflig.</li>
+      <li><strong>Grensene:</strong> hva som ikke skal være med, og hva modellen skal gjøre hvis den er usikker.</li>
+    </ol>
+    <p>Satt sammen ser det slik ut:</p>
+<pre><code>Skriv et svar på kundehenvendelsen under.
+
+Kontekst: Vi er en liten nettbutikk som selger kaffeutstyr.
+Kunden har ventet 12 dager på en kvern som skulle komme på 3 til 5 dager.
+Pakken står fast hos transportøren. Vi vil beholde kunden.
+
+Henvendelsen:
+"Hei, hvor er kverna mi? Har betalt for to uker siden. Dette er ikke greit."
+
+Format: Maks 100 ord. Vennlig, direkte og uten floskler.
+Si unnskyld én gang, forklar hva som har skjedd, og tilby gratis frakt
+på neste ordre. Ikke lov en leveringsdato vi ikke vet.</code></pre>
+    <p>Sammenlign med "skriv et svar til en sur kunde". Den første gir et svar du kan sende nesten uendret. Den andre gir en mal du må skrive om.</p>
+
+    <h2>Før og etter: eksempler som viser forskjellen</h2>
+    <p>Den raskeste måten å lære prompting på er å se hvor lite som skal til. Her er typiske prompter fra småbedrifter, og hvordan vi ville skrevet dem:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Svak prompt</th><th>Sterk prompt</th></tr></thead>
+      <tbody>
+        <tr><td>Skriv en tekst om tjenestene våre.</td><td>Skriv forsideteksten for et rørleggerfirma i Drammen med fire ansatte. Målgruppen er huseiere med akutte lekkasjer og folk som planlegger nytt bad. Vi skiller oss ut med svar innen to timer. Maks 150 ord, én tydelig oppfordring til å ringe.</td></tr>
+        <tr><td>Lag et innlegg til Facebook.</td><td>Lag tre varianter av et Facebook-innlegg om at frisørsalongen vår nå har kveldsåpent til 20 på torsdager. Lokal, varm tone, ingen emojier, maks 50 ord hver.</td></tr>
+        <tr><td>Oppsummer dette.</td><td>Oppsummer referatet under for en styreleder som ikke var på møtet. Ta med beslutninger, hvem som har ansvar for hva, og frister. Hopp over diskusjonen. Punktliste.</td></tr>
+        <tr><td>Er denne avtalen grei?</td><td>Les leverandøravtalen under som om du var en kritisk innkjøper. List opp punkter om oppsigelse, prisøkning, ansvar og eierskap til data som er uvanlige eller ugunstige for oss, og forklar hvorfor. Si fra der du er usikker.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Legg merke til at de sterke promptene ikke er smartere formulert. De inneholder bare mer av det modellen trenger å vite.</p>
+
+    <h2>Teknikker som faktisk virker</h2>
+    <p>De teknikkene som gir mest effekt i 2026, er enkle: gi eksempler, forklar hvorfor, del opp store oppgaver og be modellen stille spørsmål.</p>
+    <ul>
+      <li><strong>Vis et eksempel.</strong> Lim inn en tekst du liker og skriv "i samme stil som dette". Ett godt eksempel slår et avsnitt med beskrivelser av tone. Er du redd for at den kopierer for mye, gi to eller tre ulike eksempler.</li>
+      <li><strong>Forklar hvorfor.</strong> "Hold det kort, det skal leses på mobil i en travel butikk" gir bedre resultat enn bare "hold det kort", fordi modellen forstår hensikten og kan ta lure valg du ikke forutså.</li>
+      <li><strong>Be den spørre deg først.</strong> "Før du begynner, still meg de spørsmålene du trenger for å gjøre dette godt." Veldig nyttig når du selv ikke helt vet hva du vil ha.</li>
+      <li><strong>Del opp.</strong> Ikke be om hele forretningsplanen i én prompt. Be om disposisjonen, rett den, og ta ett kapittel om gangen.</li>
+      <li><strong>Merk materialet.</strong> Ved lange prompter, skill instruksjon og innhold tydelig, for eksempel med overskrifter eller merker som &lt;avtale&gt; og &lt;/avtale&gt;. Da blander modellen ikke sammen hva som er oppgaven og hva som er teksten den skal lese.</li>
+      <li><strong>Si hva du vil ha, ikke bare hva du ikke vil ha.</strong> "Skriv i hele setninger med vanlig norsk" virker bedre enn "ikke bruk punktlister og fagspråk".</li>
+      <li><strong>La den sjekke seg selv.</strong> "Gå gjennom svaret ditt og sjekk at alle tallene stemmer med tabellen" fanger mange feil.</li>
+    </ul>
+    <div class="tips">
+      <strong>Det beste enkeltrådet</strong>
+      Les prompten din som om du var en ny ansatt uten noen bakgrunn. Hadde du skjønt hva som skulle gjøres, og hvordan et godt resultat ser ut? Hvis ikke, mangler det kontekst.
+    </div>
+
+    <h2>Vanlige feil som gir dårlige svar</h2>
+    <p>Den vanligste feilen er for lite kontekst, men det finnes flere gjengangere:</p>
+    <ul>
+      <li><strong>Å godta første svar.</strong> Prompting er en samtale. Si hva som var bra og hva som må endres: "kortere, mer konkret, fjern andre avsnitt".</li>
+      <li><strong>Å stole blindt på fakta.</strong> Modeller kan finne på tall, kilder og lovparagrafer som høres riktige ut. Be om kilder, og sjekk dem. For alt som handler om jus, økonomi eller helse, er KI et utkast, ikke en fasit.</li>
+      <li><strong>Gamle triks.</strong> Å skrive i store bokstaver, true modellen eller love tips var noe folk gjorde med eldre modeller. I dag gjør det mer skade enn nytte, fordi nye modeller tar instruksjoner svært bokstavelig og kan overreagere.</li>
+      <li><strong>Å lime inn sensitive data.</strong> Kundedata, personnummer og interne tall hører ikke hjemme i gratisversjoner av KI-tjenester. Se guiden om <a href="/guider/ki-og-personvern/">KI og personvern</a>.</li>
+      <li><strong>Én enorm prompt for alt.</strong> Lange prompter er ikke et problem i seg selv, men en prompt med ti ulike oppgaver gir ti halvgode svar.</li>
+    </ul>
+
+    <h2>Lag gjenbrukbare prompter for jobben</h2>
+    <p>Når du har en prompt som fungerer, lagre den. De fleste KI-tjenester lar deg i dag lage egne instruksjoner eller prosjekter, som Prosjekter i ChatGPT og Claude eller Gems i Gemini, der du legger inn fast bakgrunn om bedriften, tonen og målgruppen én gang. Da slipper du å gjenta konteksten hver gang, og alle i bedriften får likere resultater.</p>
+    <p>En god fast instruks for en liten bedrift kan inneholde: hva bedriften gjør, hvem kundene er, tre til fem ord om tonen, ord og uttrykk dere bruker og ikke bruker, og en kort tekst som viser stilen. Det tar en halvtime å skrive og sparer timer hver uke.</p>
+    <p>Det samme prinsippet ligger bak alt vi bygger med KI. En <a href="/guider/chatbot-pa-nettsiden/">chatbot på nettsiden</a> er i bunn og grunn en svært godt gjennomarbeidet prompt pluss en kunnskapsbase. Når vi bygger med kodeverktøy som <a href="/guider/hva-er-claude-code/">Claude Code</a>, er prompten i praksis kravspesifikasjonen.</p>
+
+    <h2>Er prompting forskjellig for ChatGPT, Claude og Gemini?</h2>
+    <p>Grunnprinsippene er de samme for alle de store modellene: tydelig oppgave, god kontekst, eksempler og et klart format. Forskjellene sitter mer i personligheten enn i hvordan du bør skrive. Noen modeller er ordrike av natur og trenger beskjed om å være korte, andre følger instruksjoner svært bokstavelig og gjør akkurat det du ber om, verken mer eller mindre. Vil du ha ekstra innsats, si det. Vil du at den bare skal foreslå og ikke endre noe, si det også. Les mer om forskjellene i <a href="/guider/claude-vs-chatgpt/">Claude vs ChatGPT</a>.</p>
+    <p>For oppgaver som krever resonnering, som analyse, planlegging og matematikk, har de nyeste modellene innebygd tenking. Der trenger du ikke lenger skrive "tenk steg for steg". Det hjelper mer å gi dem god kontekst og et tydelig mål.</p>
+
+    <h2>Hva vi anbefaler</h2>
+    <p>Bruk malen med oppgave, kontekst, materiale, format og grenser i en uke på ekte arbeidsoppgaver. Lagre de promptene som fungerer. Etter en uke har du et lite bibliotek som gjør KI til et verktøy du stoler på, ikke et lotteri. Vil du vite hvor KI gir mest nytte i en liten bedrift, les <a href="/guider/ki-for-sma-bedrifter/">KI for små bedrifter</a>.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva er en god prompt?</summary>
+        <p>En god prompt forteller KI-modellen hva oppgaven er, hvorfor den skal gjøres, hvem resultatet er for, hvilket materiale den skal bygge på og hvordan svaret skal se ut. Jo mer relevant kontekst, jo mindre må modellen gjette.</p>
+      </details>
+      <details>
+        <summary>Hvor lang bør en prompt være?</summary>
+        <p>Så lang som den må være for at en ny kollega uten bakgrunn skulle forstått oppgaven. Et enkelt spørsmål kan være én setning, mens en viktig tekst eller analyse gjerne trenger et halvt til et helt skjermbilde med kontekst og eksempler.</p>
+      </details>
+      <details>
+        <summary>Fungerer de samme promptene i ChatGPT, Claude og Gemini?</summary>
+        <p>Ja, grunnprinsippene er de samme for alle de store modellene. Forskjellene handler mest om hvor ordrike modellene er og hvor bokstavelig de følger instruksjoner, så du kan måtte justere lengde og detaljnivå litt.</p>
+      </details>
+      <details>
+        <summary>Må jeg skrive prompter på engelsk?</summary>
+        <p>Nei. De store modellene forstår og skriver godt norsk. Skriv prompten på det språket du vil ha svaret på, og si gjerne at du vil ha bokmål eller nynorsk.</p>
+      </details>
+      <details>
+        <summary>Hvordan unngår jeg at KI finner på fakta?</summary>
+        <p>Gi modellen kildematerialet selv, be den bare svare ut fra det, og be den si fra når den er usikker. Sjekk alltid tall, kilder og juridiske påstander før du bruker dem.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/ki-for-sma-bedrifter/">KI for små bedrifter</a></li>
+        <li><a href="/guider/claude-vs-chatgpt/">Claude vs ChatGPT</a></li>
+        <li><a href="/guider/chatbot-pa-nettsiden/">KI-chatbot på nettsiden</a></li>
+        <li><a href="/guider/skrive-tekster-til-nettside/">Skrive nettsidetekster som selger</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du få mer ut av KI i bedriften?</h2>
+      <p>Vi bygger KI-løsninger med gjennomarbeidede instruksjoner og kunnskapsbaser, og hjelper bedrifter å sette opp faste prompter som gir like gode resultater for alle ansatte. Fortell oss hva dere bruker KI til i dag, så foreslår vi hva som kan bli bedre.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

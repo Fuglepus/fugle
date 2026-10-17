@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hva er et API? Enkel forklaring med norske eksempler | Fugle.dev</title>
+<meta name="description" content="Hva er et API? En enkel forklaring uten fagprat: hvordan API-er virker, norske eksempler som Vipps, Yr og Brønnøysund, hva det koster og hva du bør passe på.">
+<link rel="canonical" href="https://fugle.dev/guider/hva-er-et-api/">
+<meta property="og:title" content="Hva er et API? Enkel forklaring med norske eksempler">
+<meta property="og:description" content="API forklart på vanlig norsk: hva det er, hvordan det fungerer, eksempler fra Vipps, Yr og Brønnøysundregistrene, og hvorfor det betyr noe for bedriften din.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/hva-er-et-api/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Hva er et API? Enkel forklaring med norske eksempler",
+      "description": "Hva er et API? En enkel forklaring uten fagprat: hvordan API-er virker, norske eksempler som Vipps, Yr og Brønnøysund, hva det koster og hva du bør passe på.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/hva-er-et-api/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hva er et API?",
+          "item": "https://fugle.dev/guider/hva-er-et-api/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva er et API på enkel norsk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Et API er en avtalt måte for to dataprogrammer å snakke sammen på. Det fungerer som en meny: et program sender en bestilling, for eksempel hent værdata eller start en betaling, og får et svar tilbake uten å trenge å vite hvordan det andre systemet fungerer på innsiden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva står API for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "API står for Application Programming Interface, som betyr omtrent grensesnitt for programmer. Et skjermbilde er et grensesnitt for mennesker, et API er et grensesnitt for maskiner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Koster det penger å bruke et API?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det varierer. Mange offentlige norske API-er, som Brønnøysundregistrene og MET Norway, er gratis. Betalings-API-er som Vipps og Stripe tar gebyr per transaksjon. KI-API-er fra OpenAI, Anthropic og Google tar betalt per bruk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er en API-nøkkel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En API-nøkkel er et hemmelig passord som gir et program tilgang til et API. Den skal aldri ligge i kode som vises i nettleseren eller i offentlige repoer, fordi alle som har nøkkelen kan bruke tjenesten på dine vegne."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er forskjellen på et API og en webhook?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Med et API spør programmet ditt et annet system om noe. Med en webhook sender det andre systemet beskjed til deg av seg selv når noe skjer, for eksempel når en betaling er fullført."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Hva er et API?</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Hva er et API?</h1>
+    <p class="ingress">Kort svar: et API (Application Programming Interface) er en avtalt måte for to dataprogrammer å snakke sammen på. Når nettbutikken viser fraktpris fra Posten, når du betaler med Vipps på en nettside, eller når en app viser været fra Yr, er det et API som henter informasjonen fra et annet system.</p>
+    <h2>Hva er et API, forklart enkelt?</h2>
+    <p>Et API er en meny med ting et system kan gjøre for andre programmer, og en fast regel for hvordan man bestiller. Den vanligste forklaringen er servitøren på en restaurant. Du går ikke inn på kjøkkenet og lager maten selv. Du bestiller fra menyen, servitøren tar bestillingen med inn, og kommer tilbake med retten. Du trenger ikke vite hvordan kjøkkenet fungerer, bare hva som står på menyen.</p>
+    <p>På samme måte trenger ikke nettsiden din å vite hvordan Vipps fungerer på innsiden. Den sender en bestilling til Vipps sitt API: "start en betaling på 349 kr for ordre 1043". Vipps gjør jobben og sender svar tilbake: "betalt" eller "avbrutt".</p>
+    <p>Navnet er mindre skummelt enn det høres ut. Application Programming Interface betyr omtrent "grensesnitt for programmer". Et skjermbilde er et grensesnitt for mennesker. Et API er det samme for maskiner.</p>
+
+    <h2>Hvordan fungerer et API?</h2>
+    <p>De fleste API-er på nettet fungerer med en forespørsel og et svar over internett, på samme måte som når nettleseren din henter en nettside. Forskjellen er at svaret ikke er en pen side, men rene data, nesten alltid i formatet JSON.</p>
+    <p>En forespørsel består av fire deler:</p>
+    <ul>
+      <li><strong>Adressen</strong> (endepunktet): hvor du sender forespørselen, for eksempel en bestemt URL for "hent bedrift".</li>
+      <li><strong>Metoden</strong>: hva du vil gjøre. GET henter data, POST lager noe nytt, PUT eller PATCH endrer, DELETE sletter.</li>
+      <li><strong>Nøkkelen</strong>: et passord som viser hvem du er og hva du har lov til. Mange åpne API-er krever ikke nøkkel.</li>
+      <li><strong>Innholdet</strong>: dataene du sender med, for eksempel beløpet i en betaling.</li>
+    </ul>
+    <p>Et ekte eksempel du kan prøve selv: Brønnøysundregistrene har et åpent og gratis API for Enhetsregisteret. Lim inn denne adressen i nettleseren, med Equinors organisasjonsnummer på slutten:</p>
+    <pre><code>https://data.brreg.no/enhetsregisteret/api/enheter/923609016</code></pre>
+    <p>Du får tilbake data om bedriften i JSON: navn, adresse, organisasjonsform, næringskode og mer. Ingen nettside, bare data som et annet program kan bruke. Det er slik et regnskapsprogram fyller inn firmaadressen automatisk når du skriver inn organisasjonsnummeret.</p>
+
+    <h2>Hvilke API-er bruker norske bedrifter?</h2>
+    <p>Norske bedrifter bruker API-er hele tiden, ofte uten å vite det. Noen av de vanligste:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>API</th><th>Hva det brukes til</th><th>Pris</th></tr></thead>
+      <tbody>
+        <tr><td>Vipps MobilePay</td><td>Betaling på nettsider og i apper</td><td>Gebyr per transaksjon, ikke for selve API-et</td></tr>
+        <tr><td>Stripe</td><td>Kortbetaling og abonnement</td><td>Gebyr per transaksjon</td></tr>
+        <tr><td>Brønnøysundregistrene</td><td>Slå opp bedrifter, adresser og roller</td><td>Gratis</td></tr>
+        <tr><td>MET Norway (data bak Yr)</td><td>Værvarsel i apper og på nettsider</td><td>Gratis, krever at du identifiserer appen din</td></tr>
+        <tr><td>Entur</td><td>Kollektivtrafikk, ruter og avganger</td><td>Gratis for de fleste formål</td></tr>
+        <tr><td>Posten og Bring</td><td>Fraktpriser, sporing og etiketter</td><td>Krever kundeavtale</td></tr>
+        <tr><td>Fiken, Tripletex, PowerOffice</td><td>Regnskap, fakturaer og bilag</td><td>Del av abonnementet</td></tr>
+        <tr><td>OpenAI, Anthropic, Google</td><td>KI-modeller i egne løsninger</td><td>Betaling per bruk (tokens)</td></tr>
+      </tbody>
+    </table></div>
+    <p>Prismodellene endres, så sjekk alltid vilkårene hos leverandøren. Poenget er at mange av de nyttigste norske API-ene er gratis, og at betalings-API-er tar betalt per transaksjon, ikke for tilgangen.</p>
+
+    <h2>Hvorfor betyr API-er noe for bedriften din?</h2>
+    <p>API-er betyr noe fordi de lar systemene dine jobbe sammen, så folk slipper å kopiere data for hånd. Hver gang en ansatt skriver av en bestilling fra e-post til regnskapet, eller fra bookingsystemet til kalenderen, er det en jobb et API kunne gjort.</p>
+    <ul>
+      <li><strong>Mindre manuelt arbeid:</strong> ordren går rett fra nettbutikken til regnskap og lager.</li>
+      <li><strong>Færre feil:</strong> maskiner skriver ikke av feil kontonummer.</li>
+      <li><strong>Frihet til å bytte:</strong> systemer med gode API-er kan kobles til nye verktøy senere. Systemer uten API låser deg inne.</li>
+      <li><strong>KI blir nyttig:</strong> en KI-assistent kan bare gjøre noe i systemene dine hvis de har et API. Det er grunnlaget for både <a href="/guider/hva-er-en-ki-agent/">KI-agenter</a> og <a href="/guider/hva-er-mcp/">MCP</a>.</li>
+    </ul>
+    <div class="tips">
+      <strong>Spør dette før du kjøper et system</strong>
+      "Har dere et åpent API, og er det inkludert i prisen?" Et nei er et varseltegn. Da blir det dyrt eller umulig å koble systemet til noe annet senere.
+    </div>
+
+    <h2>Hva er en API-nøkkel?</h2>
+    <p>En API-nøkkel er et hemmelig passord som gir et program tilgang til et API på dine vegne. Den skal behandles som et bankkort med PIN-kode. Den som har nøkkelen, kan bruke tjenesten som om de var deg, og i verste fall bruke opp kreditten din eller lese kundedata.</p>
+    <p>Den vanligste feilen vi ser, er nøkler som havner i koden på nettsiden, i et offentlig GitHub-repo eller i en delt fil. Nøkler skal ligge på serveren, aldri i koden som sendes til nettleseren. Har det skjedd, har vi en egen guide: <a href="/guider/lekket-api-nokkel/">Lekket API-nøkkel: dette gjør du</a>. Flere klassiske feil finner du i <a href="/guider/vanlige-sikkerhetsfeil/">Vanlige sikkerhetsfeil</a>.</p>
+
+    <h2>Hva er forskjellen på et API og en webhook?</h2>
+    <p>Med et API spør du et system om noe, med en webhook sier systemet ifra til deg av seg selv. Hvis nettsiden din vil vite om en Vipps-betaling er fullført, kan den spørre Vipps igjen og igjen via API-et. Det er tungvint. Med en webhook ringer Vipps tilbake til en adresse du har oppgitt i det øyeblikket betalingen er gjennomført. De fleste moderne integrasjoner bruker begge: API for å gjøre ting, webhook for å få beskjed. En webhook-adresse bør alltid sjekke at meldingen faktisk kommer fra riktig avsender, ellers kan hvem som helst late som en betaling er gjennomført.</p>
+
+    <h2>Andre begreper du vil møte</h2>
+    <ul>
+      <li><strong>REST:</strong> den vanligste stilen for API-er på nettet, med adresser og metodene GET, POST og så videre.</li>
+      <li><strong>JSON:</strong> tekstformatet dataene sendes i. Lesbart for både mennesker og maskiner.</li>
+      <li><strong>Rate limit:</strong> en grense for hvor mange forespørsler du kan sende per minutt eller døgn.</li>
+      <li><strong>Dokumentasjon:</strong> bruksanvisningen for API-et. God dokumentasjon er et av de beste tegnene på et godt system.</li>
+      <li><strong>SDK:</strong> ferdig kode fra leverandøren som gjør det enklere å bruke API-et i et bestemt programmeringsspråk.</li>
+    </ul>
+
+    <h2>Må jeg kunne programmere for å bruke et API?</h2>
+    <p>Nei, ikke lenger. Automatiseringsverktøy som Zapier, Make og n8n lar deg bruke tusenvis av API-er ved å klikke sammen flyter, se <a href="/guider/zapier-make-n8n/">Zapier, Make eller n8n?</a> Og med KI-verktøy kan du beskrive hva du vil på vanlig norsk og få koden skrevet for deg. Les mer i <a href="/guider/bygge-med-ki-uten-a-kode/">Bygge med KI uten å kode</a>.</p>
+    <p>Det du fortsatt bør forstå, er det grunnleggende på denne siden: hva som sendes hvor, hvem som har nøkkelen, og hva som skjer når noe feiler. Det er der de fleste problemene oppstår.</p>
+
+    <h2>Hva koster det å lage en API-integrasjon?</h2>
+    <p>En enkel integrasjon mellom to systemer med gode API-er er ofte en jobb på timer eller noen få dager, mens kompliserte integrasjoner med gamle systemer kan ta uker. Det som driver prisen, er sjelden selve koden. Det er hvor godt API-ene er dokumentert, hvor mange felter som må oversettes mellom systemene, og hva som skal skje når noe feiler.</p>
+    <ul>
+      <li><strong>Via automatiseringsverktøy:</strong> fra 0 til noen hundrelapper i måneden, pluss oppsettstid. Raskest når begge systemene har ferdige koblinger.</li>
+      <li><strong>Skreddersydd integrasjon:</strong> en engangskostnad for bygging og lav drift. Lønner seg ved store volum, spesielle behov eller når du vil eie løsningen selv.</li>
+      <li><strong>Vedlikehold:</strong> API-er endres. Leverandører fjerner gamle versjoner, ofte med noen måneders varsel. Sett av litt tid i året til å holde integrasjonene oppdatert.</li>
+    </ul>
+
+    <h2>Hvordan vi bruker API-er</h2>
+    <p>Nesten alt vi bygger, er API-er som snakker sammen. Et bookingsystem henter betaling via Vipps eller Stripe, sender bekreftelse på e-post og legger timen i kalenderen. KI-tjenestene vi har lansert, som WatchScanning og WorthPic, sender bilder til KI-modeller via API og får tilbake en vurdering på sekunder. Når vi lager integrasjoner for kunder, er de viktigste spørsmålene alltid de samme: Hvilke systemer har du, har de API, og hvor skal dataene flyte?</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva er et API på enkel norsk?</summary>
+        <p>Et API er en avtalt måte for to dataprogrammer å snakke sammen på. Det fungerer som en meny: et program sender en bestilling, for eksempel hent værdata eller start en betaling, og får et svar tilbake uten å trenge å vite hvordan det andre systemet fungerer på innsiden.</p>
+      </details>
+      <details>
+        <summary>Hva står API for?</summary>
+        <p>API står for Application Programming Interface, som betyr omtrent grensesnitt for programmer. Et skjermbilde er et grensesnitt for mennesker, et API er et grensesnitt for maskiner.</p>
+      </details>
+      <details>
+        <summary>Koster det penger å bruke et API?</summary>
+        <p>Det varierer. Mange offentlige norske API-er, som Brønnøysundregistrene og MET Norway, er gratis. Betalings-API-er som Vipps og Stripe tar gebyr per transaksjon. KI-API-er fra OpenAI, Anthropic og Google tar betalt per bruk.</p>
+      </details>
+      <details>
+        <summary>Hva er en API-nøkkel?</summary>
+        <p>En API-nøkkel er et hemmelig passord som gir et program tilgang til et API. Den skal aldri ligge i kode som vises i nettleseren eller i offentlige repoer, fordi alle som har nøkkelen kan bruke tjenesten på dine vegne.</p>
+      </details>
+      <details>
+        <summary>Hva er forskjellen på et API og en webhook?</summary>
+        <p>Med et API spør programmet ditt et annet system om noe. Med en webhook sender det andre systemet beskjed til deg av seg selv når noe skjer, for eksempel når en betaling er fullført.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/hva-er-mcp/">Hva er MCP?</a></li>
+        <li><a href="/guider/zapier-make-n8n/">Zapier, Make eller n8n?</a></li>
+        <li><a href="/guider/lekket-api-nokkel/">Lekket API-nøkkel: dette gjør du</a></li>
+        <li><a href="/guider/betaling-pa-nettsiden/">Betaling på nettsiden</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du få systemene dine til å snakke sammen?</h2>
+      <p>Vi bygger integrasjoner mellom nettside, booking, betaling, regnskap og KI, så du slipper å kopiere data for hånd. Fortell oss hvilke systemer du bruker, så sier vi hva som lar seg koble og hva det koster.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

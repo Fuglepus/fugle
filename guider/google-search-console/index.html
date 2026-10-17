@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Search Console for nybegynnere: oppsett og bruk | Fugle.dev</title>
+<meta name="description" content="Google Search Console forklart for nybegynnere: slik setter du det opp, hvilke rapporter du trenger, hva indekseringsfeilene betyr og hva som er nytt i 2026.">
+<link rel="canonical" href="https://fugle.dev/guider/google-search-console/">
+<meta property="og:title" content="Google Search Console for nybegynnere: oppsett og bruk">
+<meta property="og:description" content="Slik setter du opp Search Console, leser ytelsesrapporten og forstår indekseringsfeilene, med det som er nytt i 2026.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/google-search-console/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Google Search Console for nybegynnere: oppsett og bruk",
+      "description": "Google Search Console forklart for nybegynnere: slik setter du det opp, hvilke rapporter du trenger, hva indekseringsfeilene betyr og hva som er nytt i 2026.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/google-search-console/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Search Console",
+          "item": "https://fugle.dev/guider/google-search-console/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva er Google Search Console?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Search Console er et gratis verktøy fra Google som viser hvordan nettsiden din gjør det i Google Søk: hvilke søk som gir visninger og klikk, hvilke sider som er indeksert, og om Google har funnet tekniske feil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er forskjellen på Search Console og Google Analytics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Search Console viser hva som skjer i søkeresultatet før noen klikker, som visninger, klikk og plassering. Google Analytics viser hva besøkende gjør etter at de har kommet inn på nettsiden. De fleste bedrifter har nytte av begge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Domene eller nettadresseprefiks, hva skal jeg velge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Velg domene-egenskap hvis du kan legge inn en TXT-post i DNS. Den dekker alle varianter av nettstedet, med og uten www og alle underdomener. Nettadresseprefiks dekker bare én variant og passer hvis du ikke har tilgang til DNS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvorfor er siden min gjennomsøkt, men ikke indeksert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det betyr at Google har lest siden, men valgt å ikke ta den med i søkeresultatene. Vanlige årsaker er tynt innhold, at siden ligner mye på andre sider, eller at nettstedet er nytt og har lite tillit. Gjør siden mer unik og nyttig, og lenk til den fra andre sider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvor lenge lagrer Search Console data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ytelsesrapporten viser data for de siste 16 månedene. Eldre data forsvinner, så det lønner seg å sette opp Search Console tidlig og eventuelt eksportere tall du vil ta vare på."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Google Search Console</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Google Search Console for nybegynnere</h1>
+    <p class="ingress">Kort svar: Google Search Console er Googles gratis verktøy som viser hvilke søk som gir nettsiden din visninger og klikk, og om sidene er indeksert. Du setter det opp på 10 til 30 minutter ved å bekrefte domenet og sende inn sitemap, og etterpå holder det med et kvarter i uka.</p>
+    <h2>Hva er Google Search Console?</h2>
+    <p>Google Search Console er Googles gratis verktøy for nettstedseiere, og det eneste stedet du får Googles egne tall for hvordan nettsiden din gjør det i søk. Du ser hvilke søk som viser sidene dine, hvor mange som klikker, hvilke sider som er indeksert, og om Google har funnet feil.</p>
+    <p>Det skiller seg fra analyseverktøy som Google Analytics. Analyse viser hva folk gjør etter at de har kommet inn på siden. Search Console viser hva som skjer før klikket: i selve søkeresultatet. Vi setter det opp første dag på alle nettsider vi lanserer, fordi data du ikke har samlet, kan du ikke hente frem igjen senere.</p>
+
+    <h2>Hvordan setter du opp Search Console?</h2>
+    <p>Oppsettet tar 10 til 30 minutter, og den eneste tekniske delen er å bevise at du eier domenet. Slik gjør du det:</p>
+    <ol>
+      <li><strong>Gå til search.google.com/search-console</strong> og logg inn med en Google-konto bedriften eier.</li>
+      <li><strong>Velg egenskapstype.</strong> Velg "Domene" hvis du kan endre DNS. Den dekker alt: med og uten www, http og https og alle underdomener. "Nettadresseprefiks" dekker bare én bestemt variant.</li>
+      <li><strong>Bekreft eierskap.</strong> For domene-egenskap får du en TXT-post som skal legges inn i DNS hos domeneleverandøren din. Hos de fleste norske leverandører finner du dette under DNS-innstillinger for domenet. Bruker du nettadresseprefiks, kan du i stedet laste opp en HTML-fil eller legge inn en metatag.</li>
+      <li><strong>Vent noen minutter og trykk "Bekreft".</strong> DNS-endringer går som regel raskt, men kan i sjeldne tilfeller ta lenger tid.</li>
+      <li><strong>Send inn sitemap.</strong> Under "Nettstedskart" skriver du inn adressen, vanligvis /sitemap.xml. De fleste publiseringsløsninger lager den automatisk.</li>
+      <li><strong>Gi tilgang til de som trenger det.</strong> Under innstillinger kan du legge til brukere. Gi byrå eller utvikler begrenset tilgang hvis de bare skal se på tall.</li>
+    </ol>
+    <div class="tips">
+      <strong>Bonus for lokale bedrifter</strong>
+      Er nettsiden verifisert i Search Console før du verifiserer <a href="/guider/google-bedriftsprofil/">Google Bedriftsprofil</a>, kan Google i noen tilfeller verifisere profilen umiddelbart. Enda en grunn til å gjøre dette først.
+    </div>
+
+    <h2>Hvilke rapporter bør en nybegynner bruke?</h2>
+    <p>Du trenger bare fire rapporter for å få 90 prosent av verdien. Navnene i menyen kan variere litt med språkinnstillingen, men de er lette å kjenne igjen:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Rapport</th><th>Hva den svarer på</th><th>Hvor ofte</th></tr></thead>
+      <tbody>
+        <tr><td>Ytelse (søkeresultater)</td><td>Hvilke søk og sider gir visninger og klikk?</td><td>Ukentlig</td></tr>
+        <tr><td>Sider (indeksering)</td><td>Hvilke sider er med i Google, og hvorfor er noen utelatt?</td><td>Månedlig, og etter endringer</td></tr>
+        <tr><td>URL-inspeksjon</td><td>Hvordan ser Google akkurat denne siden?</td><td>Når du publiserer noe nytt</td></tr>
+        <tr><td>Core Web Vitals</td><td>Er sidene raske nok for ekte brukere?</td><td>Månedlig</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Hvordan leser du ytelsesrapporten?</h2>
+    <p>Ytelsesrapporten viser fire tall: klikk, visninger, klikkfrekvens og gjennomsnittlig plassering, og det er sammenhengen mellom dem som er interessant. Du kan se data for de siste 16 månedene, og filtrere på søk, side, land, enhet og dato.</p>
+    <ul>
+      <li><strong>Mange visninger, få klikk:</strong> du vises, men tittelen frister ikke, eller du ligger for langt ned. Skriv om tittel og beskrivelse.</li>
+      <li><strong>Plassering 8 til 20 på et viktig søk:</strong> den mest lønnsomme gruppen å jobbe med. Siden er nesten der. Vi forklarer hvordan du løfter den i guiden om <a href="/guider/komme-hoyt-pa-google/">hvordan komme høyt på Google</a>.</li>
+      <li><strong>Søk du ikke visste om:</strong> folk finner deg på ting du aldri skrev en side for. Det er gratis ideer til nye sider.</li>
+      <li><strong>Brå endring:</strong> sammenlign periodene og se om fallet gjelder én side, ett søk eller alt. Alt på en gang tyder ofte på en teknisk feil.</li>
+    </ul>
+    <p>Gjennomsnittlig plassering er et gjennomsnitt av alle visninger, så den kan se rar ut. Vises du på plass 3 for ett søk og plass 60 for et annet, blir snittet midt imellom. Se derfor alltid på plassering per søk, ikke for hele nettstedet.</p>
+
+    <h2>Hva betyr feilene i indekseringsrapporten?</h2>
+    <p>Indekseringsrapporten lister sider som ikke er indeksert, med en grunn, og de fleste av grunnene er helt normale. Nøkkelen er å skille det som er villet fra det som er en feil:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Status</th><th>Hva det betyr</th><th>Bør du gjøre noe?</th></tr></thead>
+      <tbody>
+        <tr><td>Ekskludert av noindex-tagg</td><td>Siden ber selv om ikke å bli indeksert</td><td>Bare hvis siden skal synes i Google</td></tr>
+        <tr><td>Side med viderekobling</td><td>Adressen sender videre til en annen</td><td>Nei, normalt</td></tr>
+        <tr><td>Alternativ side med riktig kanonisk tagg</td><td>Google bruker en annen versjon som hovedside</td><td>Nei, normalt</td></tr>
+        <tr><td>Ikke funnet (404)</td><td>Siden finnes ikke</td><td>Ja, hvis den hadde trafikk eller lenker: lag en 301-viderekobling</td></tr>
+        <tr><td>Gjennomsøkt, ikke indeksert</td><td>Google har lest siden, men valgt å ikke ta den med</td><td>Ja, ofte et tegn på tynt eller duplisert innhold</td></tr>
+        <tr><td>Oppdaget, ikke gjennomsøkt</td><td>Google vet om siden, men har ikke hentet den</td><td>Vent, og lenk til siden fra andre sider</td></tr>
+        <tr><td>Duplikat uten brukervalgt kanonisk side</td><td>Flere like sider, og du har ikke sagt hvilken som gjelder</td><td>Ja, legg inn canonical eller slå sammen</td></tr>
+      </tbody>
+    </table></div>
+    <p>En vanlig nybegynnerfeil er å få panikk over et høyt tall her. En nettbutikk kan ha tusenvis av ikke-indekserte filtersider uten at noe er galt. Det som betyr noe, er at de sidene du vil ha i Google, faktisk er der.</p>
+
+    <h2>Hva er nytt i Search Console i 2025 og 2026?</h2>
+    <p>Search Console har fått flere nyttige funksjoner det siste året, og noen av dem er særlig nyttige for små nettsteder:</p>
+    <ul>
+      <li><strong>Rapport for generativ KI (juni 2026, alle nettsteder fra august 2026):</strong> viser hvor ofte sidene dine vises i KI-oversikter og AI-modus, per side, land og enhet. Les mer om KI-synlighet i guiden om å <a href="/guider/bli-anbefalt-av-chatgpt/">bli anbefalt av ChatGPT</a>.</li>
+      <li><strong>Filter for merkevaresøk (november 2025):</strong> skiller søk på bedriftsnavnet fra andre søk, så du ser hvor mange nye kunder som finner deg uten å kjenne deg fra før. Tilgjengelig for nettsteder med nok data.</li>
+      <li><strong>Egne notater i grafen (november 2025):</strong> høyreklikk i ytelsesgrafen og noter når du lanserte ny side eller endret noe. Gull verdt et halvt år senere.</li>
+      <li><strong>Ukes- og månedsvisning (desember 2025):</strong> jevner ut daglige svingninger, nyttig for små nettsteder med lite trafikk.</li>
+      <li><strong>KI-assistert oppsett av rapporter (desember 2025, eksperimentelt):</strong> beskriv hva du vil se med vanlige ord, så setter verktøyet opp filtrene.</li>
+      <li><strong>Multimodalt søk (september 2026):</strong> eget filter for søk med bilde, som Google Lens og Circle to Search.</li>
+    </ul>
+    <p>Søkegrupper i Insights-rapporten, som samler varianter av samme søk, finnes også, men bare for nettsteder med mange søk.</p>
+
+    <h2>Hvilke feil gjør nybegynnere i Search Console?</h2>
+    <p>De vanligste feilene handler om å lese tallene for tidlig eller for bokstavelig. Disse ser vi oftest:</p>
+    <ul>
+      <li><strong>Å konkludere etter noen dager.</strong> Tallene svinger naturlig fra dag til dag, særlig på små nettsteder. Se på minst fire uker, og sammenlign med samme periode i fjor når du kan.</li>
+      <li><strong>Å be om indeksering om og om igjen.</strong> Én gang per ny eller endret side holder. Det går ikke raskere av å trykke flere ganger.</li>
+      <li><strong>Å slette sider med få klikk.</strong> En side med få klikk kan likevel gi telefoner, eller støtte andre sider. Forbedre før du sletter, og send alltid gamle adresser videre.</li>
+      <li><strong>Å stirre på snittplasseringen for hele nettstedet.</strong> Den sier nesten ingenting. Se på enkeltsøk og enkeltsider.</li>
+      <li><strong>Å gi skrivetilgang til alle.</strong> Med full tilgang kan noen fjerne sider fra Google eller endre innstillinger. Gi bare den tilgangen som trengs.</li>
+    </ul>
+
+    <h2>En ukentlig rutine på 15 minutter</h2>
+    <p>Du trenger ikke bo i Search Console. Dette er rutinen vi anbefaler for en liten bedrift:</p>
+    <ol>
+      <li>Åpne Ytelse, sammenlign siste 28 dager med forrige periode.</li>
+      <li>Sorter søk på visninger og se etter søk med plassering 8 til 20.</li>
+      <li>Sjekk om du har fått varsler eller e-post fra Search Console.</li>
+      <li>Når du har publisert noe nytt: kjør URL-inspeksjon og trykk "Be om indeksering".</li>
+      <li>En gang i måneden: se over indeksering og <a href="/guider/treg-nettside/">Core Web Vitals</a>.</li>
+    </ol>
+    <p>Hele poenget er å ta beslutninger på data, ikke magefølelse. Gjør én endring av gangen, noter den i grafen, og vurder resultatet etter noen uker. Vil du ha det store bildet av hva du bør gjøre med tallene, se guiden om <a href="/guider/seo-for-sma-bedrifter/">SEO for små bedrifter</a>.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva er Google Search Console?</summary>
+        <p>Google Search Console er et gratis verktøy fra Google som viser hvordan nettsiden din gjør det i Google Søk: hvilke søk som gir visninger og klikk, hvilke sider som er indeksert, og om Google har funnet tekniske feil.</p>
+      </details>
+      <details>
+        <summary>Hva er forskjellen på Search Console og Google Analytics?</summary>
+        <p>Search Console viser hva som skjer i søkeresultatet før noen klikker, som visninger, klikk og plassering. Google Analytics viser hva besøkende gjør etter at de har kommet inn på nettsiden. De fleste bedrifter har nytte av begge.</p>
+      </details>
+      <details>
+        <summary>Domene eller nettadresseprefiks, hva skal jeg velge?</summary>
+        <p>Velg domene-egenskap hvis du kan legge inn en TXT-post i DNS. Den dekker alle varianter av nettstedet, med og uten www og alle underdomener. Nettadresseprefiks dekker bare én variant og passer hvis du ikke har tilgang til DNS.</p>
+      </details>
+      <details>
+        <summary>Hvorfor er siden min gjennomsøkt, men ikke indeksert?</summary>
+        <p>Det betyr at Google har lest siden, men valgt å ikke ta den med i søkeresultatene. Vanlige årsaker er tynt innhold, at siden ligner mye på andre sider, eller at nettstedet er nytt og har lite tillit. Gjør siden mer unik og nyttig, og lenk til den fra andre sider.</p>
+      </details>
+      <details>
+        <summary>Hvor lenge lagrer Search Console data?</summary>
+        <p>Ytelsesrapporten viser data for de siste 16 månedene. Eldre data forsvinner, så det lønner seg å sette opp Search Console tidlig og eventuelt eksportere tall du vil ta vare på.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/seo-for-sma-bedrifter/">SEO for små bedrifter: komplett nybegynnerguide</a></li>
+        <li><a href="/guider/komme-hoyt-pa-google/">Hvordan komme høyt på Google</a></li>
+        <li><a href="/guider/treg-nettside/">Hvorfor er nettsiden treg? Core Web Vitals forklart</a></li>
+        <li><a href="/guider/kjope-domene/">Slik kjøper du et .no-domene</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du ha hjelp med oppsett og tolkning?</h2>
+      <p>Vi setter opp Search Console, sitemap og analyse på alle nettsider vi bygger, og vi bygger med moderne KI-verktøy som gjør oss raskere og rimeligere enn tradisjonelle byråer. Har du tall du ikke skjønner, eller en side som ikke blir indeksert, send oss en e-post.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

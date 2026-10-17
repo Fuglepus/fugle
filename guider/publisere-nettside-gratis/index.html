@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publisere nettside gratis med GitHub og Vercel | Fugle.dev</title>
+<meta name="description" content="Steg for steg: legg nettsiden på GitHub, publiser den gratis med Vercel og koble til eget domene. Med grensene for gratisplanene og når du må betale.">
+<link rel="canonical" href="https://fugle.dev/guider/publisere-nettside-gratis/">
+<meta property="og:title" content="Slik publiserer du nettsiden gratis med GitHub og Vercel">
+<meta property="og:description" content="Steg for steg: legg nettsiden på GitHub, publiser den gratis med Vercel og koble til eget domene. Med grensene for gratisplanene og når du må betale.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/publisere-nettside-gratis/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Slik publiserer du nettsiden gratis med GitHub og Vercel",
+      "description": "Steg for steg: legg nettsiden på GitHub, publiser den gratis med Vercel og koble til eget domene. Med grensene for gratisplanene og når du må betale.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/publisere-nettside-gratis/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Publisere nettside gratis",
+          "item": "https://fugle.dev/guider/publisere-nettside-gratis/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kan jeg publisere en nettside helt gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Med GitHub og Vercel, Cloudflare Pages, GitHub Pages eller Netlify kan du publisere en nettside uten å betale noe, inkludert HTTPS. Det eneste som koster penger, er eget domene, typisk 100 til 200 kroner i året for et .no-domene."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg bruke Vercel gratis til en bedriftsside?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei, ikke etter vilkårene. Vercels gratisplan Hobby er bare for personlig og ikke-kommersiell bruk. En bedriftsside bør ligge på Vercel Pro til 20 dollar per utvikler i måneden, eller på Cloudflare Pages, som ikke har en slik begrensning i gratisplanen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvor lang tid tar det å publisere nettsiden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Første gang tar det 10 til 15 minutter å opprette repo, koble til Vercel og publisere. Selve publiseringen tar under et minutt for en enkel side. Kobler du til eget domene, kan DNS bruke fra noen minutter til noen timer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Trenger jeg å kunne kode for å bruke GitHub og Vercel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. Du kan laste opp filer direkte i nettleseren på GitHub og importere repoet i Vercel med noen klikk. Du trenger likevel ferdige filer til nettsiden, enten du lager dem selv eller med et KI-verktøy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Får jeg HTTPS når jeg publiserer gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Vercel, Cloudflare Pages, GitHub Pages og Netlify setter opp HTTPS automatisk, også på eget domene, og fornyer sertifikatet selv."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / Publisere nettside gratis</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Slik publiserer du nettsiden gratis</h1>
+    <p class="ingress">Kort svar: legg filene i et GitHub-repo, logg inn på Vercel med GitHub-kontoen, importer repoet og trykk Deploy. Etter et minutt eller to ligger siden ute med HTTPS, og du kan koble på eget domene. Det eneste du betaler for, er domenet. Men vær obs: Vercels gratisplan er bare for ikke-kommersiell bruk, så en bedriftsside bør ligge på Pro eller et alternativ som Cloudflare Pages.</p>
+
+    <h2>Hva trenger du før du starter?</h2>
+    <p>Du trenger tre ting: filene til nettsiden, en gratis GitHub-konto og en gratis Vercel-konto. Eget domene er valgfritt, men anbefalt.</p>
+    <ul>
+      <li><strong>Filene til nettsiden.</strong> Minst en <code>index.html</code>. Det kan være en side du har skrevet selv, eller noe du har laget med et KI-verktøy. Guiden om å <a href="/guider/lag-nettside-med-claude-code/">lage nettside med Claude Code</a> viser hvordan du lager en fra bunnen av.</li>
+      <li><strong>En GitHub-konto.</strong> GitHub er stedet der koden ligger lagret, med full historikk over hver endring.</li>
+      <li><strong>En Vercel-konto.</strong> Vercel henter koden fra GitHub og legger den ut på internett via et raskt, globalt nettverk.</li>
+      <li><strong>Et domene (valgfritt).</strong> Et .no-domene koster typisk 100 til 200 kroner i året. Se guiden om å <a href="/guider/kjope-domene/">kjøpe domene</a>.</li>
+    </ul>
+
+    <h2>Steg for steg: fra filer til nettside på nett</h2>
+    <p>Hele prosessen tar 10 til 15 minutter første gang, og etterpå oppdateres siden automatisk hver gang du lagrer en endring på GitHub.</p>
+    <ol>
+      <li><strong>Opprett et repo på GitHub.</strong> Logg inn på github.com, trykk New repository, gi det et navn som <code>min-nettside</code> og velg Public eller Private. Begge fungerer med Vercel.</li>
+      <li><strong>Last opp filene.</strong> Trykk "uploading an existing file" og dra inn filene dine. Sørg for at <code>index.html</code> ligger i rotmappen, ikke inne i en undermappe. Trykk Commit changes.</li>
+      <li><strong>Logg inn på Vercel med GitHub.</strong> Gå til vercel.com, velg Sign Up og deretter Continue with GitHub. Da slipper du et eget passord, og Vercel får tilgang til repoene du velger.</li>
+      <li><strong>Importer prosjektet.</strong> Trykk Add New og Project, finn repoet ditt og trykk Import. For en ren HTML-side trenger du ikke endre noen innstillinger. Bruker du et rammeverk som Next.js eller Astro, gjenkjenner Vercel det selv.</li>
+      <li><strong>Trykk Deploy.</strong> Etter noen sekunder får du en adresse som <code>min-nettside.vercel.app</code>. Siden er nå offentlig, med HTTPS ferdig satt opp.</li>
+      <li><strong>Koble til eget domene.</strong> Gå til Settings og Domains i prosjektet, skriv inn domenet ditt og legg inn DNS-oppføringene Vercel viser hos domeneregistraren din. Det tar fra noen minutter til noen timer før det virker.</li>
+      <li><strong>Gjør endringer.</strong> Hver gang du endrer en fil på GitHub, bygger Vercel siden på nytt automatisk. Endringer i andre greiner enn hovedgreinen får sin egen forhåndsvisningsadresse, så du kan teste før noe går live.</li>
+    </ol>
+    <div class="tips">
+      <strong>Raskere vei hvis du bruker en KI-agent</strong>
+      Bruker du Claude Code eller et lignende verktøy, kan du be agenten opprette repoet, pushe koden og koble til Vercel via kommandolinjen. Da gjøres steg 1 til 5 med én instruks.
+    </div>
+
+    <h2>Er det virkelig gratis?</h2>
+    <p>Ja, selve publiseringen er gratis, men gratisplanene har grenser, og Vercels Hobby-plan er forbeholdt personlig og ikke-kommersiell bruk.</p>
+    <p>Det siste er det mange norske guider glemmer. Vercels egne vilkår sier at Hobby er for private prosjekter. En nettside for et firma som selger noe, er kommersiell bruk, og da skal du strengt tatt være på Pro, som koster 20 dollar per utvikler i måneden. Det er fortsatt billig hosting, men det er ikke gratis.</p>
+    <p>Her er hva gratisplanen på Vercel gir per oktober 2026:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Ressurs</th><th>Hobby (gratis)</th></tr></thead>
+      <tbody>
+        <tr><td>Datatrafikk</td><td>100 GB i måneden</td></tr>
+        <tr><td>Forespørsler via CDN</td><td>1 million i måneden</td></tr>
+        <tr><td>Funksjonskall</td><td>1 million i måneden</td></tr>
+        <tr><td>Publiseringer</td><td>100 per dag</td></tr>
+        <tr><td>Prosjekter</td><td>200</td></tr>
+        <tr><td>Kommersiell bruk</td><td>Ikke tillatt</td></tr>
+      </tbody>
+    </table></div>
+    <p>For en vanlig hobbyside eller portefølje er dette langt mer enn nok. Går du over grensene, stopper Vercel funksjonen til det har gått 30 dager, i stedet for å sende deg en regning.</p>
+
+    <h2>Hvilke gratis alternativer finnes?</h2>
+    <p>De beste gratis alternativene til Vercel er Cloudflare Pages, GitHub Pages og Netlify, og de har litt ulike regler.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tjeneste</th><th>Gratis grenser</th><th>Bedriftsside?</th></tr></thead>
+      <tbody>
+        <tr><td>Vercel Hobby</td><td>100 GB trafikk, 100 publiseringer per dag</td><td>Nei, bare ikke-kommersielt</td></tr>
+        <tr><td>Cloudflare Pages</td><td>500 bygg i måneden, ubegrenset statisk trafikk</td><td>Ja, ingen slik begrensning i gratisplanen</td></tr>
+        <tr><td>GitHub Pages</td><td>1 GB nettside, mykt tak på 100 GB trafikk i måneden</td><td>Ikke ment for nettbutikk eller kommersielle tjenester</td></tr>
+        <tr><td>Netlify Free</td><td>300 kreditter i måneden, der trafikk og publiseringer trekker kreditter</td><td>Ja, men kvoten kan ta slutt</td></tr>
+      </tbody>
+    </table></div>
+    <p>Skal du publisere en bedriftsside helt gratis, er Cloudflare Pages det tryggeste valget i dag. Fremgangsmåten er nesten lik: koble til GitHub, velg repoet, og trykk deploy. GitHub Pages er perfekt for dokumentasjon, porteføljer og hobbyprosjekter, men GitHub sier selv at tjenesten ikke er ment som gratis hosting for nettbutikker eller kommersielle tjenester. Vil du sammenligne flere alternativer, inkludert vanlige webhotell, se guiden om <a href="/guider/hvor-hoste-nettside/">hvor du bør hoste nettsiden</a>.</p>
+
+    <h2>Hvilke feil gjør folk oftest?</h2>
+    <p>Den vanligste feilen er at siden viser 404 fordi <code>index.html</code> ligger i feil mappe. De andre er nesten like vanlige:</p>
+    <ul>
+      <li><strong>API-nøkler i repoet.</strong> Et offentlig repo kan leses av alle, og roboter skanner GitHub etter nøkler hele døgnet. Legg hemmeligheter i miljøvariabler i Vercel, aldri i koden. Les mer om hva du gjør hvis det skjer, i guiden om <a href="/guider/lekket-api-nokkel/">lekket API-nøkkel</a>.</li>
+      <li><strong>Feil DNS-oppføringer.</strong> Bruk nøyaktig verdiene Vercel viser i domeneinnstillingene, og fjern gamle A-poster som peker til et tidligere webhotell.</li>
+      <li><strong>Glemt www.</strong> Legg til både <code>dittdomene.no</code> og <code>www.dittdomene.no</code>, og la den ene videresende til den andre.</li>
+      <li><strong>Store bilder.</strong> Bilder på 5 MB gjør siden treg og bruker opp trafikkvoten. Komprimer dem og bruk moderne formater som WebP.</li>
+      <li><strong>Ingen kontaktskjema som virker.</strong> En statisk side kan ikke sende e-post på egen hånd. Du trenger en skjematjeneste eller en liten serverfunksjon.</li>
+    </ul>
+
+    <h2>Hva med HTTPS og sikkerhet?</h2>
+    <p>HTTPS er inkludert automatisk på Vercel, Cloudflare Pages, GitHub Pages og Netlify, både på standardadressen og på eget domene.</p>
+    <p>Sertifikatet fornyes av seg selv, så du trenger ikke tenke på det. Vil du forstå hva som faktisk skjer, har vi skrevet om <a href="/guider/https-og-ssl/">HTTPS og SSL-sertifikat</a>. En statisk side uten database og innlogging har dessuten svært lite angrepsflate. Det er en av grunnene til at vi anbefaler statiske sider for de fleste små bedrifter.</p>
+
+    <h2>Hva ville vi gjort?</h2>
+    <p>For en hobbyside eller portefølje: GitHub og Vercel Hobby, helt gratis. For en bedriftsside: GitHub og Cloudflare Pages gratis, eller Vercel Pro hvis du trenger serverfunksjoner og vil ha det enkleste oppsettet.</p>
+    <p>Denne nettsiden ligger selv på GitHub og Vercel, og det er samme oppsett vi bruker for kundene våre. Det er raskt, trygt og koster nesten ingenting å drifte, og du eier alt selv.</p>
+    <h2>Hvordan oppdaterer du siden etterpå?</h2>
+    <p>Du oppdaterer siden ved å endre filene på GitHub, og Vercel publiserer den nye versjonen automatisk i løpet av sekunder.</p>
+    <p>For små endringer kan du åpne filen direkte på github.com, trykke på blyantikonet, gjøre endringen og trykke Commit changes. For større jobber er det enklere å jobbe lokalt på maskinen med GitHub Desktop eller et KI-verktøy, og så sende endringene opp. Hver versjon lagres i historikken, så gjør du en feil, kan du gå tilbake til forrige versjon med noen klikk i Vercel under Deployments, eller ved å angre committen på GitHub.</p>
+    <p>Et tips mange ikke kjenner til: lag en egen grein for større endringer. Vercel gir hver grein sin egen forhåndsvisningsadresse, så du kan sende lenken til en kollega eller kunde og få godkjenning før noe går ut på hovedsiden. Det er samme arbeidsflyt som profesjonelle utviklingsteam bruker, og den er gratis.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Kan jeg publisere en nettside helt gratis?</summary>
+        <p>Ja. Med GitHub og Vercel, Cloudflare Pages, GitHub Pages eller Netlify kan du publisere en nettside uten å betale noe, inkludert HTTPS. Det eneste som koster penger, er eget domene, typisk 100 til 200 kroner i året for et .no-domene.</p>
+      </details>
+      <details>
+        <summary>Kan jeg bruke Vercel gratis til en bedriftsside?</summary>
+        <p>Nei, ikke etter vilkårene. Vercels gratisplan Hobby er bare for personlig og ikke-kommersiell bruk. En bedriftsside bør ligge på Vercel Pro til 20 dollar per utvikler i måneden, eller på Cloudflare Pages, som ikke har en slik begrensning i gratisplanen.</p>
+      </details>
+      <details>
+        <summary>Hvor lang tid tar det å publisere nettsiden?</summary>
+        <p>Første gang tar det 10 til 15 minutter å opprette repo, koble til Vercel og publisere. Selve publiseringen tar under et minutt for en enkel side. Kobler du til eget domene, kan DNS bruke fra noen minutter til noen timer.</p>
+      </details>
+      <details>
+        <summary>Trenger jeg å kunne kode for å bruke GitHub og Vercel?</summary>
+        <p>Nei. Du kan laste opp filer direkte i nettleseren på GitHub og importere repoet i Vercel med noen klikk. Du trenger likevel ferdige filer til nettsiden, enten du lager dem selv eller med et KI-verktøy.</p>
+      </details>
+      <details>
+        <summary>Får jeg HTTPS når jeg publiserer gratis?</summary>
+        <p>Ja. Vercel, Cloudflare Pages, GitHub Pages og Netlify setter opp HTTPS automatisk, også på eget domene, og fornyer sertifikatet selv.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/hvor-hoste-nettside/">Hvor bør du hoste nettsiden?</a></li>
+        <li><a href="/guider/kjope-domene/">Slik kjøper du et .no-domene</a></li>
+        <li><a href="/guider/https-og-ssl/">Hva er HTTPS og SSL-sertifikat?</a></li>
+        <li><a href="/guider/lag-nettside-med-claude-code/">Lag nettside med Claude Code</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Vil du ha nettsiden bygget og publisert for deg?</h2>
+      <p>Vi lager nettsiden, legger den på GitHub og publiserer den med eget domene og HTTPS, og du eier alt selv etterpå. Fortell oss hva bedriften trenger, så får du et uforpliktende prisforslag.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>

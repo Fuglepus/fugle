@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hva er HTTPS og SSL-sertifikat? Enkel forklaring | Fugle.dev</title>
+<meta name="description" content="HTTPS krypterer trafikken mellom nettsiden og besøkende, og SSL-sertifikatet beviser hvem du er. Her er hva det er, hva det koster, og hvorfor gratis holder.">
+<link rel="canonical" href="https://fugle.dev/guider/https-og-ssl/">
+<meta property="og:title" content="Hva er HTTPS og SSL-sertifikat? Enkel forklaring for bedrifter">
+<meta property="og:description" content="HTTPS krypterer trafikken mellom nettsiden og besøkende, og SSL-sertifikatet beviser hvem du er. Her er hva det er, hva det koster, og hvorfor gratis holder.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fugle.dev/guider/https-og-ssl/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Hva er HTTPS og SSL-sertifikat? Enkel forklaring for bedrifter",
+      "description": "HTTPS krypterer trafikken mellom nettsiden og besøkende, og SSL-sertifikatet beviser hvem du er. Her er hva det er, hva det koster, og hvorfor gratis holder.",
+      "inLanguage": "nb-NO",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fugle",
+        "url": "https://fugle.dev"
+      },
+      "mainEntityOfPage": "https://fugle.dev/guider/https-og-ssl/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forsiden",
+          "item": "https://fugle.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guider",
+          "item": "https://fugle.dev/guider/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HTTPS og SSL",
+          "item": "https://fugle.dev/guider/https-og-ssl/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva er forskjellen på HTTP og HTTPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HTTP sender data mellom nettleseren og nettsiden i klartekst, mens HTTPS krypterer trafikken. Med HTTPS kan ingen underveis lese eller endre det som sendes, som passord og skjemadata."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva koster et SSL-sertifikat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For de fleste nettsider ingenting. Let's Encrypt utsteder gratis sertifikater som er like sikre som betalte, og de brukes automatisk av Vercel, Netlify, Cloudflare, GitHub Pages og mange webhotell. Betalte OV- og EV-sertifikater er bare nødvendig hvis noen krever det spesielt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Er SSL og TLS det samme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I praksis ja. SSL er det gamle navnet, og TLS er den moderne og sikre versjonen som faktisk brukes i dag. Det som kalles SSL-sertifikat, er egentlig et TLS-sertifikat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvor lenge varer et SSL-sertifikat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fra 15. mars 2026 kan offentlig klarerte sertifikater gjelde i maks 200 dager, og grensen reduseres til 100 dager i 2027 og 47 dager i 2029. Let's Encrypt utsteder sertifikater med 90 dagers varighet. Derfor bør fornyelsen alltid være automatisk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Påvirker HTTPS rangeringen i Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, Google har i mange år brukt HTTPS som et rangeringssignal. Viktigere er det at nettlesere merker sider uten HTTPS som ikke sikre, noe som får mange besøkende til å forlate siden."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:image" content="https://fugle.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
+      <circle cx="13" cy="15.5" r="6.5" fill="var(--yellow)"/>
+      <circle cx="17.5" cy="9" r="1.6" fill="var(--paper)"/>
+      <path d="M25 13 L20 11.5 L20 14.5 Z" fill="var(--ink)"/>
+    </svg>
+    <a href="/">fugle.dev</a>
+  </div>
+  <nav class="crumb"><a href="/">Forsiden</a> / <a href="/guider/">Guider</a> / HTTPS og SSL</nav>
+</header>
+
+<main class="wrap">
+  <article>
+    <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
+    <h1>Hva er HTTPS og SSL-sertifikat?</h1>
+    <p class="ingress">Kort svar: HTTPS er den sikre versjonen av HTTP, og betyr at all trafikk mellom nettsiden og den besøkende er kryptert. SSL-sertifikatet, som i dag egentlig heter TLS-sertifikat, er en digital ID som beviser at siden faktisk tilhører domenet. For en vanlig bedriftsside skal det koste null kroner, fordi gratis sertifikater fra Let's Encrypt er like sikre som de betalte.</p>
+
+    <h2>Hva er HTTPS?</h2>
+    <p>HTTPS står for Hypertext Transfer Protocol Secure, og er måten nettleseren og nettsiden snakker sammen på når samtalen er kryptert. Du ser det på at adressen starter med <code>https://</code>, og at nettleseren ikke viser noen advarsel.</p>
+    <p>Uten HTTPS sendes alt i klartekst. Det betyr at noen på samme wifi-nett, en kompromittert ruter eller en ondsinnet nettverksleverandør kan lese og endre det som sendes: passord, kontaktskjemaer, betalingsinformasjon, og til og med selve innholdet på siden. Med HTTPS er trafikken kryptert, og den kan ikke endres underveis uten at nettleseren merker det.</p>
+
+    <h2>Hva er forskjellen på SSL og TLS?</h2>
+    <p>SSL er det gamle navnet på teknologien, og TLS er den moderne versjonen som faktisk brukes i dag. Når folk sier SSL-sertifikat, mener de nesten alltid et TLS-sertifikat.</p>
+    <p>Alle versjoner av SSL og de eldste versjonene av TLS regnes som usikre og er slått av i moderne nettlesere. I dag skal en nettside bruke TLS 1.2 eller TLS 1.3. Navnet SSL har likevel hengt igjen i markedsføring og kontrollpaneler, så du vil se begge begrepene om det samme.</p>
+
+    <h2>Hva er et SSL-sertifikat?</h2>
+    <p>Et SSL-sertifikat er en digital fil som beviser at nettsiden faktisk tilhører domenet den viser, og som inneholder nøkkelen som brukes til å sette opp den krypterte forbindelsen.</p>
+    <p>Sertifikatet utstedes av en sertifikatutsteder som nettleserne stoler på. Før utstederen gir deg et sertifikat, må du bevise at du kontrollerer domenet, for eksempel ved å legge inn en bestemt fil på serveren eller en oppføring i DNS. Moderne hostingtjenester gjør dette automatisk.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Type</th><th>Hva som sjekkes</th><th>Pris</th><th>Passer for</th></tr></thead>
+      <tbody>
+        <tr><td>DV (domenevalidert)</td><td>At du kontrollerer domenet</td><td>Gratis med Let's Encrypt</td><td>Nesten alle nettsider, også nettbutikker</td></tr>
+        <tr><td>OV (organisasjonsvalidert)</td><td>Domenet og at firmaet finnes</td><td>Fra noen hundre kroner i året</td><td>Virksomheter med krav fra kunder eller anbud</td></tr>
+        <tr><td>EV (utvidet validering)</td><td>Grundigere sjekk av firmaet</td><td>Fra noen tusen kroner i året</td><td>Sjelden verdt det i dag</td></tr>
+      </tbody>
+    </table></div>
+    <p>Krypteringen er like sterk i alle tre. Forskjellen ligger bare i hvor mye utstederen har sjekket om eieren. Tidligere viste nettlesere firmanavnet i grønt for EV-sertifikater, men det er fjernet, og vanlige besøkende ser ingen forskjell i dag.</p>
+
+    <h2>Hva koster et SSL-sertifikat?</h2>
+    <p>For en vanlig bedriftsside eller nettbutikk koster SSL-sertifikat ingenting. Let's Encrypt er en ideell sertifikatutsteder som har delt ut gratis sertifikater siden 2015, og det er dette Vercel, Netlify, Cloudflare, GitHub Pages og de fleste webhotell bruker i bakgrunnen.</p>
+    <p>Likevel ser vi fortsatt norske småbedrifter som betaler flere hundre eller tusen kroner i året for et sertifikat fra webhotellet. Det er sjelden nødvendig. Spør om webhotellet ditt tilbyr gratis sertifikat med automatisk fornyelse, og bytt hvis svaret er nei. Les mer om alternativene i guiden om <a href="/guider/hvor-hoste-nettside/">hvor du bør hoste nettsiden</a>.</p>
+    <div class="tips">
+      <strong>Når betaler det seg å kjøpe sertifikat?</strong>
+      Hvis en kunde, et anbud eller en bransjestandard krever OV- eller EV-sertifikat, eller hvis du har spesielle tekniske behov. For alle andre er gratis sertifikat riktig valg.
+    </div>
+
+    <h2>Hvorfor er sertifikatene blitt kortere?</h2>
+    <p>Fra 15. mars 2026 kan offentlig klarerte sertifikater ikke lenger gjelde i mer enn 200 dager, og grensen faller videre til 100 dager i 2027 og 47 dager i 2029.</p>
+    <p>Dette er bestemt av CA/Browser Forum, bransjeorganet der nettleserne og sertifikatutstederne lager reglene. Begrunnelsen er sikkerhet: blir en nøkkel stjålet eller et sertifikat utstedt feil, er skaden begrenset i tid. Let's Encrypt har lenge utstedt sertifikater med 90 dagers varighet.</p>
+    <p>For deg betyr det én ting: manuell fornyelse er i ferd med å bli umulig i praksis. Sertifikatet må fornyes automatisk. Har du et webhotell der du selv må kjøpe og laste opp et nytt sertifikat hvert år, er det på tide å bytte løsning før du blir en av dem som plutselig har en side med rød advarsel.</p>
+
+    <h2>Hva skjer hvis nettsiden ikke har HTTPS?</h2>
+    <p>Nettlesere merker siden som "Ikke sikker", besøkende mister tilliten, og Google har i mange år brukt HTTPS som et signal i rangeringen.</p>
+    <p>Google har også varslet at Chrome fra versjon 154, som er planlagt til oktober 2026, slår på innstillingen Always Use Secure Connections som standard. Da vil Chrome spørre brukeren om lov før det åpner en offentlig nettside uten HTTPS. For en bedrift er det nok til at mange snur i døra.</p>
+    <p>Har siden et kontaktskjema, innlogging eller betaling, er HTTPS uansett ikke valgfritt. Personopplysninger skal beskyttes etter GDPR, og å sende dem ukryptert vil vanskelig kunne kalles en forsvarlig sikkerhet.</p>
+
+    <h2>Slik sjekker og fikser du HTTPS på nettsiden</h2>
+    <p>Du kan sjekke om nettsiden har riktig HTTPS på et minutt, og de fleste feil kan rettes på under en time.</p>
+    <ol>
+      <li><strong>Åpne siden med http://</strong> foran adressen. Du skal bli sendt videre til https:// automatisk. Skjer ikke det, mangler det en omdirigering.</li>
+      <li><strong>Trykk på symbolet til venstre for adressen</strong> i nettleseren og se på sertifikatet: hvem som har utstedt det, og når det utløper.</li>
+      <li><strong>Sjekk både med og uten www.</strong> Begge variantene må ha gyldig sertifikat.</li>
+      <li><strong>Se etter blandet innhold.</strong> Bilder eller skript som lastes over http:// på en https-side, gir advarsler eller blir blokkert. Åpne utviklerverktøyene (F12) og se i Console etter "Mixed Content".</li>
+      <li><strong>Kjør en ekstern test.</strong> SSL Labs fra Qualys gir siden en karakter fra A+ til F og forteller hva som er galt.</li>
+      <li><strong>Slå på HSTS</strong> når alt fungerer. Det forteller nettleseren at siden alltid skal åpnes med HTTPS, også hvis noen skriver http.</li>
+    </ol>
+    <p>På Vercel, Netlify og Cloudflare er HTTPS og omdirigering slått på automatisk, inkludert på eget domene. Se guiden om å <a href="/guider/publisere-nettside-gratis/">publisere nettside gratis</a> for hvordan det settes opp.</p>
+
+    <h2>Gjør HTTPS nettsiden trygg?</h2>
+    <p>Nei. HTTPS beskytter bare trafikken på veien mellom nettleseren og serveren, ikke selve nettsiden.</p>
+    <p>Svindelsider har også HTTPS, og hengelåsen betyr ikke at siden er til å stole på. En side med HTTPS kan fortsatt bli hacket gjennom utdaterte utvidelser, svake passord eller lekkede nøkler. Les mer om hva som faktisk gjør en side trygg i guiden om <a href="/guider/vanlige-sikkerhetsfeil/">vanlige sikkerhetsfeil</a>, og om hva du gjør hvis <a href="/guider/nettsiden-er-hacket/">nettsiden er hacket</a>.</p>
+    <p>Vårt råd er enkelt: velg en hostingløsning der HTTPS er gratis, automatisk og alltid på, så har du løst dette for godt. Alle nettsidene vi lager for kundene våre, leveres slik, uten ekstra kostnad. Se <a href="/tjenester/">tjenestene våre</a>.</p>
+    <h2>Hvorfor får nettsiden sertifikatfeil?</h2>
+    <p>De vanligste årsakene til sertifikatfeil er at sertifikatet har utløpt, at det ikke dekker riktig domenenavn, eller at klokka på brukerens enhet er feil.</p>
+    <ul>
+      <li><strong>Utløpt sertifikat.</strong> Den klassiske feilen når fornyelsen er manuell. Løsningen er automatisk fornyelse.</li>
+      <li><strong>Feil domenenavn.</strong> Sertifikatet gjelder for <code>dittdomene.no</code>, men ikke for <code>www.dittdomene.no</code>, eller omvendt.</li>
+      <li><strong>DNS peker feil sted.</strong> Etter flytting til ny hosting kan gamle DNS-oppføringer gjøre at sertifikatet ikke kan utstedes. Fjern gamle A-poster.</li>
+      <li><strong>Mangler mellomsertifikat.</strong> Typisk ved manuell installasjon på egen server. Siden virker i én nettleser, men ikke i en annen.</li>
+    </ul>
+    <p>Ser du en sertifikatfeil på din egen side, sjekk først utløpsdatoen ved å trykke på symbolet ved adressefeltet. Er sertifikatet gyldig, men feilen bare dukker opp hos enkelte kunder, ligger problemet ofte hos dem, for eksempel feil dato på maskinen eller et gammelt operativsystem som ikke kjenner nyere rotsertifikater.</p>
+
+    <section class="faq" aria-label="Ofte stilte spørsmål">
+      <h2>Ofte stilte spørsmål</h2>
+      <details>
+        <summary>Hva er forskjellen på HTTP og HTTPS?</summary>
+        <p>HTTP sender data mellom nettleseren og nettsiden i klartekst, mens HTTPS krypterer trafikken. Med HTTPS kan ingen underveis lese eller endre det som sendes, som passord og skjemadata.</p>
+      </details>
+      <details>
+        <summary>Hva koster et SSL-sertifikat?</summary>
+        <p>For de fleste nettsider ingenting. Let&#x27;s Encrypt utsteder gratis sertifikater som er like sikre som betalte, og de brukes automatisk av Vercel, Netlify, Cloudflare, GitHub Pages og mange webhotell. Betalte OV- og EV-sertifikater er bare nødvendig hvis noen krever det spesielt.</p>
+      </details>
+      <details>
+        <summary>Er SSL og TLS det samme?</summary>
+        <p>I praksis ja. SSL er det gamle navnet, og TLS er den moderne og sikre versjonen som faktisk brukes i dag. Det som kalles SSL-sertifikat, er egentlig et TLS-sertifikat.</p>
+      </details>
+      <details>
+        <summary>Hvor lenge varer et SSL-sertifikat?</summary>
+        <p>Fra 15. mars 2026 kan offentlig klarerte sertifikater gjelde i maks 200 dager, og grensen reduseres til 100 dager i 2027 og 47 dager i 2029. Let&#x27;s Encrypt utsteder sertifikater med 90 dagers varighet. Derfor bør fornyelsen alltid være automatisk.</p>
+      </details>
+      <details>
+        <summary>Påvirker HTTPS rangeringen i Google?</summary>
+        <p>Ja, Google har i mange år brukt HTTPS som et rangeringssignal. Viktigere er det at nettlesere merker sider uten HTTPS som ikke sikre, noe som får mange besøkende til å forlate siden.</p>
+      </details>
+    </section>
+
+    <section class="related">
+      <h2>Les også</h2>
+      <ul>
+        <li><a href="/guider/publisere-nettside-gratis/">Slik publiserer du nettsiden gratis</a></li>
+        <li><a href="/guider/nettsiden-er-hacket/">Nettsiden er hacket: dette gjør du nå</a></li>
+        <li><a href="/guider/hvor-hoste-nettside/">Hvor bør du hoste nettsiden?</a></li>
+        <li><a href="/guider/sikkerhet-nar-du-bygger-med-ki/">Sikkerhet når du bygger med KI</a></li>
+      </ul>
+    </section>
+
+    <div class="cta-box">
+      <h2>Får nettsiden din advarsler i nettleseren?</h2>
+      <p>Vi flytter nettsider over til moderne hosting med gratis, automatisk HTTPS, og fikser omdirigeringer og blandet innhold på veien. Send oss adressen, så sier vi hva som må gjøres og hva det koster.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span><a href="/">fugle.dev</a></span>
+  <span><a href="/guider/">Flere guider</a></span>
+</footer>
+
+</body>
+</html>
