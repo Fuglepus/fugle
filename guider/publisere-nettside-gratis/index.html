@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Publisere nettside gratis med GitHub og Vercel | Fugle.dev</title>
-<meta name="description" content="Steg for steg: legg nettsiden på GitHub, publiser den gratis med Vercel og koble til eget domene. Med grensene for gratisplanene og når du må betale.">
+<meta name="description" content="Steg for steg: legg nettsiden på GitHub, publiser gratis med Vercel og koble til eget domene. Og hvorfor en bedriftsside ikke kan ligge på gratisplanen.">
 <link rel="canonical" href="https://fugle.dev/guider/publisere-nettside-gratis/">
 <meta property="og:title" content="Slik publiserer du nettsiden gratis med GitHub og Vercel">
-<meta property="og:description" content="Steg for steg: legg nettsiden på GitHub, publiser den gratis med Vercel og koble til eget domene. Med grensene for gratisplanene og når du må betale.">
+<meta property="og:description" content="Steg for steg: legg nettsiden på GitHub, publiser gratis med Vercel og koble til eget domene. Og hvorfor en bedriftsside ikke kan ligge på gratisplanen.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://fugle.dev/guider/publisere-nettside-gratis/">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -23,7 +23,7 @@
     {
       "@type": "Article",
       "headline": "Slik publiserer du nettsiden gratis med GitHub og Vercel",
-      "description": "Steg for steg: legg nettsiden på GitHub, publiser den gratis med Vercel og koble til eget domene. Med grensene for gratisplanene og når du må betale.",
+      "description": "Steg for steg: legg nettsiden på GitHub, publiser gratis med Vercel og koble til eget domene. Og hvorfor en bedriftsside ikke kan ligge på gratisplanen.",
       "inLanguage": "nb-NO",
       "datePublished": "2026-10-17",
       "dateModified": "2026-10-17",
@@ -70,7 +70,7 @@
           "name": "Kan jeg publisere en nettside helt gratis?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. Med GitHub og Vercel, Cloudflare Pages, GitHub Pages eller Netlify kan du publisere en nettside uten å betale noe, inkludert HTTPS. Det eneste som koster penger, er eget domene, typisk 100 til 200 kroner i året for et .no-domene."
+            "text": "Ja. Med GitHub og Vercel, Cloudflare Pages, GitHub Pages eller Netlify kan du publisere en nettside uten å betale noe, inkludert HTTPS. Er siden for en bedrift, kan du ikke bruke Vercels gratisplan, men Cloudflare Pages er gratis også for kommersiell bruk. Det eneste som koster penger, er eget domene, typisk 100 til 200 kroner i året for et .no-domene."
           }
         },
         {
@@ -78,7 +78,7 @@
           "name": "Kan jeg bruke Vercel gratis til en bedriftsside?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nei, ikke etter vilkårene. Vercels gratisplan Hobby er bare for personlig og ikke-kommersiell bruk. En bedriftsside bør ligge på Vercel Pro til 20 dollar per utvikler i måneden, eller på Cloudflare Pages, som ikke har en slik begrensning i gratisplanen."
+            "text": "Nei. Vercels gratisplan Hobby er bare for personlig og ikke-kommersiell bruk, og en side som markedsfører en bedrift, eller som noen har fått betalt for å lage, regnes som kommersiell. En bedriftsside skal ligge på Vercel Pro til 20 dollar per utvikler i måneden, eller på Cloudflare Pages, som ikke har en slik begrensning i gratisplanen."
           }
         },
         {
@@ -133,7 +133,7 @@
   <article>
     <img class="article-logo" src="/ai.png" alt="AI-ikon" width="60" height="60">
     <h1>Slik publiserer du nettsiden gratis</h1>
-    <p class="ingress">Kort svar: legg filene i et GitHub-repo, logg inn på Vercel med GitHub-kontoen, importer repoet og trykk Deploy. Etter et minutt eller to ligger siden ute med HTTPS, og du kan koble på eget domene. Det eneste du betaler for, er domenet. Men vær obs: Vercels gratisplan er bare for ikke-kommersiell bruk, så en bedriftsside bør ligge på Pro eller et alternativ som Cloudflare Pages.</p>
+    <p class="ingress">Kort svar: legg filene i et GitHub-repo, logg inn på Vercel med GitHub-kontoen, importer repoet og trykk Deploy. Etter et minutt eller to ligger siden ute med HTTPS, og du kan koble på eget domene. For en privat side betaler du bare for domenet. Men Vercels gratisplan Hobby er kun for personlig, ikke-kommersiell bruk. Er siden for en bedrift, må den ligge på Vercel Pro til 20 dollar i måneden, eller på Cloudflare Pages, som er gratis også for bedrifter.</p>
 
     <h2>Hva trenger du før du starter?</h2>
     <p>Du trenger tre ting: filene til nettsiden, en gratis GitHub-konto og en gratis Vercel-konto. Eget domene er valgfritt, men anbefalt.</p>
@@ -162,7 +162,14 @@
 
     <h2>Er det virkelig gratis?</h2>
     <p>Ja, selve publiseringen er gratis, men gratisplanene har grenser, og Vercels Hobby-plan er forbeholdt personlig og ikke-kommersiell bruk.</p>
-    <p>Det siste er det mange norske guider glemmer. Vercels egne vilkår sier at Hobby er for private prosjekter. En nettside for et firma som selger noe, er kommersiell bruk, og da skal du strengt tatt være på Pro, som koster 20 dollar per utvikler i måneden. Det er fortsatt billig hosting, men det er ikke gratis.</p>
+    <p>Det siste er det mange norske guider glemmer. Vercels retningslinjer for rimelig bruk sier rett ut at Hobby er begrenset til personlig bruk, og at all kommersiell bruk krever Pro eller Enterprise. Kommersiell betyr at noen som er involvert i siden, har økonomisk vinning av den. Vercel nevner blant annet disse eksemplene:</p>
+    <ul>
+      <li>siden tar imot betaling fra besøkende</li>
+      <li>siden reklamerer for salg av et produkt eller en tjeneste</li>
+      <li>noen får betalt for å lage, oppdatere eller drifte siden</li>
+      <li>siden har annonser, for eksempel Google AdSense, eller lever hovedsakelig av affiliate-lenker</li>
+    </ul>
+    <p>Med andre ord: en vanlig bedriftsside som forteller om tjenestene dine, er kommersiell, selv om den ikke selger noe direkte. Det samme gjelder hvis du betaler et byrå eller en frilanser for å lage den. Da skal den ligge på Pro, som koster 20 dollar per utvikler i måneden, omtrent 250 til 280 kroner med mva. Det er fortsatt billig hosting, men det er ikke gratis. Å be om donasjoner regnes ikke som kommersielt.</p>
     <p>Her er hva gratisplanen på Vercel gir per oktober 2026:</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Ressurs</th><th>Hobby (gratis)</th></tr></thead>
@@ -206,7 +213,7 @@
 
     <h2>Hva ville vi gjort?</h2>
     <p>For en hobbyside eller portefølje: GitHub og Vercel Hobby, helt gratis. For en bedriftsside: GitHub og Cloudflare Pages gratis, eller Vercel Pro hvis du trenger serverfunksjoner og vil ha det enkleste oppsettet.</p>
-    <p>Denne nettsiden ligger selv på GitHub og Vercel, og det er samme oppsett vi bruker for kundene våre. Det er raskt, trygt og koster nesten ingenting å drifte, og du eier alt selv.</p>
+    <p>Denne nettsiden ligger selv på GitHub og Vercel, og det er samme oppsett vi bruker for kundene våre. Fordi bedriftssider er kommersielle, anbefaler vi en betalt Vercel-plan eller Cloudflare Pages til dem, ikke Hobby. Det er raskt, trygt og koster lite å drifte, og du eier alt selv.</p>
     <h2>Hvordan oppdaterer du siden etterpå?</h2>
     <p>Du oppdaterer siden ved å endre filene på GitHub, og Vercel publiserer den nye versjonen automatisk i løpet av sekunder.</p>
     <p>For små endringer kan du åpne filen direkte på github.com, trykke på blyantikonet, gjøre endringen og trykke Commit changes. For større jobber er det enklere å jobbe lokalt på maskinen med GitHub Desktop eller et KI-verktøy, og så sende endringene opp. Hver versjon lagres i historikken, så gjør du en feil, kan du gå tilbake til forrige versjon med noen klikk i Vercel under Deployments, eller ved å angre committen på GitHub.</p>
@@ -216,11 +223,11 @@
       <h2>Ofte stilte spørsmål</h2>
       <details>
         <summary>Kan jeg publisere en nettside helt gratis?</summary>
-        <p>Ja. Med GitHub og Vercel, Cloudflare Pages, GitHub Pages eller Netlify kan du publisere en nettside uten å betale noe, inkludert HTTPS. Det eneste som koster penger, er eget domene, typisk 100 til 200 kroner i året for et .no-domene.</p>
+        <p>Ja. Med GitHub og Vercel, Cloudflare Pages, GitHub Pages eller Netlify kan du publisere en nettside uten å betale noe, inkludert HTTPS. Er siden for en bedrift, kan du ikke bruke Vercels gratisplan, men Cloudflare Pages er gratis også for kommersiell bruk. Det eneste som koster penger, er eget domene, typisk 100 til 200 kroner i året for et .no-domene.</p>
       </details>
       <details>
         <summary>Kan jeg bruke Vercel gratis til en bedriftsside?</summary>
-        <p>Nei, ikke etter vilkårene. Vercels gratisplan Hobby er bare for personlig og ikke-kommersiell bruk. En bedriftsside bør ligge på Vercel Pro til 20 dollar per utvikler i måneden, eller på Cloudflare Pages, som ikke har en slik begrensning i gratisplanen.</p>
+        <p>Nei. Vercels gratisplan Hobby er bare for personlig og ikke-kommersiell bruk, og en side som markedsfører en bedrift, eller som noen har fått betalt for å lage, regnes som kommersiell. En bedriftsside skal ligge på Vercel Pro til 20 dollar per utvikler i måneden, eller på Cloudflare Pages, som ikke har en slik begrensning i gratisplanen.</p>
       </details>
       <details>
         <summary>Hvor lang tid tar det å publisere nettsiden?</summary>

@@ -94,7 +94,7 @@
           "name": "Hvor lenge varer et SSL-sertifikat?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fra 15. mars 2026 kan offentlig klarerte sertifikater gjelde i maks 200 dager, og grensen reduseres til 100 dager i 2027 og 47 dager i 2029. Let's Encrypt utsteder sertifikater med 90 dagers varighet. Derfor bør fornyelsen alltid være automatisk."
+            "text": "Fra 15. mars 2026 kan offentlig klarerte sertifikater gjelde i maks 200 dager, og grensen reduseres til 100 dager i 2027 og 47 dager i 2029. Let's Encrypt utsteder i dag sertifikater med 90 dagers varighet, men går ned til 64 dager i 2027 og 45 dager i 2028. Derfor bør fornyelsen alltid være automatisk."
           }
         },
         {
@@ -102,7 +102,7 @@
           "name": "Påvirker HTTPS rangeringen i Google?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, Google har i mange år brukt HTTPS som et rangeringssignal. Viktigere er det at nettlesere merker sider uten HTTPS som ikke sikre, noe som får mange besøkende til å forlate siden."
+            "text": "Ja, Google har brukt HTTPS som et rangeringssignal siden 2014, men effekten er liten. Viktigere er det at nettlesere merker sider uten HTTPS som ikke sikre, og at Chrome nå varsler før den åpner slike sider, noe som får mange besøkende til å forlate siden."
           }
         }
       ]
@@ -166,12 +166,12 @@
 
     <h2>Hvorfor er sertifikatene blitt kortere?</h2>
     <p>Fra 15. mars 2026 kan offentlig klarerte sertifikater ikke lenger gjelde i mer enn 200 dager, og grensen faller videre til 100 dager i 2027 og 47 dager i 2029.</p>
-    <p>Dette er bestemt av CA/Browser Forum, bransjeorganet der nettleserne og sertifikatutstederne lager reglene. Begrunnelsen er sikkerhet: blir en nøkkel stjålet eller et sertifikat utstedt feil, er skaden begrenset i tid. Let's Encrypt har lenge utstedt sertifikater med 90 dagers varighet.</p>
+    <p>Dette er bestemt av CA/Browser Forum, bransjeorganet der nettleserne og sertifikatutstederne lager reglene. Begrunnelsen er sikkerhet: blir en nøkkel stjålet eller et sertifikat utstedt feil, er skaden begrenset i tid. Let's Encrypt har lenge utstedt sertifikater med 90 dagers varighet, og korter selv ned til 64 dager i februar 2027 og 45 dager i februar 2028.</p>
     <p>For deg betyr det én ting: manuell fornyelse er i ferd med å bli umulig i praksis. Sertifikatet må fornyes automatisk. Har du et webhotell der du selv må kjøpe og laste opp et nytt sertifikat hvert år, er det på tide å bytte løsning før du blir en av dem som plutselig har en side med rød advarsel.</p>
 
     <h2>Hva skjer hvis nettsiden ikke har HTTPS?</h2>
-    <p>Nettlesere merker siden som "Ikke sikker", besøkende mister tilliten, og Google har i mange år brukt HTTPS som et signal i rangeringen.</p>
-    <p>Google har også varslet at Chrome fra versjon 154, som er planlagt til oktober 2026, slår på innstillingen Always Use Secure Connections som standard. Da vil Chrome spørre brukeren om lov før det åpner en offentlig nettside uten HTTPS. For en bedrift er det nok til at mange snur i døra.</p>
+    <p>Nettlesere merker siden som "Ikke sikker", besøkende mister tilliten, og Google har brukt HTTPS som et signal i rangeringen siden 2014.</p>
+    <p>Nå blir det strengere. Google varslet i oktober 2025 at Chrome 154, som kommer høsten 2026, slår på innstillingen Always Use Secure Connections som standard for offentlige nettsider. Da viser Chrome en advarsel og spør brukeren om lov før den åpner en side uten HTTPS, i hvert fall første gang eller hvis brukeren ikke har vært der på en stund. Brukere med utvidet Safe Browsing har hatt dette siden Chrome 147 i april 2026. Interne adresser i bedriftsnettverk er unntatt. For en bedriftsside er en slik advarsel nok til at mange snur i døra.</p>
     <p>Har siden et kontaktskjema, innlogging eller betaling, er HTTPS uansett ikke valgfritt. Personopplysninger skal beskyttes etter GDPR, og å sende dem ukryptert vil vanskelig kunne kalles en forsvarlig sikkerhet.</p>
 
     <h2>Slik sjekker og fikser du HTTPS på nettsiden</h2>
@@ -216,11 +216,11 @@
       </details>
       <details>
         <summary>Hvor lenge varer et SSL-sertifikat?</summary>
-        <p>Fra 15. mars 2026 kan offentlig klarerte sertifikater gjelde i maks 200 dager, og grensen reduseres til 100 dager i 2027 og 47 dager i 2029. Let&#x27;s Encrypt utsteder sertifikater med 90 dagers varighet. Derfor bør fornyelsen alltid være automatisk.</p>
+        <p>Fra 15. mars 2026 kan offentlig klarerte sertifikater gjelde i maks 200 dager, og grensen reduseres til 100 dager i 2027 og 47 dager i 2029. Let&#x27;s Encrypt utsteder i dag sertifikater med 90 dagers varighet, men går ned til 64 dager i 2027 og 45 dager i 2028. Derfor bør fornyelsen alltid være automatisk.</p>
       </details>
       <details>
         <summary>Påvirker HTTPS rangeringen i Google?</summary>
-        <p>Ja, Google har i mange år brukt HTTPS som et rangeringssignal. Viktigere er det at nettlesere merker sider uten HTTPS som ikke sikre, noe som får mange besøkende til å forlate siden.</p>
+        <p>Ja, Google har brukt HTTPS som et rangeringssignal siden 2014, men effekten er liten. Viktigere er det at nettlesere merker sider uten HTTPS som ikke sikre, og at Chrome nå varsler før den åpner slike sider, noe som får mange besøkende til å forlate siden.</p>
       </details>
     </section>
 
