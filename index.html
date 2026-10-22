@@ -295,12 +295,236 @@
     html{scroll-behavior:auto}
     *{transition:none !important;animation:none !important}
   }
+
+  /* ===== Designlag 2026 ===== */
+  .wrap{max-width:760px}
+  html,body{overflow-x:clip}
+  .site-head{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--paper) 78%, transparent);
+    backdrop-filter:saturate(1.4) blur(14px);
+    -webkit-backdrop-filter:saturate(1.4) blur(14px);
+    border-bottom:1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  }
+  .site-head header{padding:16px 24px}
+  .topnav{display:flex;align-items:center;gap:20px}
+  .topnav a.nav-cta{
+    color:var(--paper);background:var(--ink);
+    padding:7px 14px;border-radius:999px;font-weight:600;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .topnav a.nav-cta:hover{color:var(--paper);background:var(--blue);transform:translateY(-1px)}
+
+  .hero{position:relative;padding:88px 0 8px;border-bottom:none;isolation:isolate}
+  .hero-bg{
+    position:absolute;top:-40px;bottom:0;left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:none;overflow:hidden;
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, var(--line) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--line) 55%, transparent) 1px, transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image:radial-gradient(ellipse 60% 70% at 50% 35%, #000 30%, transparent 75%);
+            mask-image:radial-gradient(ellipse 60% 70% at 50% 35%, #000 30%, transparent 75%);
+  }
+  .hero-bg::before,.hero-bg::after{
+    content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;
+  }
+  .hero-bg::before{
+    width:420px;height:420px;left:calc(50% - 380px);top:20px;
+    background:color-mix(in srgb, var(--blue) 55%, transparent);
+    animation:drift 16s ease-in-out infinite alternate;
+  }
+  .hero-bg::after{
+    width:320px;height:320px;left:calc(50% + 60px);top:140px;
+    background:color-mix(in srgb, var(--yellow) 60%, transparent);
+    animation:drift 19s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift{
+    0%{transform:translate(0,0) scale(1)}
+    100%{transform:translate(40px,30px) scale(1.12)}
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.8rem;font-weight:600;color:var(--ink);
+    background:color-mix(in srgb, var(--card) 85%, transparent);
+    border:1px solid var(--line);border-radius:999px;
+    padding:6px 14px 6px 10px;margin-bottom:26px;
+    box-shadow:0 1px 2px rgba(0,0,0,.04);
+  }
+  .eyebrow .dot{
+    width:8px;height:8px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 0 0 color-mix(in srgb, var(--green) 60%, transparent);
+    animation:pulse 2s ease-out infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 color-mix(in srgb, var(--green) 55%, transparent)}
+    100%{box-shadow:0 0 0 10px transparent}
+  }
+  .hero h1{font-size:clamp(2.5rem, 7.4vw, 4.4rem);line-height:1.02;letter-spacing:-0.035em;max-width:14ch}
+  .hero h1 em{
+    background:linear-gradient(100deg, var(--blue-ink) 0%, var(--blue) 45%, color-mix(in srgb, var(--blue) 60%, #8FC1FF) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p{font-size:1.12rem;margin-top:24px}
+  .hero-actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:600;font-size:.98rem;text-decoration:none;
+    padding:13px 22px;border-radius:10px;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn-primary{
+    color:#fff;background:var(--blue);
+    box-shadow:0 6px 20px -6px color-mix(in srgb, var(--blue) 70%, transparent);
+  }
+  :root[data-theme="dark"] .btn-primary{color:var(--paper)}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn-primary{color:var(--paper)} }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px -8px color-mix(in srgb, var(--blue) 80%, transparent)}
+  .btn-ghost{color:var(--ink);background:var(--card);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn svg{transition:transform .15s ease}
+  .btn:hover svg{transform:translateX(3px)}
+
+  .stats{
+    margin-top:52px;
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);border-radius:16px;
+    background:color-mix(in srgb, var(--card) 80%, transparent);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    overflow:hidden;
+  }
+  .stat{padding:20px 18px}
+  .stat + .stat{border-left:1px solid var(--line)}
+  .stat strong{
+    display:block;
+    font-family:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;
+    font-weight:800;font-size:clamp(1.5rem,3.6vw,2rem);letter-spacing:-0.03em;line-height:1.1;
+    font-variant-numeric:tabular-nums;
+  }
+  .stat span{display:block;margin-top:4px;font-size:.8rem;color:var(--muted);line-height:1.35}
+  @media (max-width:600px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(3){border-left:none}
+    .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  }
+
+  .section-label{
+    display:inline-block;font-size:.75rem;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;
+  }
+  .projects{padding:44px 0 8px;counter-reset:proj}
+  .projects > h2{color:var(--ink);font-size:clamp(1.9rem,4.5vw,2.4rem);letter-spacing:-0.03em}
+  .projects > h2 .arrow-down line,.projects > h2 .arrow-down path{stroke:var(--blue)}
+  .project{
+    counter-increment:proj;position:relative;
+    margin-top:18px;padding:28px 28px 26px 28px;
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    transition:transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, border-color .25s ease;
+  }
+  .project:first-of-type{margin-top:28px}
+  .project::before{
+    content:counter(proj, decimal-leading-zero);
+    position:absolute;top:26px;right:26px;
+    font-family:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;
+    font-weight:800;font-size:.8rem;letter-spacing:.06em;color:var(--muted);opacity:.7;
+  }
+  .project::after{
+    content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:radial-gradient(500px circle at var(--mx,80%) var(--my,0%), color-mix(in srgb, var(--blue) 9%, transparent), transparent 45%);
+    opacity:0;transition:opacity .25s ease;
+  }
+  .project:hover{
+    transform:translateY(-3px);
+    border-color:color-mix(in srgb, var(--blue) 35%, var(--line));
+    box-shadow:0 18px 40px -22px color-mix(in srgb, var(--ink) 45%, transparent);
+  }
+  .project:hover::after{opacity:1}
+  .project-head{padding-right:40px}
+  .project h2{font-size:1.55rem;letter-spacing:-0.02em}
+  .project h2 a{border-bottom-width:0;background:linear-gradient(var(--yellow),var(--yellow)) 0 100%/100% 2px no-repeat;transition:background-size .2s ease,color .15s ease}
+  .project h2 a:hover{background-size:100% 40%}
+  .domain{
+    font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.78rem;
+    background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:2px 8px;
+  }
+  .project p{color:color-mix(in srgb, var(--ink) 88%, var(--muted))}
+
+  .services{padding:72px 0 8px;border-bottom:none}
+  .services > h2,.contact h2{font-size:clamp(1.9rem,4.5vw,2.4rem);letter-spacing:-0.03em}
+  .service{
+    border-radius:16px;
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .service:hover{
+    transform:translateY(-3px);
+    border-color:color-mix(in srgb, var(--blue) 35%, var(--line));
+    box-shadow:0 14px 30px -20px color-mix(in srgb, var(--ink) 45%, transparent);
+  }
+  .service svg{
+    padding:8px;box-sizing:content-box;border-radius:12px;
+    background:color-mix(in srgb, var(--blue) 9%, var(--card));
+  }
+
+  .contact{
+    position:relative;overflow:hidden;isolation:isolate;
+    margin:40px 0 24px;padding:56px 40px;border-radius:24px;
+    background:#111B2C;color:#E9ECE7;
+    border:1px solid rgba(255,255,255,.06);
+  }
+  .contact::before{
+    content:"";position:absolute;z-index:-1;width:380px;height:380px;right:-80px;top:-120px;border-radius:50%;
+    background:#2A62B5;filter:blur(60px);opacity:.75;
+  }
+  .contact::after{
+    content:"";position:absolute;z-index:-1;width:260px;height:260px;left:-60px;bottom:-140px;border-radius:50%;
+    background:#F2B90F;filter:blur(60px);opacity:.35;
+  }
+  .contact h2{color:#fff}
+  .contact p{color:rgba(233,236,231,.78)}
+  .contact a.mail{background:#fff;color:#17211E;border-radius:10px;padding:13px 24px}
+  .contact a.mail:hover{background:var(--yellow);color:#17211E}
+  @media (max-width:600px){ .contact{padding:40px 24px;border-radius:20px} .project{padding:22px 20px} .project::before{top:22px;right:20px} }
+
+  footer{border-top:1px solid var(--line);margin-top:24px}
+  footer a:hover{color:var(--blue) !important}
+
+
+  .hero-tags{
+    margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 0;
+    font-size:.92rem;color:var(--muted);
+  }
+  .hero-tags::before{
+    content:"Vi lager";font-weight:600;color:var(--ink);margin-right:14px;
+    font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  }
+  .hero-tags li{display:inline-flex;align-items:center}
+  .hero-tags li:not(:last-child)::after{
+    content:"";width:4px;height:4px;border-radius:50%;
+    background:color-mix(in srgb, var(--blue) 55%, var(--line));margin:0 12px;
+  }
+  .hero-tags a{
+    all:unset;cursor:pointer;color:var(--muted);font-weight:500;
+    background:linear-gradient(var(--blue),var(--blue)) 0 100%/0 1.5px no-repeat;
+    transition:color .15s ease, background-size .2s ease;
+  }
+  .hero-tags a:hover{color:var(--ink);background-size:100% 1.5px}
+  .hero-tags a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+
+  .trend svg{stroke:var(--blue)}
+  .trend .trend-area{fill:color-mix(in srgb, var(--blue) 18%, transparent)}
+  .trend .trend-dot{fill:var(--blue)}
+  .trend .revenue-tip{white-space:normal;width:max-content;max-width:240px;line-height:1.4}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none}
+    .hero-bg::before,.hero-bg::after,.eyebrow .dot{animation:none}
+  }
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
-<header class="wrap">
+<div class="site-head"><header class="wrap">
   <div class="mark">
     <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
       <circle cx="13" cy="13" r="12" fill="var(--blue)"/>
@@ -310,24 +534,31 @@
     </svg>
     fugle.no
   </div>
-  <nav class="topnav"><a href="/tjenester/" style="margin-right:18px">Tjenester</a><a href="/guider/">Guider</a></nav>
-</header>
+  <nav class="topnav"><a href="/tjenester/">Tjenester</a><a href="/guider/">Guider</a><a class="nav-cta" href="#kontakt">Kontakt</a></nav>
+</header></div>
 
 <main class="wrap">
 
   <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Tar imot nye oppdrag</span>
     <h1>Vi bygger nettsider. Og <em>ferdige produkter</em>.</h1>
-    <p>Vi lager nettsider, automasjon og KI-løsninger. Her er sju prosjekter vi har tatt fra idé til lansering, alt fra sanntidsanalyse av fotballkamper til AI som styler boligen din med tingene du allerede eier.</p>
+    <p>Vi lager nettsider, automasjon og KI-løsninger. Her er åtte prosjekter vi har tatt fra idé til lansering, alt fra sanntidsanalyse av fotballkamper til AI som styler boligen din med tingene du allerede eier.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#kontakt">Start et prosjekt <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#prosjekter">Se hva vi har bygget</a>
+    </div>
     <ul class="hero-tags" aria-label="Hva vi tilbyr">
       <li><a href="/tjenester/">Nettsider</a></li>
       <li><a href="/tjenester/">Bestillingssystemer</a></li>
       <li><a href="/tjenester/">Booking</a></li>
       <li><a href="/tjenester/">Automatisering</a></li>
-      <li><a href="/tjenester/">KI-løsninger</a></li>
+      <li><a href="/tjenester/">KI-løsninger</a>&nbsp;<a href="/tjenester/">og mer</a></li>
     </ul>
   </section>
 
-  <section class="projects" aria-label="Prosjekter">
+  <section class="projects" id="prosjekter" aria-label="Prosjekter">
+    <span class="section-label">Portefølje</span>
     <h2>
       Hva vi har bygget
       <svg class="arrow-down" width="20" height="26" viewBox="0 0 20 26" fill="none" aria-hidden="true">
@@ -359,28 +590,6 @@
 
     <article class="project">
       <div class="project-head">
-        <h2><a href="https://www.worthpic.com" target="_blank" rel="noopener">WorthPic.com</a></h2>
-        <span class="domain">worthpic.com</span>
-      </div>
-      <div class="difficulty">
-        <span class="diff-label">Vanskelighet</span>
-        <span class="stars" role="img" aria-label="Vanskelighetsgrad 3 av 3">
-          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
-          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
-          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
-        </span>
-      </div>
-      <p>KI-drevet verdivurdering av ting du eier, har funnet eller arvet. Velg kategori, last opp inntil fire bilder og få svar på hva det er, et ærlig verdianslag og historien bak, på under et minutt. Vi bruker den mest avanserte KI-modellen som finnes, og hver kategori har sin egen spesialist som kan sitt tema: mynter, samlekort, klokker, klær og sneakers, vesker, smykker, frimerker, leker og LEGO, kunst, bøker, tegneserier, elektronikk og mer. Ingen konto nødvendig.</p>
-      <ul class="tags">
-        <li>Kunstig intelligens</li>
-        <li>Bildeanalyse</li>
-        <li>Verdivurdering</li>
-        <li>14 kategorier</li>
-      </ul>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
         <h2><a href="https://betbott.com" target="_blank" rel="noopener">BetBott.com</a><span class="revenue" tabindex="0" aria-label="Denne nettsiden har inntekter"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span class="revenue-tip">Denne nettsiden har inntekter</span></span></h2>
         <span class="domain">betbott.com</span>
       </div>
@@ -398,6 +607,28 @@
         <li>100+ ligaer</li>
         <li>Sanntidsdata 24/7</li>
         <li>Discord-bot</li>      </ul>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h2><a href="https://www.worthpic.com" target="_blank" rel="noopener">WorthPic.com</a><span class="revenue trend" tabindex="0" aria-label="Stor tro på denne nettsiden. Ingen betalingsløsninger så langt."><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="trend-area" d="M3 19C8 19 9 13 13 12S18 7 21 5V20H3Z" stroke="none"/><path d="M3 19C8 19 9 13 13 12S18 7 21 5"/><circle cx="21" cy="5" r="1.6" class="trend-dot" stroke="none"/></svg><span class="revenue-tip">Stor tro på denne nettsiden. Ingen betalingsløsninger så langt.</span></span></h2>
+        <span class="domain">worthpic.com</span>
+      </div>
+      <div class="difficulty">
+        <span class="diff-label">Vanskelighet</span>
+        <span class="stars" role="img" aria-label="Vanskelighetsgrad 3 av 3">
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--yellow)"/></svg>
+        </span>
+      </div>
+      <p>KI-drevet verdivurdering av ting du eier, har funnet eller arvet. Velg kategori, last opp inntil fire bilder og få svar på hva det er, et ærlig verdianslag og historien bak, på under et minutt. Vi bruker den mest avanserte KI-modellen som finnes, og hver kategori har sin egen spesialist som kan sitt tema: mynter, samlekort, klokker, klær og sneakers, vesker, smykker, frimerker, leker og LEGO, kunst, bøker, tegneserier, elektronikk og mer. Ingen konto nødvendig.</p>
+      <ul class="tags">
+        <li>Kunstig intelligens</li>
+        <li>Bildeanalyse</li>
+        <li>Verdivurdering</li>
+        <li>14 kategorier</li>
+      </ul>
     </article>
 
     <article class="project">
@@ -434,9 +665,10 @@
           <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" fill="var(--line)"/></svg>
         </span>
       </div>
-      <p>Bli rik på kunnskap mens du scroller. Læring pakket inn i formatet folk faktisk bruker hver dag, som gjør skjermtiden litt smartere i stedet for litt dummere.</p>
+      <p>Bli rik på kunnskap mens du scroller. Læring pakket inn i formatet folk faktisk bruker hver dag, som gjør skjermtiden litt smartere i stedet for litt dummere. Innholdet hentes fra Wikipedias API, så det finnes noe nytt å lære om nesten alle tenkelige temaer.</p>
       <ul class="tags">
         <li>Mikrolæring</li>
+        <li>Wikipedia-API</li>
         <li>Mobil først</li>
       </ul>
     </article>
@@ -507,6 +739,7 @@
   </section>
 
   <section class="services" aria-label="Tjenester">
+    <span class="section-label">Tjenester</span>
     <h2>Hva vi kan bygge for deg</h2>
     <p>Alt fra en enkel nettside til et komplett produkt med automatisering og KI. Prisen avhenger av hva du trenger, så send oss en melding, så finner vi ut av det sammen. Se <a href="/tjenester/" style="color:var(--blue)">alt vi tilbyr her</a>.</p>
 
@@ -594,5 +827,26 @@
   <span>Nettsider, automasjon og KI-løsninger</span>
 </footer>
 
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.project, .service, .services > h2, .contact');
+  if (!reduce && 'IntersectionObserver' in window) {
+    els.forEach(function(el){ el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin: '0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  }
+  document.querySelectorAll('.project').forEach(function(card){
+    card.addEventListener('pointermove', function(ev){
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (ev.clientY - r.top) + 'px');
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -155,3 +155,29 @@ footer{
 footer a{color:var(--muted)}
 .guide-group{margin-top:52px;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 .guide-group + .guide-list{margin-top:8px}
+
+/* ===== Designlag 2026, guider ===== */
+html,body{overflow-x:clip}
+.cta-box{
+  position:relative;overflow:hidden;isolation:isolate;
+  background:#111B2C;border:1px solid rgba(255,255,255,.06);
+  border-radius:20px;padding:36px 32px;color:#E9ECE7;
+}
+.cta-box::before{
+  content:"";position:absolute;z-index:-1;width:300px;height:300px;right:-70px;top:-110px;border-radius:50%;
+  background:#2A62B5;filter:blur(55px);opacity:.75;
+}
+.cta-box::after{
+  content:"";position:absolute;z-index:-1;width:200px;height:200px;left:-50px;bottom:-120px;border-radius:50%;
+  background:#F2B90F;filter:blur(55px);opacity:.35;
+}
+.cta-box h2{color:#fff}
+.cta-box p{color:rgba(233,236,231,.78)}
+.cta-box a.mail{background:#fff;color:#17211E;border-radius:10px;padding:12px 22px;transition:background .15s ease, transform .15s ease}
+.cta-box a.mail:hover{background:#F2B90F;color:#17211E;transform:translateY(-1px)}
+.cta-box a:not(.mail){color:#8FB6F0}
+.tips{border-radius:14px}
+.faq details{transition:background .15s ease}
+.guide-list li{transition:transform .2s ease}
+.guide-list li:hover{transform:translateX(4px)}
+@media (prefers-reduced-motion: reduce){ .guide-list li{transition:none} .guide-list li:hover{transform:none} }
