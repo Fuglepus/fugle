@@ -522,6 +522,63 @@
   }
   @keyframes pulseY{0%{box-shadow:0 0 0 0 color-mix(in srgb, var(--yellow) 60%, transparent)}100%{box-shadow:0 0 0 9px transparent}}
   @media (prefers-reduced-motion: reduce){ .wip-border rect,.wip-icon svg,.wip-pill .dot{animation:none} }
+
+  .contact{overflow:clip}
+  .contact-text{max-width:450px;position:relative}
+
+  /* Kontaktboks med hero-bakgrunn og kodehint */
+  .contact{
+    background:color-mix(in srgb, var(--card) 70%, var(--paper));
+    color:var(--ink);border:1px solid var(--line);
+  }
+  .contact-bg{
+    position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, var(--line) 75%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--line) 75%, transparent) 1px, transparent 1px);
+    background-size:36px 36px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 90% at 60% 40%, #000 35%, transparent 85%);
+            mask-image:radial-gradient(ellipse 80% 90% at 60% 40%, #000 35%, transparent 85%);
+  }
+  .contact::before{background:var(--blue);opacity:.28;filter:blur(70px)}
+  .contact::after{background:var(--yellow);opacity:.32;filter:blur(70px)}
+  .contact h2{color:var(--ink)}
+  .contact p{color:var(--muted)}
+  .contact a.mail{background:var(--blue);color:#fff;box-shadow:0 6px 20px -6px color-mix(in srgb, var(--blue) 70%, transparent)}
+  .contact a.mail:hover{background:var(--blue-ink);color:#fff;transform:translateY(-2px)}
+  :root[data-theme="dark"] .contact a.mail{color:var(--paper)}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .contact a.mail{color:var(--paper)} }
+
+  .term{
+    font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.82rem !important;
+    color:var(--ink) !important;margin:0 0 14px !important;
+    display:inline-flex;align-items:center;gap:6px;
+    background:color-mix(in srgb, var(--card) 85%, transparent);
+    border:1px solid var(--line);border-radius:8px;padding:5px 10px;
+  }
+  .term .prompt{color:var(--green);font-weight:600}
+  .caret{display:inline-block;width:7px;height:1em;background:var(--blue);margin-left:2px;animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+
+  .contact-code{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  .cs{
+    position:absolute;white-space:nowrap;
+    font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.74rem;
+    color:var(--blue-ink);opacity:.38;
+    animation:floatcode 9s ease-in-out infinite;
+  }
+  .c1{top:22px;right:28px;transform:rotate(-4deg)}
+  .c2{top:96px;right:250px;opacity:.28;animation-delay:-2s}
+  .c3{bottom:26px;left:40px;opacity:.3;animation-delay:-4s}
+  .c4{top:170px;right:18px;transform:rotate(5deg);animation-delay:-1s}
+  .c5{top:58px;right:200px;font-size:1.3rem;font-weight:700;opacity:.22;animation-delay:-3s}
+  .c6{bottom:96px;right:262px;opacity:.26;animation-delay:-5s}
+  .c7{bottom:104px;right:60px;font-size:1.1rem;font-weight:700;opacity:.24;animation-delay:-6s}
+  .c8{top:24px;left:44%;opacity:.24;animation-delay:-7s}
+  .c9{bottom:40px;right:36px;opacity:.32;transform:rotate(-3deg);animation-delay:-2.5s}
+  @keyframes floatcode{0%,100%{translate:0 0}50%{translate:0 -6px}}
+  @media (max-width:600px){ .c2,.c5,.c6,.c8{display:none} .c1{right:16px;top:14px} .c4{top:auto;bottom:230px;right:12px} .c3{left:20px;bottom:14px} }
+  @media (prefers-reduced-motion: reduce){ .cs,.caret{animation:none} }
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion: reduce){
@@ -848,9 +905,24 @@
   </section>
 
   <section class="contact" id="kontakt">
-    <h2>Trenger du noe lignende?</h2>
-    <p>Vi tar oppdrag, alt fra enkle nettsider til automatisering og KI-verktøy. Send oss en e-post, så tar vi det derfra.</p>
-    <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    <div class="contact-bg" aria-hidden="true"></div>
+    <div class="contact-code" aria-hidden="true">
+      <span class="cs c1">console.log("Hello, world!");</span>
+      <span class="cs c2">&lt;h1&gt;Hei!&lt;/h1&gt;</span>
+      <span class="cs c3">git push origin main</span>
+      <span class="cs c4">print("hei, verden")</span>
+      <span class="cs c5">&lt;/&gt;</span>
+      <span class="cs c6">const idé = "nettside";</span>
+      <span class="cs c7">{ }</span>
+      <span class="cs c8">npm run dev</span>
+      <span class="cs c9">// TODO: bygg noe kult</span>
+    </div>
+    <div class="contact-text">
+      <p class="term"><span class="prompt">~/fugle $</span> echo "Hello, world!"<span class="caret"></span></p>
+      <h2>Trenger du noe lignende?</h2>
+      <p>Vi tar oppdrag, alt fra enkle nettsider til automatisering og KI-verktøy. Send oss en e-post, så tar vi det derfra.</p>
+      <a class="mail" href="mailto:hi@watchscanning.com">Send oss en e-post</a>
+    </div>
   </section>
 
 </main>
